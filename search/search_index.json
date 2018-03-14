@@ -1,0 +1,69 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Dan's Docs\n\n\n\n\nWho am I?\n\n\nDaniel McMahon\n <- Dats me.\n\n\nConnect\n\n\n\n\nGithub\n\n\nLinkedIn\n\n\n\n\nEducation\n\n\n\n\nBA Music & Geography 2009-2012\n\n\nProfessional Diploma in Education 2012-2013\n\n\nHigher Diploma in Computer Science (Conversion) 2017-18\n\n\n\n\nWork\n\n\n\n\nVarious Retail Locations 2007-2008\n\n\nStudent Teacher 2012-2013\n\n\nEducation Officer 2013-2016\n\n\nSoftware Engineer 2017-Present\n\n\n\n\nWhat are these docs and who are they for?\n\n\n(Me) => {\n\n\n\n\nMaking notes & resources helps me concrete my own knowledge.\n\n\nDocs provide a useful and quick reference for day to day work.\n\n\nAn excuse to experiment with a new documentation library.\n\n\n\n\n}\n\n\n(You) => {\n\n\n\n\nMaybe there is some useful knowledge in here relating to a language or tech concept that will help\n\n\nMaybe you would like to adopt something similar for your own purposes and will use this as a template\n\n\n\n\n}\n\n\nWhy am I using mkdocs?\n\n\nIt's quick and easy.\nI wanted to have a docs page I can quickly update when the mood strikes.\n\n\nBeing able to update the documentation using markdown and not worrying about custom styling and css is crucial to achieve this.\nOnce I have my knowledge solidified in a markdown structure I may consider switching to something like Gatsby or Hugo.\n\n\nHaving previously designed page search functionality, it's also so much easier to use a pre-made solution like mkdocs that has search integrated.\nThere's no point having all these resources if I can't search for what I need quickly and efficiently now is there?",
+            "title": "Home"
+        },
+        {
+            "location": "/#dans-docs",
+            "text": "",
+            "title": "Dan's Docs"
+        },
+        {
+            "location": "/#who-am-i",
+            "text": "Daniel McMahon  <- Dats me.  Connect   Github  LinkedIn   Education   BA Music & Geography 2009-2012  Professional Diploma in Education 2012-2013  Higher Diploma in Computer Science (Conversion) 2017-18   Work   Various Retail Locations 2007-2008  Student Teacher 2012-2013  Education Officer 2013-2016  Software Engineer 2017-Present",
+            "title": "Who am I?"
+        },
+        {
+            "location": "/#what-are-these-docs-and-who-are-they-for",
+            "text": "(Me) => {   Making notes & resources helps me concrete my own knowledge.  Docs provide a useful and quick reference for day to day work.  An excuse to experiment with a new documentation library.   }  (You) => {   Maybe there is some useful knowledge in here relating to a language or tech concept that will help  Maybe you would like to adopt something similar for your own purposes and will use this as a template   }",
+            "title": "What are these docs and who are they for?"
+        },
+        {
+            "location": "/#why-am-i-using-mkdocs",
+            "text": "It's quick and easy.\nI wanted to have a docs page I can quickly update when the mood strikes.  Being able to update the documentation using markdown and not worrying about custom styling and css is crucial to achieve this.\nOnce I have my knowledge solidified in a markdown structure I may consider switching to something like Gatsby or Hugo.  Having previously designed page search functionality, it's also so much easier to use a pre-made solution like mkdocs that has search integrated.\nThere's no point having all these resources if I can't search for what I need quickly and efficiently now is there?",
+            "title": "Why am I using mkdocs?"
+        },
+        {
+            "location": "/python/",
+            "text": "Python",
+            "title": "Python"
+        },
+        {
+            "location": "/python/#python",
+            "text": "",
+            "title": "Python"
+        },
+        {
+            "location": "/javascript/",
+            "text": "JavaScript",
+            "title": "JavaScript"
+        },
+        {
+            "location": "/javascript/#javascript",
+            "text": "",
+            "title": "JavaScript"
+        },
+        {
+            "location": "/java/",
+            "text": "Java",
+            "title": "Java"
+        },
+        {
+            "location": "/java/#java",
+            "text": "",
+            "title": "Java"
+        },
+        {
+            "location": "/scala/",
+            "text": "Scala",
+            "title": "Scala"
+        },
+        {
+            "location": "/scala/#scala",
+            "text": "",
+            "title": "Scala"
+        }
+    ]
+}
