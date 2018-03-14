@@ -1,0 +1,8 @@
+site_name: Dans Docs
+pages:
+  - Home: index.md
+  - Python: python.md
+  - JavaScript: javascript.md
+  - Java: java.md
+  - Scala: scala.md
+theme: readthedocs
