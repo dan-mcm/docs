@@ -16,17 +16,16 @@ Connect
 
 Education
 
-- BA Music & Geography 2009-2012
-- Professional Diploma in Education 2012-2013
 - Higher Diploma in Computer Science (Conversion) 2017-18
+- Professional Diploma in Education 2012-2013
+- BA Music & Geography 2009-2012
 
 Work
 
-- Various Retail Locations 2007-2008
-- Student Teacher 2012-2013
-- Education Officer 2013-2016
 - Software Engineer 2017-Present
-
+- Education Officer 2013-2016
+- Student Teacher 2012-2013
+- Various Retail Locations 2007-2008
 
 ## What are these docs and who are they for?
 
