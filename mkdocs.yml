@@ -1,8 +1,13 @@
 site_name: Dans Docs
 pages:
   - Home: index.md
-  - Python: python.md
-  - JavaScript: javascript.md
-  - Java: java.md
-  - Scala: scala.md
+  - Languages:
+    - Python: python.md
+    - JavaScript: javascript.md
+    - Java: java.md
+    - Scala: scala.md
+    - Go: go.md
+  - Containerisation:
+    - Docker: docker.md
+    - Kubernetes: kubernetes.md
 theme: readthedocs

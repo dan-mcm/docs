@@ -1,6 +1,8 @@
 # Dan's Docs
 
-<img src="https://media.giphy.com/media/l41m17b1ggScfYWNG/giphy.gif"/>
+<p align="center">
+  <img src="https://media.giphy.com/media/d6FUKcr5FkiDS/giphy.gif"/>
+</p>
 
 ## Who am I?
 
