@@ -16,7 +16,7 @@ Connect
 
 Education
 
-- Higher Diploma in Computer Science (Conversion) 2017-18
+- Higher Diploma in Computer Science (Conversion) 2016-17
 - Professional Diploma in Education 2012-2013
 - BA Music & Geography 2009-2012
 
