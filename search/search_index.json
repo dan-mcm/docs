@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Dan's Docs\n\n\n\n  \n\n\n\n\n\nWho am I?\n\n\nDaniel McMahon\n <- Dats me.\n\n\nConnect\n\n\n\n\nGithub\n\n\nLinkedIn\n\n\n\n\nEducation\n\n\n\n\nHigher Diploma in Computer Science (Conversion) 2017-18\n\n\nProfessional Diploma in Education 2012-2013\n\n\nBA Music & Geography 2009-2012\n\n\n\n\nWork\n\n\n\n\nSoftware Engineer 2017-Present\n\n\nEducation Officer 2013-2016\n\n\nStudent Teacher 2012-2013\n\n\nVarious Retail Locations 2007-2008\n\n\n\n\nWhat are these docs and who are they for?\n\n\n(Me) => {\n\n\n\n\nMaking notes & resources helps me concrete my own knowledge.\n\n\nDocs provide a useful and quick reference for day to day work.\n\n\nAn excuse to experiment with a new documentation library.\n\n\n\n\n}\n\n\n(You) => {\n\n\n\n\nMaybe there is some useful knowledge in here relating to a language or tech concept that will help\n\n\nMaybe you would like to adopt something similar for your own purposes and will use this as a template\n\n\n\n\n}\n\n\nWhy am I using mkdocs?\n\n\nIt's quick and easy.\nI wanted to have a docs page I can quickly update when the mood strikes.\n\n\nBeing able to update the documentation using markdown and not worrying about custom styling and css is crucial to achieve this.\nOnce I have my knowledge solidified in a markdown structure I may consider switching to something like Gatsby or Hugo.\n\n\nHaving previously designed page search functionality, it's also so much easier to use a pre-made solution like mkdocs that has search integrated.\nThere's no point having all these resources if I can't search for what I need quickly and efficiently now is there?",
+            "text": "Dan's Docs\n\n\n\n  \n\n\n\n\n\nWho am I?\n\n\nDaniel McMahon\n <- Dats me.\n\n\nConnect\n\n\n\n\nGithub\n\n\nLinkedIn\n\n\n\n\nEducation\n\n\n\n\nHigher Diploma in Computer Science (Conversion) 2016-17\n\n\nProfessional Diploma in Education 2012-2013\n\n\nBA Music & Geography 2009-2012\n\n\n\n\nWork\n\n\n\n\nSoftware Engineer 2017-Present\n\n\nEducation Officer 2013-2016\n\n\nStudent Teacher 2012-2013\n\n\nVarious Retail Locations 2007-2008\n\n\n\n\nWhat are these docs and who are they for?\n\n\n(Me) => {\n\n\n\n\nMaking notes & resources helps me concrete my own knowledge.\n\n\nDocs provide a useful and quick reference for day to day work.\n\n\nAn excuse to experiment with a new documentation library.\n\n\n\n\n}\n\n\n(You) => {\n\n\n\n\nMaybe there is some useful knowledge in here relating to a language or tech concept that will help\n\n\nMaybe you would like to adopt something similar for your own purposes and will use this as a template\n\n\n\n\n}\n\n\nWhy am I using mkdocs?\n\n\nIt's quick and easy.\nI wanted to have a docs page I can quickly update when the mood strikes.\n\n\nBeing able to update the documentation using markdown and not worrying about custom styling and css is crucial to achieve this.\nOnce I have my knowledge solidified in a markdown structure I may consider switching to something like Gatsby or Hugo.\n\n\nHaving previously designed page search functionality, it's also so much easier to use a pre-made solution like mkdocs that has search integrated.\nThere's no point having all these resources if I can't search for what I need quickly and efficiently now is there?",
             "title": "Home"
         },
         {
@@ -12,7 +12,7 @@
         },
         {
             "location": "/#who-am-i",
-            "text": "Daniel McMahon  <- Dats me.  Connect   Github  LinkedIn   Education   Higher Diploma in Computer Science (Conversion) 2017-18  Professional Diploma in Education 2012-2013  BA Music & Geography 2009-2012   Work   Software Engineer 2017-Present  Education Officer 2013-2016  Student Teacher 2012-2013  Various Retail Locations 2007-2008",
+            "text": "Daniel McMahon  <- Dats me.  Connect   Github  LinkedIn   Education   Higher Diploma in Computer Science (Conversion) 2016-17  Professional Diploma in Education 2012-2013  BA Music & Geography 2009-2012   Work   Software Engineer 2017-Present  Education Officer 2013-2016  Student Teacher 2012-2013  Various Retail Locations 2007-2008",
             "title": "Who am I?"
         },
         {
@@ -57,13 +57,88 @@
         },
         {
             "location": "/scala/",
-            "text": "Scala",
+            "text": "Scala\n\n\n\n  \n\n\n\n\n\nVariable Declaration\n\n\n// immutable\nval donutsToBuy: Int = 5\n\n// mutable\nvar favoriteDonut: String = \"Glazed Donut\"\nfavoriteDonut = \"Vanilla Donut\"\n\n// lazy (delay the initialization until consumed by application)\n// this also uses type inference - note the lack of : String!\n\nlazy val donutService = \"initialize some donut service\"\n\n// declare a variable with no initialization\nvar leastFavoriteDonut: String = _\nleastFavoriteDonut = \"Plain Donut\"\n\n\n\n\n\nSupported Types\n\n\nval donutsBought: Int = 5\nval bigNumberOfDonuts: Long = 100000000L\nval smallNumberOfDonuts: Short = 1\nval priceOfDonut: Double = 2.50\nval donutPrice: Float = 2.50f\nval donutStoreName: String = \"allaboutscala Donut Store\"\nval donutByte: Byte = 0xa\nval donutFirstLetter: Char = 'D'\nval nothing: Unit = ()\n\n\n\n\nCollections\n\n\nLists\n\n\n// List of Strings\nval fruit: List[String] = List(\"apples\", \"oranges\", \"pears\")\n\n// List of Integers\nval nums: List[Int] = List(1, 2, 3, 4)\n\n// Empty List.\nval empty: List[Nothing] = List()\n\n// Two dimensional list\nval dim: List[List[Int]] =\n   List(\n      List(1, 0, 0),\n      List(0, 1, 0),\n      List(0, 0, 1)\n   )\n\n// Basic Examples of common methods\n\n// another way of defining the fruit List above using cons (::)\nval fruit = \"apples\" :: (\"oranges\" :: (\"pears\" :: Nil))\nval nums = Nil\n\nprintln( \"Head of fruit : \" + fruit.head )\nprintln( \"Tail of fruit : \" + fruit.tail )\nprintln( \"Check if fruit is empty : \" + fruit.isEmpty )\nprintln( \"Check if nums is empty : \" + nums.isEmpty )\n\n\n\n\nSets\n\n\n// Empty set of integer type\nvar s : Set[Int] = Set()\n\n// Set of integer type\nvar s : Set[Int] = Set(1,3,5,7)\n\nor\n\nvar s = Set(1,3,5,7)\n\n// find common elements between two sets\n\nval num1 = Set(5,6,9,20,30,45)\nval num2 = Set(50,60,9,20,35,55)\n\nprintln( \"num1.&(num2) : \" + num1.&(num2) )\nprintln( \"num1.intersect(num2) : \" + num1.intersect(num2) )\n\n\n\n\nMaps\n\n\n// Empty hash table whose keys are strings and values are integers:\nvar A:Map[Char,Int] = Map()\n\n// A map with keys and values.\nval colors = Map(\"red\" -> \"#FF0000\", \"azure\" -> \"#F0FFFF\")\n\n// Basic examples of common methods\nval colors = Map(\"red\" -> \"#FF0000\", \"azure\" -> \"#F0FFFF\", \"peru\" -> \"#CD853F\")\n\nval nums: Map[Int, Int] = Map()\n\nprintln( \"Keys in colors : \" + colors.keys )\nprintln( \"Values in colors : \" + colors.values )\nprintln( \"Check if colors is empty : \" + colors.isEmpty )\nprintln( \"Check if nums is empty : \" + nums.isEmpty )\n\n\n\n\nTuples\n\n\n// Short version\nval t = (1, \"hello\", Console)\n\n// Long version\nval t = new Tuple3(1, \"hello\", Console)\n\n// Example Usage\nval t = (4,3,2,1)\nval sum = t._1 + t._2 + t._3 + t._4\nprintln( \"Sum of elements: \"  + sum )\n\nval t = new Tuple3(1, \"hello\", Console)  \nprintln(\"Concatenated String: \" + t.toString() )\n\n\n\n\nOptions\n\n\n// An Option[T] can be either Some[T] or None object, which represents a missing value.\n\n// Example\n\nobject Demo {\n   def main(args: Array[String]) {\n      val capitals = Map(\"France\" -> \"Paris\", \"Japan\" -> \"Tokyo\")\n\n      println(\"capitals.get( \\\"France\\\" ) : \" +  capitals.get( \"France\" ))\n      println(\"capitals.get( \\\"India\\\" ) : \" +  capitals.get( \"India\" ))\n   }\n}\n\n// Example Output\n\ncapitals.get( \"France\" ) : Some(Paris)\ncapitals.get( \"India\" ) : None\n\n\n\n\nIterators\n\n\nval it = Iterator(\"a\", \"number\", \"of\", \"words\")\n\n while (it.hasNext){\n    println(it.next())\n }\n\nval ita = Iterator(20,40,2,50,69, 90)\nval itb = Iterator(20,40,2,50,69, 90)\n\nprintln(\"Maximum valued element \" + ita.max )\nprintln(\"Minimum valued element \" + itb.min )\nprintln(\"Value of ita.size : \" + ita.size )\nprintln(\"Value of itb.length : \" + itb.length )\n\n\n\n\nConditionals/Matching\n\n\nIf Statements\n\n\nvar x = 10;\n\nif(x < 20)\n  100\nelse if (x > 20)\n  200\nelse\n  0\n\n\n\n\nPattern Matching\n\n\nimport scala.util.Random\n\nval x: Int = Random.nextInt(10)\n\nx match {\n  case 0 => \"zero\"\n  case 1 => \"one\"\n  case 2 => \"two\"\n  case _ => \"many\"\n}\n\n\n\n\ndef matchTest(x: Int): String = x match {\n  case 1 => \"one\"\n  case 2 => \"two\"\n  case _ => \"many\"\n}\nmatchTest(3)  // many\nmatchTest(1)  // one\n\n\n\n\nLoops\n\n\nFor\n\n\nvar a = 0;\n\n// for loop execution with a single range\nfor( a <- 1 to 10){\n   println(\"Value of a: \" + a );\n}\n\n\n\n\nvar a = 0;\nvar b = 0;\n\n// for loop execution with multiple ranges\nfor( a <- 1 to 3; b <- 1 to 3){\n   println( \"Value of a: \" + a );\n   println( \"Value of b: \" + b );\n}\n\n\n\n\nvar a = 0;\nval numList = List(1,2,3,4,5,6);\n\n// for loop execution with a collection\nfor( a <- numList ){\n   println( \"Value of a: \" + a );\n}\n\n\n\n\nvar a = 0;\nval numList = List(1,2,3,4,5,6,7,8,9,10);\n\n// for loop execution with multiple filters\nfor( a <- numList\n     if a != 3; if a < 8 ){\n   println( \"Value of a: \" + a );\n}\n\n\n\n\nWhile\n\n\nvar a = 10;\n\n// while loop execution\nwhile( a < 20 ){\n   println( \"Value of a: \" + a );\n   a = a + 1;\n}",
             "title": "Scala"
         },
         {
             "location": "/scala/#scala",
             "text": "",
             "title": "Scala"
+        },
+        {
+            "location": "/scala/#variable-declaration",
+            "text": "// immutable\nval donutsToBuy: Int = 5\n\n// mutable\nvar favoriteDonut: String = \"Glazed Donut\"\nfavoriteDonut = \"Vanilla Donut\"\n\n// lazy (delay the initialization until consumed by application)\n// this also uses type inference - note the lack of : String!\n\nlazy val donutService = \"initialize some donut service\"\n\n// declare a variable with no initialization\nvar leastFavoriteDonut: String = _\nleastFavoriteDonut = \"Plain Donut\"",
+            "title": "Variable Declaration"
+        },
+        {
+            "location": "/scala/#supported-types",
+            "text": "val donutsBought: Int = 5\nval bigNumberOfDonuts: Long = 100000000L\nval smallNumberOfDonuts: Short = 1\nval priceOfDonut: Double = 2.50\nval donutPrice: Float = 2.50f\nval donutStoreName: String = \"allaboutscala Donut Store\"\nval donutByte: Byte = 0xa\nval donutFirstLetter: Char = 'D'\nval nothing: Unit = ()",
+            "title": "Supported Types"
+        },
+        {
+            "location": "/scala/#collections",
+            "text": "",
+            "title": "Collections"
+        },
+        {
+            "location": "/scala/#lists",
+            "text": "// List of Strings\nval fruit: List[String] = List(\"apples\", \"oranges\", \"pears\")\n\n// List of Integers\nval nums: List[Int] = List(1, 2, 3, 4)\n\n// Empty List.\nval empty: List[Nothing] = List()\n\n// Two dimensional list\nval dim: List[List[Int]] =\n   List(\n      List(1, 0, 0),\n      List(0, 1, 0),\n      List(0, 0, 1)\n   )\n\n// Basic Examples of common methods\n\n// another way of defining the fruit List above using cons (::)\nval fruit = \"apples\" :: (\"oranges\" :: (\"pears\" :: Nil))\nval nums = Nil\n\nprintln( \"Head of fruit : \" + fruit.head )\nprintln( \"Tail of fruit : \" + fruit.tail )\nprintln( \"Check if fruit is empty : \" + fruit.isEmpty )\nprintln( \"Check if nums is empty : \" + nums.isEmpty )",
+            "title": "Lists"
+        },
+        {
+            "location": "/scala/#sets",
+            "text": "// Empty set of integer type\nvar s : Set[Int] = Set()\n\n// Set of integer type\nvar s : Set[Int] = Set(1,3,5,7)\n\nor\n\nvar s = Set(1,3,5,7)\n\n// find common elements between two sets\n\nval num1 = Set(5,6,9,20,30,45)\nval num2 = Set(50,60,9,20,35,55)\n\nprintln( \"num1.&(num2) : \" + num1.&(num2) )\nprintln( \"num1.intersect(num2) : \" + num1.intersect(num2) )",
+            "title": "Sets"
+        },
+        {
+            "location": "/scala/#maps",
+            "text": "// Empty hash table whose keys are strings and values are integers:\nvar A:Map[Char,Int] = Map()\n\n// A map with keys and values.\nval colors = Map(\"red\" -> \"#FF0000\", \"azure\" -> \"#F0FFFF\")\n\n// Basic examples of common methods\nval colors = Map(\"red\" -> \"#FF0000\", \"azure\" -> \"#F0FFFF\", \"peru\" -> \"#CD853F\")\n\nval nums: Map[Int, Int] = Map()\n\nprintln( \"Keys in colors : \" + colors.keys )\nprintln( \"Values in colors : \" + colors.values )\nprintln( \"Check if colors is empty : \" + colors.isEmpty )\nprintln( \"Check if nums is empty : \" + nums.isEmpty )",
+            "title": "Maps"
+        },
+        {
+            "location": "/scala/#tuples",
+            "text": "// Short version\nval t = (1, \"hello\", Console)\n\n// Long version\nval t = new Tuple3(1, \"hello\", Console)\n\n// Example Usage\nval t = (4,3,2,1)\nval sum = t._1 + t._2 + t._3 + t._4\nprintln( \"Sum of elements: \"  + sum )\n\nval t = new Tuple3(1, \"hello\", Console)  \nprintln(\"Concatenated String: \" + t.toString() )",
+            "title": "Tuples"
+        },
+        {
+            "location": "/scala/#options",
+            "text": "// An Option[T] can be either Some[T] or None object, which represents a missing value.\n\n// Example\n\nobject Demo {\n   def main(args: Array[String]) {\n      val capitals = Map(\"France\" -> \"Paris\", \"Japan\" -> \"Tokyo\")\n\n      println(\"capitals.get( \\\"France\\\" ) : \" +  capitals.get( \"France\" ))\n      println(\"capitals.get( \\\"India\\\" ) : \" +  capitals.get( \"India\" ))\n   }\n}\n\n// Example Output\n\ncapitals.get( \"France\" ) : Some(Paris)\ncapitals.get( \"India\" ) : None",
+            "title": "Options"
+        },
+        {
+            "location": "/scala/#iterators",
+            "text": "val it = Iterator(\"a\", \"number\", \"of\", \"words\")\n\n while (it.hasNext){\n    println(it.next())\n }\n\nval ita = Iterator(20,40,2,50,69, 90)\nval itb = Iterator(20,40,2,50,69, 90)\n\nprintln(\"Maximum valued element \" + ita.max )\nprintln(\"Minimum valued element \" + itb.min )\nprintln(\"Value of ita.size : \" + ita.size )\nprintln(\"Value of itb.length : \" + itb.length )",
+            "title": "Iterators"
+        },
+        {
+            "location": "/scala/#conditionalsmatching",
+            "text": "",
+            "title": "Conditionals/Matching"
+        },
+        {
+            "location": "/scala/#if-statements",
+            "text": "var x = 10;\n\nif(x < 20)\n  100\nelse if (x > 20)\n  200\nelse\n  0",
+            "title": "If Statements"
+        },
+        {
+            "location": "/scala/#pattern-matching",
+            "text": "import scala.util.Random\n\nval x: Int = Random.nextInt(10)\n\nx match {\n  case 0 => \"zero\"\n  case 1 => \"one\"\n  case 2 => \"two\"\n  case _ => \"many\"\n}  def matchTest(x: Int): String = x match {\n  case 1 => \"one\"\n  case 2 => \"two\"\n  case _ => \"many\"\n}\nmatchTest(3)  // many\nmatchTest(1)  // one",
+            "title": "Pattern Matching"
+        },
+        {
+            "location": "/scala/#loops",
+            "text": "",
+            "title": "Loops"
+        },
+        {
+            "location": "/scala/#for",
+            "text": "var a = 0;\n\n// for loop execution with a single range\nfor( a <- 1 to 10){\n   println(\"Value of a: \" + a );\n}  var a = 0;\nvar b = 0;\n\n// for loop execution with multiple ranges\nfor( a <- 1 to 3; b <- 1 to 3){\n   println( \"Value of a: \" + a );\n   println( \"Value of b: \" + b );\n}  var a = 0;\nval numList = List(1,2,3,4,5,6);\n\n// for loop execution with a collection\nfor( a <- numList ){\n   println( \"Value of a: \" + a );\n}  var a = 0;\nval numList = List(1,2,3,4,5,6,7,8,9,10);\n\n// for loop execution with multiple filters\nfor( a <- numList\n     if a != 3; if a < 8 ){\n   println( \"Value of a: \" + a );\n}",
+            "title": "For"
+        },
+        {
+            "location": "/scala/#while",
+            "text": "var a = 10;\n\n// while loop execution\nwhile( a < 20 ){\n   println( \"Value of a: \" + a );\n   a = a + 1;\n}",
+            "title": "While"
         },
         {
             "location": "/go/",
