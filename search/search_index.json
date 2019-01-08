@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Dan's Docs\n\n\n\n  \n\n\n\n\n\nWho am I?\n\n\nDaniel McMahon\n <- Dats me.\n\n\nConnect\n\n\n\n\nGithub\n\n\nLinkedIn\n\n\n\n\nEducation\n\n\n\n\nHigher Diploma in Computer Science (Conversion) 2016-17\n\n\nProfessional Diploma in Education 2012-2013\n\n\nBA Music & Geography 2009-2012\n\n\n\n\nWork\n\n\n\n\nSoftware Engineer 2017-Present\n\n\nEducation Officer 2013-2016\n\n\nStudent Teacher 2012-2013\n\n\nVarious Retail Locations 2007-2008\n\n\n\n\nWhat are these docs and who are they for?\n\n\n(Me) => {\n\n\n\n\nMaking notes & resources helps me concrete my own knowledge.\n\n\nDocs provide a useful and quick reference for day to day work.\n\n\nAn excuse to experiment with a new documentation library.\n\n\n\n\n}\n\n\n(You) => {\n\n\n\n\nMaybe there is some useful knowledge in here relating to a language or tech concept that will help\n\n\nMaybe you would like to adopt something similar for your own purposes and will use this as a template\n\n\n\n\n}\n\n\nWhy am I using mkdocs?\n\n\nIt's quick and easy.\nI wanted to have a docs page I can quickly update when the mood strikes.\n\n\nBeing able to update the documentation using markdown and not worrying about custom styling and css is crucial to achieve this.\nOnce I have my knowledge solidified in a markdown structure I may consider switching to something like Gatsby or Hugo.\n\n\nHaving previously designed page search functionality, it's also so much easier to use a pre-made solution like mkdocs that has search integrated.\nThere's no point having all these resources if I can't search for what I need quickly and efficiently now is there?",
+            "text": "Dan's Docs\n\n\n\n  \n\n\n\n\n\n\n\nWho am I?\n\n\nDaniel McMahon\n <- Dats me.\n\n\nConnect\n\n\n\n\nGithub\n\n\nLinkedIn\n\n\n\n\nEducation\n\n\n\n\nHigher Diploma in Computer Science (Conversion) 2016-17\n\n\nProfessional Diploma in Education 2012-2013\n\n\nBA Music & Geography 2009-2012\n\n\n\n\nWork\n\n\n\n\nSoftware Engineer 2017-Present\n\n\nEducation Officer 2013-2016\n\n\nStudent Teacher 2012-2013\n\n\nVarious Retail Locations 2007-2008\n\n\n\n\n\n\nWhat are these docs and who are they for?\n\n\n(Me) => {\n\n\n\n\nMaking notes & resources helps me concrete my own knowledge.\n\n\nDocs provide a useful and quick reference for day to day work.\n\n\nAn excuse to experiment with a new documentation library.\n\n\n\n\n}\n\n\n(You) => {\n\n\n\n\nMaybe there is some useful knowledge in here relating to a language or tech concept that will help\n\n\nMaybe you would like to adopt something similar for your own purposes and will use this as a template\n\n\n\n\n}\n\n\n\n\nWhy am I using mkdocs?\n\n\nIt's quick and easy.\nI wanted to have a docs page I can quickly update when the mood strikes.\n\n\nBeing able to update the documentation using markdown and not worrying about custom styling and css is crucial to achieve this.\nOnce I have my knowledge solidified in a markdown structure I may consider switching to something like Gatsby or Hugo.\n\n\nHaving previously designed page search functionality, it's also so much easier to use a pre-made solution like mkdocs that has search integrated.\nThere's no point having all these resources if I can't search for what I need quickly and efficiently now is there?",
             "title": "Home"
         },
         {
@@ -26,149 +26,189 @@
             "title": "Why am I using mkdocs?"
         },
         {
-            "location": "/python/",
+            "location": "/languages/python/",
             "text": "Python\n\n\n\n  \n\n\n\n\n\nx = \"always look on\";\ny = \"the bright side\";\nz = x + y + \"of life\";",
             "title": "Python"
         },
         {
-            "location": "/python/#python",
+            "location": "/languages/python/#python",
             "text": "x = \"always look on\";\ny = \"the bright side\";\nz = x + y + \"of life\";",
             "title": "Python"
         },
         {
-            "location": "/javascript/",
+            "location": "/languages/javascript/",
             "text": "JavaScript",
             "title": "JavaScript"
         },
         {
-            "location": "/javascript/#javascript",
+            "location": "/languages/javascript/#javascript",
             "text": "",
             "title": "JavaScript"
         },
         {
-            "location": "/java/",
+            "location": "/languages/java/",
             "text": "Java",
             "title": "Java"
         },
         {
-            "location": "/java/#java",
+            "location": "/languages/java/#java",
             "text": "",
             "title": "Java"
         },
         {
-            "location": "/scala/",
+            "location": "/languages/scala/",
             "text": "Scala\n\n\n\n  \n\n\n\n\n\nVariable Declaration\n\n\n// immutable\nval donutsToBuy: Int = 5\n\n// mutable\nvar favoriteDonut: String = \"Glazed Donut\"\nfavoriteDonut = \"Vanilla Donut\"\n\n// lazy (delay the initialization until consumed by application)\n// this also uses type inference - note the lack of : String!\n\nlazy val donutService = \"initialize some donut service\"\n\n// declare a variable with no initialization\nvar leastFavoriteDonut: String = _\nleastFavoriteDonut = \"Plain Donut\"\n\n\n\n\n\nSupported Types\n\n\nval donutsBought: Int = 5\nval bigNumberOfDonuts: Long = 100000000L\nval smallNumberOfDonuts: Short = 1\nval priceOfDonut: Double = 2.50\nval donutPrice: Float = 2.50f\nval donutStoreName: String = \"allaboutscala Donut Store\"\nval donutByte: Byte = 0xa\nval donutFirstLetter: Char = 'D'\nval nothing: Unit = ()\n\n\n\n\nCollections\n\n\nLists\n\n\n// List of Strings\nval fruit: List[String] = List(\"apples\", \"oranges\", \"pears\")\n\n// List of Integers\nval nums: List[Int] = List(1, 2, 3, 4)\n\n// Empty List.\nval empty: List[Nothing] = List()\n\n// Two dimensional list\nval dim: List[List[Int]] =\n   List(\n      List(1, 0, 0),\n      List(0, 1, 0),\n      List(0, 0, 1)\n   )\n\n// Basic Examples of common methods\n\n// another way of defining the fruit List above using cons (::)\nval fruit = \"apples\" :: (\"oranges\" :: (\"pears\" :: Nil))\nval nums = Nil\n\nprintln( \"Head of fruit : \" + fruit.head )\nprintln( \"Tail of fruit : \" + fruit.tail )\nprintln( \"Check if fruit is empty : \" + fruit.isEmpty )\nprintln( \"Check if nums is empty : \" + nums.isEmpty )\n\n\n\n\nSets\n\n\n// Empty set of integer type\nvar s : Set[Int] = Set()\n\n// Set of integer type\nvar s : Set[Int] = Set(1,3,5,7)\n\nor\n\nvar s = Set(1,3,5,7)\n\n// find common elements between two sets\n\nval num1 = Set(5,6,9,20,30,45)\nval num2 = Set(50,60,9,20,35,55)\n\nprintln( \"num1.&(num2) : \" + num1.&(num2) )\nprintln( \"num1.intersect(num2) : \" + num1.intersect(num2) )\n\n\n\n\nMaps\n\n\n// Empty hash table whose keys are strings and values are integers:\nvar A:Map[Char,Int] = Map()\n\n// A map with keys and values.\nval colors = Map(\"red\" -> \"#FF0000\", \"azure\" -> \"#F0FFFF\")\n\n// Basic examples of common methods\nval colors = Map(\"red\" -> \"#FF0000\", \"azure\" -> \"#F0FFFF\", \"peru\" -> \"#CD853F\")\n\nval nums: Map[Int, Int] = Map()\n\nprintln( \"Keys in colors : \" + colors.keys )\nprintln( \"Values in colors : \" + colors.values )\nprintln( \"Check if colors is empty : \" + colors.isEmpty )\nprintln( \"Check if nums is empty : \" + nums.isEmpty )\n\n\n\n\nTuples\n\n\n// Short version\nval t = (1, \"hello\", Console)\n\n// Long version\nval t = new Tuple3(1, \"hello\", Console)\n\n// Example Usage\nval t = (4,3,2,1)\nval sum = t._1 + t._2 + t._3 + t._4\nprintln( \"Sum of elements: \"  + sum )\n\nval t = new Tuple3(1, \"hello\", Console)  \nprintln(\"Concatenated String: \" + t.toString() )\n\n\n\n\nOptions\n\n\n// An Option[T] can be either Some[T] or None object, which represents a missing value.\n\n// Example\n\nobject Demo {\n   def main(args: Array[String]) {\n      val capitals = Map(\"France\" -> \"Paris\", \"Japan\" -> \"Tokyo\")\n\n      println(\"capitals.get( \\\"France\\\" ) : \" +  capitals.get( \"France\" ))\n      println(\"capitals.get( \\\"India\\\" ) : \" +  capitals.get( \"India\" ))\n   }\n}\n\n// Example Output\n\ncapitals.get( \"France\" ) : Some(Paris)\ncapitals.get( \"India\" ) : None\n\n\n\n\nIterators\n\n\nval it = Iterator(\"a\", \"number\", \"of\", \"words\")\n\n while (it.hasNext){\n    println(it.next())\n }\n\nval ita = Iterator(20,40,2,50,69, 90)\nval itb = Iterator(20,40,2,50,69, 90)\n\nprintln(\"Maximum valued element \" + ita.max )\nprintln(\"Minimum valued element \" + itb.min )\nprintln(\"Value of ita.size : \" + ita.size )\nprintln(\"Value of itb.length : \" + itb.length )\n\n\n\n\nConditionals/Matching\n\n\nIf Statements\n\n\nvar x = 10;\n\nif(x < 20)\n  100\nelse if (x > 20)\n  200\nelse\n  0\n\n\n\n\nPattern Matching\n\n\nimport scala.util.Random\n\nval x: Int = Random.nextInt(10)\n\nx match {\n  case 0 => \"zero\"\n  case 1 => \"one\"\n  case 2 => \"two\"\n  case _ => \"many\"\n}\n\n\n\n\ndef matchTest(x: Int): String = x match {\n  case 1 => \"one\"\n  case 2 => \"two\"\n  case _ => \"many\"\n}\nmatchTest(3)  // many\nmatchTest(1)  // one\n\n\n\n\nLoops\n\n\nFor\n\n\nvar a = 0;\n\n// for loop execution with a single range\nfor( a <- 1 to 10){\n   println(\"Value of a: \" + a );\n}\n\n\n\n\nvar a = 0;\nvar b = 0;\n\n// for loop execution with multiple ranges\nfor( a <- 1 to 3; b <- 1 to 3){\n   println( \"Value of a: \" + a );\n   println( \"Value of b: \" + b );\n}\n\n\n\n\nvar a = 0;\nval numList = List(1,2,3,4,5,6);\n\n// for loop execution with a collection\nfor( a <- numList ){\n   println( \"Value of a: \" + a );\n}\n\n\n\n\nvar a = 0;\nval numList = List(1,2,3,4,5,6,7,8,9,10);\n\n// for loop execution with multiple filters\nfor( a <- numList\n     if a != 3; if a < 8 ){\n   println( \"Value of a: \" + a );\n}\n\n\n\n\nWhile\n\n\nvar a = 10;\n\n// while loop execution\nwhile( a < 20 ){\n   println( \"Value of a: \" + a );\n   a = a + 1;\n}",
             "title": "Scala"
         },
         {
-            "location": "/scala/#scala",
+            "location": "/languages/scala/#scala",
             "text": "",
             "title": "Scala"
         },
         {
-            "location": "/scala/#variable-declaration",
+            "location": "/languages/scala/#variable-declaration",
             "text": "// immutable\nval donutsToBuy: Int = 5\n\n// mutable\nvar favoriteDonut: String = \"Glazed Donut\"\nfavoriteDonut = \"Vanilla Donut\"\n\n// lazy (delay the initialization until consumed by application)\n// this also uses type inference - note the lack of : String!\n\nlazy val donutService = \"initialize some donut service\"\n\n// declare a variable with no initialization\nvar leastFavoriteDonut: String = _\nleastFavoriteDonut = \"Plain Donut\"",
             "title": "Variable Declaration"
         },
         {
-            "location": "/scala/#supported-types",
+            "location": "/languages/scala/#supported-types",
             "text": "val donutsBought: Int = 5\nval bigNumberOfDonuts: Long = 100000000L\nval smallNumberOfDonuts: Short = 1\nval priceOfDonut: Double = 2.50\nval donutPrice: Float = 2.50f\nval donutStoreName: String = \"allaboutscala Donut Store\"\nval donutByte: Byte = 0xa\nval donutFirstLetter: Char = 'D'\nval nothing: Unit = ()",
             "title": "Supported Types"
         },
         {
-            "location": "/scala/#collections",
+            "location": "/languages/scala/#collections",
             "text": "",
             "title": "Collections"
         },
         {
-            "location": "/scala/#lists",
+            "location": "/languages/scala/#lists",
             "text": "// List of Strings\nval fruit: List[String] = List(\"apples\", \"oranges\", \"pears\")\n\n// List of Integers\nval nums: List[Int] = List(1, 2, 3, 4)\n\n// Empty List.\nval empty: List[Nothing] = List()\n\n// Two dimensional list\nval dim: List[List[Int]] =\n   List(\n      List(1, 0, 0),\n      List(0, 1, 0),\n      List(0, 0, 1)\n   )\n\n// Basic Examples of common methods\n\n// another way of defining the fruit List above using cons (::)\nval fruit = \"apples\" :: (\"oranges\" :: (\"pears\" :: Nil))\nval nums = Nil\n\nprintln( \"Head of fruit : \" + fruit.head )\nprintln( \"Tail of fruit : \" + fruit.tail )\nprintln( \"Check if fruit is empty : \" + fruit.isEmpty )\nprintln( \"Check if nums is empty : \" + nums.isEmpty )",
             "title": "Lists"
         },
         {
-            "location": "/scala/#sets",
+            "location": "/languages/scala/#sets",
             "text": "// Empty set of integer type\nvar s : Set[Int] = Set()\n\n// Set of integer type\nvar s : Set[Int] = Set(1,3,5,7)\n\nor\n\nvar s = Set(1,3,5,7)\n\n// find common elements between two sets\n\nval num1 = Set(5,6,9,20,30,45)\nval num2 = Set(50,60,9,20,35,55)\n\nprintln( \"num1.&(num2) : \" + num1.&(num2) )\nprintln( \"num1.intersect(num2) : \" + num1.intersect(num2) )",
             "title": "Sets"
         },
         {
-            "location": "/scala/#maps",
+            "location": "/languages/scala/#maps",
             "text": "// Empty hash table whose keys are strings and values are integers:\nvar A:Map[Char,Int] = Map()\n\n// A map with keys and values.\nval colors = Map(\"red\" -> \"#FF0000\", \"azure\" -> \"#F0FFFF\")\n\n// Basic examples of common methods\nval colors = Map(\"red\" -> \"#FF0000\", \"azure\" -> \"#F0FFFF\", \"peru\" -> \"#CD853F\")\n\nval nums: Map[Int, Int] = Map()\n\nprintln( \"Keys in colors : \" + colors.keys )\nprintln( \"Values in colors : \" + colors.values )\nprintln( \"Check if colors is empty : \" + colors.isEmpty )\nprintln( \"Check if nums is empty : \" + nums.isEmpty )",
             "title": "Maps"
         },
         {
-            "location": "/scala/#tuples",
+            "location": "/languages/scala/#tuples",
             "text": "// Short version\nval t = (1, \"hello\", Console)\n\n// Long version\nval t = new Tuple3(1, \"hello\", Console)\n\n// Example Usage\nval t = (4,3,2,1)\nval sum = t._1 + t._2 + t._3 + t._4\nprintln( \"Sum of elements: \"  + sum )\n\nval t = new Tuple3(1, \"hello\", Console)  \nprintln(\"Concatenated String: \" + t.toString() )",
             "title": "Tuples"
         },
         {
-            "location": "/scala/#options",
+            "location": "/languages/scala/#options",
             "text": "// An Option[T] can be either Some[T] or None object, which represents a missing value.\n\n// Example\n\nobject Demo {\n   def main(args: Array[String]) {\n      val capitals = Map(\"France\" -> \"Paris\", \"Japan\" -> \"Tokyo\")\n\n      println(\"capitals.get( \\\"France\\\" ) : \" +  capitals.get( \"France\" ))\n      println(\"capitals.get( \\\"India\\\" ) : \" +  capitals.get( \"India\" ))\n   }\n}\n\n// Example Output\n\ncapitals.get( \"France\" ) : Some(Paris)\ncapitals.get( \"India\" ) : None",
             "title": "Options"
         },
         {
-            "location": "/scala/#iterators",
+            "location": "/languages/scala/#iterators",
             "text": "val it = Iterator(\"a\", \"number\", \"of\", \"words\")\n\n while (it.hasNext){\n    println(it.next())\n }\n\nval ita = Iterator(20,40,2,50,69, 90)\nval itb = Iterator(20,40,2,50,69, 90)\n\nprintln(\"Maximum valued element \" + ita.max )\nprintln(\"Minimum valued element \" + itb.min )\nprintln(\"Value of ita.size : \" + ita.size )\nprintln(\"Value of itb.length : \" + itb.length )",
             "title": "Iterators"
         },
         {
-            "location": "/scala/#conditionalsmatching",
+            "location": "/languages/scala/#conditionalsmatching",
             "text": "",
             "title": "Conditionals/Matching"
         },
         {
-            "location": "/scala/#if-statements",
+            "location": "/languages/scala/#if-statements",
             "text": "var x = 10;\n\nif(x < 20)\n  100\nelse if (x > 20)\n  200\nelse\n  0",
             "title": "If Statements"
         },
         {
-            "location": "/scala/#pattern-matching",
+            "location": "/languages/scala/#pattern-matching",
             "text": "import scala.util.Random\n\nval x: Int = Random.nextInt(10)\n\nx match {\n  case 0 => \"zero\"\n  case 1 => \"one\"\n  case 2 => \"two\"\n  case _ => \"many\"\n}  def matchTest(x: Int): String = x match {\n  case 1 => \"one\"\n  case 2 => \"two\"\n  case _ => \"many\"\n}\nmatchTest(3)  // many\nmatchTest(1)  // one",
             "title": "Pattern Matching"
         },
         {
-            "location": "/scala/#loops",
+            "location": "/languages/scala/#loops",
             "text": "",
             "title": "Loops"
         },
         {
-            "location": "/scala/#for",
+            "location": "/languages/scala/#for",
             "text": "var a = 0;\n\n// for loop execution with a single range\nfor( a <- 1 to 10){\n   println(\"Value of a: \" + a );\n}  var a = 0;\nvar b = 0;\n\n// for loop execution with multiple ranges\nfor( a <- 1 to 3; b <- 1 to 3){\n   println( \"Value of a: \" + a );\n   println( \"Value of b: \" + b );\n}  var a = 0;\nval numList = List(1,2,3,4,5,6);\n\n// for loop execution with a collection\nfor( a <- numList ){\n   println( \"Value of a: \" + a );\n}  var a = 0;\nval numList = List(1,2,3,4,5,6,7,8,9,10);\n\n// for loop execution with multiple filters\nfor( a <- numList\n     if a != 3; if a < 8 ){\n   println( \"Value of a: \" + a );\n}",
             "title": "For"
         },
         {
-            "location": "/scala/#while",
+            "location": "/languages/scala/#while",
             "text": "var a = 10;\n\n// while loop execution\nwhile( a < 20 ){\n   println( \"Value of a: \" + a );\n   a = a + 1;\n}",
             "title": "While"
         },
         {
-            "location": "/go/",
+            "location": "/languages/go/",
             "text": "Go",
             "title": "Go"
         },
         {
-            "location": "/go/#go",
+            "location": "/languages/go/#go",
             "text": "",
             "title": "Go"
         },
         {
-            "location": "/docker/",
+            "location": "/containerisation/docker/",
             "text": "Docker",
             "title": "Docker"
         },
         {
-            "location": "/docker/#docker",
+            "location": "/containerisation/docker/#docker",
             "text": "",
             "title": "Docker"
         },
         {
-            "location": "/kubernetes/",
-            "text": "Kubernetes",
+            "location": "/containerisation/kubernetes/",
+            "text": "Kubernetes\n\n\nNotes based on practice following the Udemy course: \nLearn DevOps: The Complete Kubernetes Course\n.\n\n\nSee related GitHub code files \nhere\n.\n\n\n\n  \n\n\n\n\n\nVagrant Commands\n\n\nTo build a plain ubuntu box\n\n\nmkdir ubuntu\nvagrant init ubuntu/xenial64\nvagrant up\n\n\n\n\n\n\nDocker Commands\n\n\nThe -it flag will allow you to ctrl+c to close the running image\n\ndocker run -p 3000:3000 -it 0319d6e6a683\n\n\nThe -d flag will run service in the background allowing continued terminal access\n\ndocker run -p 3000:3000 -d 0319d6e6a683\n\n\nTo push an image to Docker Hub (required for Kubernetes access)\n\n\ndocker login\ndocker tag imageid your-login/docker-demo\ndocker push your-login/docker-demo\n\n\n\n\nTo tag an image during the build process\n\n\ndocker build -t your-login/docker-demo .\ndocker push your-login/docker-demo\n\n\n\n\n\n\nRunning Docker Image on Kubernetes\n\n\n\n\nBefore launching container based on Docker image need to create pod definition\n\n\nPod: describes an application running on Kubernetes\n\n\nService: contain one or more tightly coupled containers (that make up the app - easily communicate with local port numbers)\n\n\n\n\n\n\nSetup Application on Kubernetes\n\n\n\n\nkubectl create -f k8s/demopod-helloworld.yml\n\n\nkubectl describe pod nodehelloworld.example.com\n\n\nkubectl port-forward nodehelloworld.example.com 8081:3000\n\n\nkubectl expose pod nodehelloworld.example.com --type=NodePort --name=helloworld-service\n\n\nminikube service helloworld-service --url\n returns url of the service running\n= \nkubectl get service\n\n\n\n\n\n\nUseful Kubectl Commands (tie in with above example)\n\n\n\n\nkubectl attach helloworld.example.com\n\n\nkubectl exec helloworld.example.com -- ls /app\n lists file running inside container\n\n\nkubectl exec helloworld.example.com -- touch /app/test.txt\n creates file inside container  (will disappear if the container is killed - non-persistent data)\n\n\nkubectl describe service helloworld-service\n\n\nkubectl run -i -tty busybox --image=busybox --restart=Never -- sh\n\n\n\n\n\n\nUseful Generic Pod Commands\n\n\n\n\nkubectl get pod\n Get info about all running pods\n\n\nkubectl describe pod <pod>\n Describe one pod\n\n\nkubectl expose pod <pod> --port=444 --name=frontend\n Expose port of a pod (creates new service)\n\n\nkubectl port-forward <pod> 8080\n Port forward teh exposed pod port to your local machine\n\n\nkubectl attach <podname> -i\n Attach to the pod\n\n\nkubectl exec <pod> --command\n Execute a command on the pod\n\n\nkubectl label pods <pod> mylabel=awesome\n Add a new label to a pod\n\n\nkubectl run -i --tty busybox --image=busybox --restart=Never -- sh\n Run a shell in a pod - very useful for debugging. Once in you can run \ntelnet 172.17.0.5 3000\n to hit service and then command \nGET /\n\n\nkubectl scale --replicas=4 -f file.yaml\n Scales the number of pods replicated\n\n\nkubectl get rc\n Gets replica controllers\n\n\nkubectl scale --replicas=4 -f rc/helloworld-controller\n Scales the number of pods replicated\n\n\nkubectl delete rc/helloworld-controller\n Deletes controller\n\n\n\n\n\n\nKops Cluster Deployment\n\n\nAFTER SSHING INTO LINUX INSTANCE (vagrant via putty):\n\n\nsetup awscli\n\n\nsudo apt-get install python-pip\nsudo pip install awscli\naws configure (use IAM role details - with admin policy)\nls -ahl ~/.aws/ (verify credentials)\n\n\n\n\nsetup kubectl\n\n\nwget https://storage.googleapis.com/kubernetes-release/release/v1.6.1/bin/linux/amd64/kubectl\nsudo mv kubectl /usr/local/bin/\nsudo chmod +x /usr/local/bin/kubectl\nkubectl\n\n\n\n\nsetup keygen\n\n\nssh-keygen -f .ssh/id_rsa\ncat .ssh/id_rsa.pub\n\n\n\n\nrename kops installation\n\n\nsudo mv /usr/local/bin/kops-linux-amd64 /usr/local/bin/kops\n\n\ngenerate cluster with your s3 bucket with route53 dns zone\n\n\nkops create cluster --name=kubernetes.yourowndomain.com --state=s3://kops-state-randomhash --zones=eu-west-1a --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns-zone=kubernetes.yourowndomain.com\n\n\nkops update cluster kubernetes.yourowndomain.com --yes --state=s3://kops-state-randomhash\n\n\ncheck your cert and password to log into new cluster\n\n\ncat .kube/config\n\n\ncheck nodes are running\n\n\nkubectl get node\n\n\ntest own program on nodes\n\n\nkubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080\nkubectl expose deployment hello-minikube --type=NodePort\nkubectl get service\n\n\n\n\nat this point add custom rule to aws- using VPC dashbaord - select master node - modify inbound traffic - all allowed on the port of your app in this case: 31956\nTest it out: http://api.kubernetes.yourowndomain.com:31956/\n\n\nto delete and avoid payments\n\n\nkops delete cluster --name kubernetes.yourowndomain.com --state=s3://kops-state-randomhash\n\n\nto agree to delete\n\n\nkops delete cluster --name kubernetes.yourowndomain.com --state=s3://kops-state-randomhash --yes\n\n\n\n\nHorizontal -v- Vertical Scaling\n\n\nYou can only horizontally scale when your pod is stateless. (i.e. kubectl scale options).\nStateful pods cannot be horizontally scaled.",
             "title": "Kubernetes"
         },
         {
-            "location": "/kubernetes/#kubernetes",
-            "text": "",
+            "location": "/containerisation/kubernetes/#kubernetes",
+            "text": "Notes based on practice following the Udemy course:  Learn DevOps: The Complete Kubernetes Course .  See related GitHub code files  here .",
             "title": "Kubernetes"
+        },
+        {
+            "location": "/containerisation/kubernetes/#vagrant-commands",
+            "text": "To build a plain ubuntu box  mkdir ubuntu\nvagrant init ubuntu/xenial64\nvagrant up",
+            "title": "Vagrant Commands"
+        },
+        {
+            "location": "/containerisation/kubernetes/#docker-commands",
+            "text": "The -it flag will allow you to ctrl+c to close the running image docker run -p 3000:3000 -it 0319d6e6a683  The -d flag will run service in the background allowing continued terminal access docker run -p 3000:3000 -d 0319d6e6a683  To push an image to Docker Hub (required for Kubernetes access)  docker login\ndocker tag imageid your-login/docker-demo\ndocker push your-login/docker-demo  To tag an image during the build process  docker build -t your-login/docker-demo .\ndocker push your-login/docker-demo",
+            "title": "Docker Commands"
+        },
+        {
+            "location": "/containerisation/kubernetes/#running-docker-image-on-kubernetes",
+            "text": "Before launching container based on Docker image need to create pod definition  Pod: describes an application running on Kubernetes  Service: contain one or more tightly coupled containers (that make up the app - easily communicate with local port numbers)",
+            "title": "Running Docker Image on Kubernetes"
+        },
+        {
+            "location": "/containerisation/kubernetes/#setup-application-on-kubernetes",
+            "text": "kubectl create -f k8s/demopod-helloworld.yml  kubectl describe pod nodehelloworld.example.com  kubectl port-forward nodehelloworld.example.com 8081:3000  kubectl expose pod nodehelloworld.example.com --type=NodePort --name=helloworld-service  minikube service helloworld-service --url  returns url of the service running\n=  kubectl get service",
+            "title": "Setup Application on Kubernetes"
+        },
+        {
+            "location": "/containerisation/kubernetes/#useful-kubectl-commands-tie-in-with-above-example",
+            "text": "kubectl attach helloworld.example.com  kubectl exec helloworld.example.com -- ls /app  lists file running inside container  kubectl exec helloworld.example.com -- touch /app/test.txt  creates file inside container  (will disappear if the container is killed - non-persistent data)  kubectl describe service helloworld-service  kubectl run -i -tty busybox --image=busybox --restart=Never -- sh",
+            "title": "Useful Kubectl Commands (tie in with above example)"
+        },
+        {
+            "location": "/containerisation/kubernetes/#useful-generic-pod-commands",
+            "text": "kubectl get pod  Get info about all running pods  kubectl describe pod <pod>  Describe one pod  kubectl expose pod <pod> --port=444 --name=frontend  Expose port of a pod (creates new service)  kubectl port-forward <pod> 8080  Port forward teh exposed pod port to your local machine  kubectl attach <podname> -i  Attach to the pod  kubectl exec <pod> --command  Execute a command on the pod  kubectl label pods <pod> mylabel=awesome  Add a new label to a pod  kubectl run -i --tty busybox --image=busybox --restart=Never -- sh  Run a shell in a pod - very useful for debugging. Once in you can run  telnet 172.17.0.5 3000  to hit service and then command  GET /  kubectl scale --replicas=4 -f file.yaml  Scales the number of pods replicated  kubectl get rc  Gets replica controllers  kubectl scale --replicas=4 -f rc/helloworld-controller  Scales the number of pods replicated  kubectl delete rc/helloworld-controller  Deletes controller",
+            "title": "Useful Generic Pod Commands"
+        },
+        {
+            "location": "/containerisation/kubernetes/#kops-cluster-deployment",
+            "text": "AFTER SSHING INTO LINUX INSTANCE (vagrant via putty):  setup awscli  sudo apt-get install python-pip\nsudo pip install awscli\naws configure (use IAM role details - with admin policy)\nls -ahl ~/.aws/ (verify credentials)  setup kubectl  wget https://storage.googleapis.com/kubernetes-release/release/v1.6.1/bin/linux/amd64/kubectl\nsudo mv kubectl /usr/local/bin/\nsudo chmod +x /usr/local/bin/kubectl\nkubectl  setup keygen  ssh-keygen -f .ssh/id_rsa\ncat .ssh/id_rsa.pub  rename kops installation  sudo mv /usr/local/bin/kops-linux-amd64 /usr/local/bin/kops  generate cluster with your s3 bucket with route53 dns zone  kops create cluster --name=kubernetes.yourowndomain.com --state=s3://kops-state-randomhash --zones=eu-west-1a --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns-zone=kubernetes.yourowndomain.com  kops update cluster kubernetes.yourowndomain.com --yes --state=s3://kops-state-randomhash  check your cert and password to log into new cluster  cat .kube/config  check nodes are running  kubectl get node  test own program on nodes  kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080\nkubectl expose deployment hello-minikube --type=NodePort\nkubectl get service  at this point add custom rule to aws- using VPC dashbaord - select master node - modify inbound traffic - all allowed on the port of your app in this case: 31956\nTest it out: http://api.kubernetes.yourowndomain.com:31956/  to delete and avoid payments  kops delete cluster --name kubernetes.yourowndomain.com --state=s3://kops-state-randomhash  to agree to delete  kops delete cluster --name kubernetes.yourowndomain.com --state=s3://kops-state-randomhash --yes",
+            "title": "Kops Cluster Deployment"
+        },
+        {
+            "location": "/containerisation/kubernetes/#horizontal-v-vertical-scaling",
+            "text": "You can only horizontally scale when your pod is stateless. (i.e. kubectl scale options).\nStateful pods cannot be horizontally scaled.",
+            "title": "Horizontal -v- Vertical Scaling"
         }
     ]
 }

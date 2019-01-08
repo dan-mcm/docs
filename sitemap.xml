@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-05-18</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,32 +12,32 @@
     
         
     <url>
-     <loc>/python/</loc>
-     <lastmod>2018-05-18</lastmod>
+     <loc>/languages/python/</loc>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/javascript/</loc>
-     <lastmod>2018-05-18</lastmod>
+     <loc>/languages/javascript/</loc>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/java/</loc>
-     <lastmod>2018-05-18</lastmod>
+     <loc>/languages/java/</loc>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/scala/</loc>
-     <lastmod>2018-05-18</lastmod>
+     <loc>/languages/scala/</loc>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/go/</loc>
-     <lastmod>2018-05-18</lastmod>
+     <loc>/languages/go/</loc>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -46,14 +46,14 @@
     
         
     <url>
-     <loc>/docker/</loc>
-     <lastmod>2018-05-18</lastmod>
+     <loc>/containerisation/docker/</loc>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/kubernetes/</loc>
-     <lastmod>2018-05-18</lastmod>
+     <loc>/containerisation/kubernetes/</loc>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

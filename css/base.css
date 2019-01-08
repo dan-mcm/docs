@@ -43,7 +43,7 @@ ul.nav .main {
 }
 
 .clicky :target::before {
-  animation-name: collapse-anchor-padding-2;
+    animation-name: collapse-anchor-padding-2;
 }
 
 @keyframes collapse-anchor-padding-1 {
@@ -61,9 +61,13 @@ ul.nav .main {
 }
 
 pre, code {
-    background: #151515;
-    color: #888;
-    border: 1px solid #030303;
+    background: #1c1e22;
+    border: solid 1px #0c0d0e;
+    color: #c8c8c8;
+}
+
+code {
+    padding: 1px 3px;
 }
 
 pre code {
@@ -72,7 +76,7 @@ pre code {
 }
 
 a code {
-    color: #2a9fd6;
+    color: #fff;
 }
 
 kbd {
@@ -100,24 +104,24 @@ footer {
 
 .admonition {
     margin-bottom: 20px;
-    border: 1px solid #282828;
+    border: 1px solid #000;
     border-radius: 4px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    color: #888;
-    background-color: #222;
+    background-color: #2e3338;
 }
 
 .admonition > .admonition-title {
     margin: 0;
     padding: 10px 15px;
-    border-top-right-radius: 3px;
+    border-bottom: 1px solid #000;
     border-top-left-radius: 3px;
-    border-bottom: 1px solid #282828;
-    background-color: #3c3c3c;
+    border-top-right-radius: 3px;
+    color: #fff;
+    background-color: #3e444c;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 .admonition > * {
@@ -136,31 +140,16 @@ footer {
 
 /* Style each kind of admonition. */
 
-.admonition.note, .admonition.note > .admonition-title {
-    border-color: #6e2caf;
-}
-
 .admonition.note > .admonition-title {
-    color: #fff;
-    background-color: #9933cc;
-}
-
-.admonition.warning, .admonition.warning > .admonition-title {
-    border-color: #f05800;
+    background-color: #5bc0de;
 }
 
 .admonition.warning > .admonition-title {
-    color: #fff;
-    background-color: #ff8800;
-}
-
-.admonition.danger, .admonition.danger > .admonition-title {
-    border-color: #bd001f;
+    background-color: #f89406;
 }
 
 .admonition.danger > .admonition-title {
-    color: #fff;
-    background-color: #cc0000;
+    background-color: #ee5f5b;
 }
 
 /*
