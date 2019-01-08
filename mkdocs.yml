@@ -2,12 +2,12 @@ site_name: Dans Docs
 pages:
   - Home: index.md
   - Languages:
-    - Python: python.md
-    - JavaScript: javascript.md
-    - Java: java.md
-    - Scala: scala.md
-    - Go: go.md
+    - Python: languages/python.md
+    - JavaScript: languages/javascript.md
+    - Java: languages/java.md
+    - Scala: languages/scala.md
+    - Go: languages/go.md
   - Containerisation:
-    - Docker: docker.md
-    - Kubernetes: kubernetes.md
-theme: cyborg
+    - Docker: containerisation/docker.md
+    - Kubernetes: containerisation/kubernetes.md
+theme: slate
