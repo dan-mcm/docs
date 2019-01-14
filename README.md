@@ -18,3 +18,8 @@ To publish to GitHub Pages:
 ```
 mkdocs gh-deploy
 ```
+
+## Markdown Extension Resources
+
+* [Python Markdown](https://python-markdown.github.io/sitemap)
+* [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)

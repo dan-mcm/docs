@@ -1,13 +1,38 @@
 site_name: Dans Docs
-pages:
+nav:
   - Home: index.md
+
   - Languages:
     - Python: languages/python.md
     - JavaScript: languages/javascript.md
     - Java: languages/java.md
     - Scala: languages/scala.md
     - Go: languages/go.md
+
   - Containerisation:
     - Docker: containerisation/docker.md
     - Kubernetes: containerisation/kubernetes.md
-theme: slate
+
+theme:
+  name: material
+  favicon: https://lh3.googleusercontent.com/m2Zy-ujFWYyQUhg3uIuG_YDx00HB1v08cQ4CBJnd-v6LMPBpps3C4kvQriV0nObfI-I
+  logo: https://lh3.googleusercontent.com/m2Zy-ujFWYyQUhg3uIuG_YDx00HB1v08cQ4CBJnd-v6LMPBpps3C4kvQriV0nObfI-I
+
+  feature:
+    tabs: true
+
+  palette:
+    primary: teal
+    accent: cyan
+
+repo_url: https://github.com/daniel40392/docs
+repo_name: Dan's Docs
+edit_uri: edit/master/docs
+
+markdown_extensions:
+  - admonition
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.mark
+  - smarty

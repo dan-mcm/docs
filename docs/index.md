@@ -4,10 +4,9 @@
   <img src="https://media.giphy.com/media/d6FUKcr5FkiDS/giphy.gif"/>
 </p>
 
-<br/>
 ## Who am I?
 
-**Daniel McMahon** <- Dats me.
+**Daniel McMahon**.
 
 Connect
 
@@ -28,7 +27,6 @@ Work
 - Student Teacher 2012-2013
 - Various Retail Locations 2007-2008
 
-<br/>
 ## What are these docs and who are they for?
 
 
@@ -47,7 +45,6 @@ Work
 
 }
 
-<br/>
 ## Why am I using mkdocs?
 
 It's quick and easy.
