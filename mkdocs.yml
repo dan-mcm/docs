@@ -1,6 +1,7 @@
 site_name: Dans Docs
 nav:
   - Home: index.md
+  - Publications: publications/dev.md
 
   - Languages:
     - Python: languages/python.md
