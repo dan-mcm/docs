@@ -36,7 +36,7 @@
     
     
       
-        <title>Docker - Dans Docs</title>
+        <title>Publications - Dans Docs</title>
       
     
     
@@ -99,7 +99,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#docker" tabindex="1" class="md-skip">
+      <a href="#publications" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
                 Dans Docs
               </span>
               <span class="md-header-nav__topic">
-                Docker
+                Publications
               </span>
             
           
@@ -197,16 +197,14 @@
       
         
 
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<nav class="md-tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../.." title="Home" class="md-tabs__link">
+      <a href="../.." title="Home" class="md-tabs__link md-tabs__link--active">
         Home
       </a>
     
@@ -233,7 +231,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" title="Containerisation" class="md-tabs__link md-tabs__link--active">
+        <a href="../../containerisation/docker/" title="Containerisation" class="md-tabs__link">
           Containerisation
         </a>
       
@@ -302,11 +300,49 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../publications/dev/" title="Publications" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Publications
+      </label>
+    
+    <a href="./" title="Publications" class="md-nav__link md-nav__link--active">
       Publications
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2018-devto-publications" title="2018 - DEV.to Publications" class="md-nav__link">
+    2018 - DEV.to Publications
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -398,12 +434,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Containerisation
@@ -419,49 +453,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Docker
-      </label>
-    
-    <a href="./" title="Docker" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../containerisation/docker/" title="Docker" class="md-nav__link">
       Docker
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#docker-commands" title="Docker Commands" class="md-nav__link">
-    Docker Commands
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -471,7 +467,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../kubernetes/" title="Kubernetes" class="md-nav__link">
+    <a href="../../containerisation/kubernetes/" title="Kubernetes" class="md-nav__link">
       Kubernetes
     </a>
   </li>
@@ -503,8 +499,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker-commands" title="Docker Commands" class="md-nav__link">
-    Docker Commands
+  <a href="#2018-devto-publications" title="2018 - DEV.to Publications" class="md-nav__link">
+    2018 - DEV.to Publications
   </a>
   
 </li>
@@ -525,28 +521,21 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/daniel40392/docs/edit/master/docs/containerisation/docker.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/daniel40392/docs/edit/master/docs/publications/dev.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="docker">Docker</h1>
-<p align="center">
-  <img src="https://media.giphy.com/media/CB4FhLQiJX1QI/giphy.gif"/>
-</p>
-
-<h2 id="docker-commands">Docker Commands</h2>
-<p>The -it flag will allow you to ctrl+c to close the running image
-<code>docker run -p 3000:3000 -it 0319d6e6a683</code></p>
-<p>The -d flag will run service in the background allowing continued terminal access
-<code>docker run -p 3000:3000 -d 0319d6e6a683</code></p>
-<p>To push an image to Docker Hub (required for Kubernetes access)
-<div class="highlight"><pre><span></span>docker login
-docker tag imageid your-login/docker-demo
-docker push your-login/docker-demo
-</pre></div></p>
-<p>To tag an image during the build process
-<div class="highlight"><pre><span></span>docker build -t your-login/docker-demo .
-docker push your-login/docker-demo
-</pre></div></p>
+                <h1 id="publications">Publications</h1>
+<p>My primary publications are posted over at <a href="https://dev.to/">dev.together</a>. You can access my <a href="https://dev.to/daniel40392">main account</a> for an up to date list of my recent activity/publications or review the ocassionally updated list below.</p>
+<h2 id="2018-devto-publications">2018 - DEV.to Publications</h2>
+<ul>
+<li><a href="https://dev.to/daniel40392/visualizing-fibonacci-for-the-music-lover-in-you-2609">Visualizing Fibonacci: For the Music Lover in You!</a></li>
+<li><a href="https://dev.to/daniel40392/leveling-up-from-create-react-app-to-express--some-neat-styling-libraries-130p">Leveling Up: From Create-React-App to Express (&amp; some neat styling libraries)</a></li>
+<li><a href="https://dev.to/daniel40392/building-a-portfolio-the-painful-way-3im8">Building A Portfolio: The Painful Way</a></li>
+<li><a href="https://dev.to/daniel40392/the-inspiration-api-a-project-built-with-scala--play-framework-195d">The Inspiration API: A project built with Scala &amp; Play Framework</a></li>
+<li><a href="https://dev.to/daniel40392/a-year-in-professional-software-development-1l7a">A year in Professional Software Development</a></li>
+<li><a href="https://dev.to/daniel40392/integrating-docker-with-your-personal-projects-19cl">Integrating Docker with your Personal Projects</a></li>
+<li><a href="https://dev.to/daniel40392/lucas---a-webscraper-in-go-3jkc">Lucas - A Webscraper in Go</a></li>
+</ul>
                 
                   
                 
@@ -567,7 +556,7 @@ docker push your-login/docker-demo
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../languages/go/" title="Go" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -576,19 +565,19 @@ docker push your-login/docker-demo
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Go
+                Home
               </span>
             </div>
           </a>
         
         
-          <a href="../kubernetes/" title="Kubernetes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../languages/python/" title="Python" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Kubernetes
+                Python
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
