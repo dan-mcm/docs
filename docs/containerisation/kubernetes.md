@@ -2,7 +2,7 @@
 
 Notes based on practice following the Udemy course: [Learn DevOps: The Complete Kubernetes Course](https://www.udemy.com/learn-devops-the-complete-kubernetes-course/).
 
-See related GitHub code files [here](https://github.com/daniel40392/kubernetes-course).
+See related GitHub code files [here](https://github.com/wardviaene/kubernetes-course).
 
 <p align="center">
   <img src="https://media.giphy.com/media/991T0LFIrKGfS/giphy.gif"/>
