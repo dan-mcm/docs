@@ -555,6 +555,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#readiness-probes" title="Readiness Probes" class="md-nav__link">
+    Readiness Probes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pod-state" title="Pod State" class="md-nav__link">
+    Pod State
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secrets" title="Secrets" class="md-nav__link">
+    Secrets
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-secrets" title="Using Secrets" class="md-nav__link">
+    Using Secrets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -684,6 +718,40 @@
   <a href="#health-checks" title="Health Checks" class="md-nav__link">
     Health Checks
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#readiness-probes" title="Readiness Probes" class="md-nav__link">
+    Readiness Probes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pod-state" title="Pod State" class="md-nav__link">
+    Pod State
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secrets" title="Secrets" class="md-nav__link">
+    Secrets
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-secrets" title="Using Secrets" class="md-nav__link">
+    Using Secrets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -884,6 +952,103 @@ kubectl label nodes node2 <span class="nv">hardware</span><span class="o">=</spa
 </pre></div>
 
 <p>You can describe pods to see the liveness in effect and success/failure counts</p>
+<h2 id="readiness-probes">Readiness Probes</h2>
+<ul>
+<li>
+<p>livenessProbes: indicates whether container is Running</p>
+</li>
+<li>
+<p>readinessProbes: indicates whether container is ready to serve</p>
+</li>
+<li>make sure at startup the pod will onyl receive traffic when test succeeds</li>
+<li>you can use them in conjunction</li>
+</ul>
+<h2 id="pod-state">Pod State</h2>
+<ul>
+<li>Pod Status <code>kubectl get pods</code> [Pending/Succeeded/Failed/Unknown]</li>
+<li>Pod Condition <code>kubectl describe pod PODNAME</code> [PodScheduled/Ready/Initialized/Unschedulable/ContainersReady]</li>
+<li>Container State <code>kubectl get pod &lt;podname&gt;</code>[Running/Terminated/Waiting]</li>
+</ul>
+<h2 id="secrets">Secrets</h2>
+<ul>
+<li>A way to distribute credentials, keys, passwords or data to pods</li>
+</ul>
+<p>Use in the following ways:</p>
+<ul>
+<li>Use secrets as env varaiables</li>
+<li>Use secrets as a file in a pod</li>
+<li>Uses volumes to be mounted in a container with files, can be used for dotenv files or your app can just read this file.</li>
+<li>Use an external image to pull secrets from a private image registry</li>
+</ul>
+<p>To generate secrets using files:</p>
+<div class="highlight"><pre><span></span><span class="nb">echo</span> -n <span class="s2">&quot;root&quot;</span> &gt; ./username.txt
+<span class="nb">echo</span> -n <span class="s2">&quot;password&quot;</span> &gt; ./password.txt
+kubectl create secret generic db-user-pass --from-file<span class="o">=</span>./username.txt --from-file<span class="o">=</span>./password.txt
+</pre></div>
+
+<p>Can also be an SSH key or SSL cert:
+<div class="highlight"><pre><span></span>kubectl create secret generic ssl-certificate --from-file<span class="o">=</span>ssh-privatekey<span class="o">=</span>~/.sshid_rsa --ssl-cert<span class="o">=</span>mysslcert.crt
+</pre></div></p>
+<p>To generate secrets using yaml</p>
+<div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Secret</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">db-secret</span>
+<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Opaque</span>
+<span class="nt">data</span><span class="p">:</span>
+  <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">blergh</span> <span class="c1"># base64 encoded</span>
+  <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">blergh2</span> <span class="c1"># base64 encoded</span>
+</pre></div>
+
+<div class="highlight"><pre><span></span><span class="nb">echo</span> -n <span class="s2">&quot;blergh&quot;</span> <span class="p">|</span> base64
+</pre></div>
+
+<h3 id="using-secrets">Using Secrets</h3>
+<p>Create a pod that exposes secrets as env variables:</p>
+<div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pod</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodehelloworld.example.com</span>
+  <span class="nt">labels</span><span class="p">:</span>
+    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">helloworld</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">containers</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">k8s-demo</span>
+  <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">daniel40392/k8s-demo</span>
+  <span class="nt">ports</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>
+  <span class="nt">env</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SECRET_USERNAME</span>
+    <span class="nt">valueFrom</span><span class="p">:</span>
+      <span class="nt">secretKeyRef</span><span class="p">:</span>
+        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">db-secret</span>
+        <span class="nt">key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">username</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SECRET_PASSWORD</span>
+    <span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
+</pre></div>
+
+<p>Alternatively you can provide the secrets in a file:</p>
+<div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pod</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodehelloworld.example.com</span>
+  <span class="nt">labels</span><span class="p">:</span>
+    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">helloworld</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">containers</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">k8s-demo</span>
+  <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">daniel40392/k8s-demo</span>
+  <span class="nt">ports</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>
+  <span class="nt">volumeMounts</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">credvolume</span>
+    <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/etc/creds</span>
+    <span class="nt">readOnly</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">volumes</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">credvolume</span>
+  <span class="nt">secret</span><span class="p">:</span>
+    <span class="nt">secretName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">db-secrets</span>
+</pre></div>
                 
                   
                 
