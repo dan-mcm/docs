@@ -207,3 +207,111 @@ spec:
 ```
 
 You can describe pods to see the liveness in effect and success/failure counts
+
+## Readiness Probes
+
+* livenessProbes: indicates whether container is Running
+
+* readinessProbes: indicates whether container is ready to serve
+  * make sure at startup the pod will onyl receive traffic when test succeeds
+  * you can use them in conjunction
+
+## Pod State
+
+* Pod Status `kubectl get pods` [Pending/Succeeded/Failed/Unknown]
+* Pod Condition `kubectl describe pod PODNAME` [PodScheduled/Ready/Initialized/Unschedulable/ContainersReady]
+* Container State `kubectl get pod <podname>`[Running/Terminated/Waiting]
+
+## Secrets
+
+* A way to distribute credentials, keys, passwords or data to pods
+
+Use in the following ways:
+
+* Use secrets as env varaiables
+* Use secrets as a file in a pod
+  * Uses volumes to be mounted in a container with files, can be used for dotenv files or your app can just read this file.
+* Use an external image to pull secrets from a private image registry
+
+To generate secrets using files:
+
+```bash
+echo -n "root" > ./username.txt
+echo -n "password" > ./password.txt
+kubectl create secret generic db-user-pass --from-file=./username.txt --from-file=./password.txt
+```
+
+Can also be an SSH key or SSL cert:
+```bash
+kubectl create secret generic ssl-certificate --from-file=ssh-privatekey=~/.sshid_rsa --ssl-cert=mysslcert.crt
+```
+
+To generate secrets using yaml
+
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: db-secret
+type: Opaque
+data:
+  password: blergh # base64 encoded
+  username: blergh2 # base64 encoded
+```
+
+```bash
+echo -n "blergh" | base64
+```
+
+
+### Using Secrets
+
+Create a pod that exposes secrets as env variables:
+
+```yaml
+apiVersion: v1
+kind: pod
+metadata:
+  name: nodehelloworld.example.com
+  labels:
+    app: helloworld
+spec:
+  containers:
+  - name: k8s-demo
+  image: daniel40392/k8s-demo
+  ports:
+  - containerPort: 3000
+  env:
+    - name: SECRET_USERNAME
+    valueFrom:
+      secretKeyRef:
+        name: db-secret
+        key: username
+    - name: SECRET_PASSWORD
+    [...]
+```
+
+Alternatively you can provide the secrets in a file:
+
+```yaml
+apiVersion: v1
+kind: pod
+metadata:
+  name: nodehelloworld.example.com
+  labels:
+    app: helloworld
+spec:
+  containers:
+  - name: k8s-demo
+  image: daniel40392/k8s-demo
+  ports:
+  - containerPort: 3000
+  volumeMounts:
+  - name: credvolume
+    mountPath: /etc/creds
+    readOnly: true
+  volumes:
+  - name: credvolume
+  secret:
+    secretName: db-secrets
+```
