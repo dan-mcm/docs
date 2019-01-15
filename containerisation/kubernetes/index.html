@@ -584,6 +584,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#web-ui" title="Web UI" class="md-nav__link">
+    Web UI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-dashboard" title="Start dashboard" class="md-nav__link">
+    Start dashboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-user" title="Create user" class="md-nav__link">
+    Create user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-login-token" title="Get login token:" class="md-nav__link">
+    Get login token:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-to-dashboard" title="Login to dashboard" class="md-nav__link">
+    Login to dashboard
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -746,6 +781,41 @@
           <li class="md-nav__item">
   <a href="#using-secrets" title="Using Secrets" class="md-nav__link">
     Using Secrets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-ui" title="Web UI" class="md-nav__link">
+    Web UI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-dashboard" title="Start dashboard" class="md-nav__link">
+    Start dashboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-user" title="Create user" class="md-nav__link">
+    Create user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-login-token" title="Get login token:" class="md-nav__link">
+    Get login token:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-to-dashboard" title="Login to dashboard" class="md-nav__link">
+    Login to dashboard
   </a>
   
 </li>
@@ -1049,6 +1119,26 @@ kubectl create secret generic db-user-pass --from-file<span class="o">=</span>./
   <span class="nt">secret</span><span class="p">:</span>
     <span class="nt">secretName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">db-secrets</span>
 </pre></div>
+
+<h3 id="web-ui">Web UI</h3>
+<h3 id="start-dashboard">Start dashboard</h3>
+<p>Create dashboard:
+<div class="highlight"><pre><span></span>kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+</pre></div></p>
+<h3 id="create-user">Create user</h3>
+<p>Create sample user (if using RBAC - on by default on new installs with kops / kubeadm):
+<div class="highlight"><pre><span></span>kubectl create -f sample-user.yaml
+</pre></div></p>
+<h3 id="get-login-token">Get login token:</h3>
+<div class="highlight"><pre><span></span>kubectl -n kube-system get secret | grep admin-user
+kubectl -n kube-system describe secret admin-user-token-&lt;id displayed by previous command&gt;
+</pre></div>
+
+<h3 id="login-to-dashboard">Login to dashboard</h3>
+<p>Go to <a href="http://api.yourdomain.com:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/login">http://api.yourdomain.com:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/login</a></p>
+<p>Login: admin
+Password: the password that is listed in ~/.kube/config (open file in editor and look for &ldquo;password: &hellip;&rdquo;</p>
+<p>Choose for login token and enter the login token from the previous ste</p>
                 
                   
                 
