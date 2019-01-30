@@ -241,6 +241,19 @@
   
 
       
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../aws/aws/" title="AWS" class="md-tabs__link">
+          AWS
+        </a>
+      
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -584,18 +597,12 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#web-ui" title="Web UI" class="md-nav__link">
     Web UI
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#start-dashboard" title="Start dashboard" class="md-nav__link">
@@ -638,6 +645,114 @@
   
 </nav>
     
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      AWS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        AWS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/aws/" title="AWS" class="md-nav__link">
+      AWS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/cli/" title="CLI" class="md-nav__link">
+      CLI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/iam/" title="IAM" class="md-nav__link">
+      IAM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/ec2/" title="EC2" class="md-nav__link">
+      EC2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/rds/" title="RDS" class="md-nav__link">
+      RDS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/elb/" title="ELB" class="md-nav__link">
+      ELB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/r53/" title="Route 53" class="md-nav__link">
+      Route 53
+    </a>
   </li>
 
         
@@ -791,18 +906,12 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#web-ui" title="Web UI" class="md-nav__link">
     Web UI
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#start-dashboard" title="Start dashboard" class="md-nav__link">
@@ -993,44 +1102,44 @@ Stateful pods cannot be horizontally scaled.</p>
 kubectl label nodes node2 <span class="nv">hardware</span><span class="o">=</span><span class="nv">low</span><span class="o">=</span>spec
 </pre></div></p>
 <p>Second step: add a pod that uses those labels:
-<div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pod</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodehelloworld.example.com</span>
-  <span class="nt">labels</span><span class="p">:</span>
-    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">helloworld</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">containers</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">k8s-demo</span>
-  <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">daniel40392/k8s-demo</span>
-  <span class="nt">ports</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>
-<span class="nt">nodeSelector</span><span class="p">:</span>
-  <span class="nt">hardware</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">high-spec</span>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="l l-Scalar l-Scalar-Plain">kind</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">pod</span>
+<span class="l l-Scalar l-Scalar-Plain">metadata</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nodehelloworld.example.com</span>
+  <span class="l l-Scalar l-Scalar-Plain">labels</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">app</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">helloworld</span>
+<span class="l l-Scalar l-Scalar-Plain">spec</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">containers</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">k8s-demo</span>
+  <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">daniel40392/k8s-demo</span>
+  <span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">containerPort</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>
+<span class="l l-Scalar l-Scalar-Plain">nodeSelector</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">hardware</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">high-spec</span>
 </pre></div></p>
 <h2 id="health-checks">Health Checks</h2>
 <p>To detect and resolve problems with you app, you can run health checks</p>
 <p>2 types of healthchecks:
 <em> Running a command in the container periodically
 </em> Periodic checks on a URL (HTTP)</p>
-<div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pod</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodehelloworld.example.com</span>
-  <span class="nt">labels</span><span class="p">:</span>
-    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">helloworld</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">containers</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">k8s-demo</span>
-  <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">daniel40392/k8s-demo</span>
-  <span class="nt">ports</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>
-  <span class="nt">livenessProbe</span><span class="p">:</span>
-    <span class="nt">httpGet</span><span class="p">:</span>
-      <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/</span>
-      <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>
-    <span class="nt">initialDelaySeconds</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
-    <span class="nt">timeoutSeconds</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="l l-Scalar l-Scalar-Plain">kind</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">pod</span>
+<span class="l l-Scalar l-Scalar-Plain">metadata</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nodehelloworld.example.com</span>
+  <span class="l l-Scalar l-Scalar-Plain">labels</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">app</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">helloworld</span>
+<span class="l l-Scalar l-Scalar-Plain">spec</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">containers</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">k8s-demo</span>
+  <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">daniel40392/k8s-demo</span>
+  <span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">containerPort</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>
+  <span class="l l-Scalar l-Scalar-Plain">livenessProbe</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">httpGet</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">path</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/</span>
+      <span class="l l-Scalar l-Scalar-Plain">port</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>
+    <span class="l l-Scalar l-Scalar-Plain">initialDelaySeconds</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">15</span>
+    <span class="l l-Scalar l-Scalar-Plain">timeoutSeconds</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
 </pre></div>
 
 <p>You can describe pods to see the liveness in effect and success/failure counts</p>
@@ -1072,14 +1181,14 @@ kubectl create secret generic db-user-pass --from-file<span class="o">=</span>./
 <div class="highlight"><pre><span></span>kubectl create secret generic ssl-certificate --from-file<span class="o">=</span>ssh-privatekey<span class="o">=</span>~/.sshid_rsa --ssl-cert<span class="o">=</span>mysslcert.crt
 </pre></div></p>
 <p>To generate secrets using yaml</p>
-<div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Secret</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">db-secret</span>
-<span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Opaque</span>
-<span class="nt">data</span><span class="p">:</span>
-  <span class="nt">password</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">blergh</span> <span class="c1"># base64 encoded</span>
-  <span class="nt">username</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">blergh2</span> <span class="c1"># base64 encoded</span>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="l l-Scalar l-Scalar-Plain">kind</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Secret</span>
+<span class="l l-Scalar l-Scalar-Plain">metadata</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">db-secret</span>
+<span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Opaque</span>
+<span class="l l-Scalar l-Scalar-Plain">data</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">password</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">blergh</span> <span class="c1"># base64 encoded</span>
+  <span class="l l-Scalar l-Scalar-Plain">username</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">blergh2</span> <span class="c1"># base64 encoded</span>
 </pre></div>
 
 <div class="highlight"><pre><span></span><span class="nb">echo</span> -n <span class="s2">&quot;blergh&quot;</span> <span class="p">|</span> base64
@@ -1087,52 +1196,52 @@ kubectl create secret generic db-user-pass --from-file<span class="o">=</span>./
 
 <h3 id="using-secrets">Using Secrets</h3>
 <p>Create a pod that exposes secrets as env variables:</p>
-<div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pod</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodehelloworld.example.com</span>
-  <span class="nt">labels</span><span class="p">:</span>
-    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">helloworld</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">containers</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">k8s-demo</span>
-  <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">daniel40392/k8s-demo</span>
-  <span class="nt">ports</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>
-  <span class="nt">env</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SECRET_USERNAME</span>
-    <span class="nt">valueFrom</span><span class="p">:</span>
-      <span class="nt">secretKeyRef</span><span class="p">:</span>
-        <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">db-secret</span>
-        <span class="nt">key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">username</span>
-    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SECRET_PASSWORD</span>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="l l-Scalar l-Scalar-Plain">kind</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">pod</span>
+<span class="l l-Scalar l-Scalar-Plain">metadata</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nodehelloworld.example.com</span>
+  <span class="l l-Scalar l-Scalar-Plain">labels</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">app</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">helloworld</span>
+<span class="l l-Scalar l-Scalar-Plain">spec</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">containers</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">k8s-demo</span>
+  <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">daniel40392/k8s-demo</span>
+  <span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">containerPort</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>
+  <span class="l l-Scalar l-Scalar-Plain">env</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SECRET_USERNAME</span>
+    <span class="l l-Scalar l-Scalar-Plain">valueFrom</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">secretKeyRef</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">db-secret</span>
+        <span class="l l-Scalar l-Scalar-Plain">key</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">username</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">SECRET_PASSWORD</span>
     <span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
 </pre></div>
 
 <p>Alternatively you can provide the secrets in a file:</p>
-<div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pod</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodehelloworld.example.com</span>
-  <span class="nt">labels</span><span class="p">:</span>
-    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">helloworld</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">containers</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">k8s-demo</span>
-  <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">daniel40392/k8s-demo</span>
-  <span class="nt">ports</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>
-  <span class="nt">volumeMounts</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">credvolume</span>
-    <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/etc/creds</span>
-    <span class="nt">readOnly</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-  <span class="nt">volumes</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">credvolume</span>
-  <span class="nt">secret</span><span class="p">:</span>
-    <span class="nt">secretName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">db-secrets</span>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="l l-Scalar l-Scalar-Plain">kind</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">pod</span>
+<span class="l l-Scalar l-Scalar-Plain">metadata</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">nodehelloworld.example.com</span>
+  <span class="l l-Scalar l-Scalar-Plain">labels</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">app</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">helloworld</span>
+<span class="l l-Scalar l-Scalar-Plain">spec</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">containers</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">k8s-demo</span>
+  <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">daniel40392/k8s-demo</span>
+  <span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">containerPort</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">3000</span>
+  <span class="l l-Scalar l-Scalar-Plain">volumeMounts</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">credvolume</span>
+    <span class="l l-Scalar l-Scalar-Plain">mountPath</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/etc/creds</span>
+    <span class="l l-Scalar l-Scalar-Plain">readOnly</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="l l-Scalar l-Scalar-Plain">volumes</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">credvolume</span>
+  <span class="l l-Scalar l-Scalar-Plain">secret</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">secretName</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">db-secrets</span>
 </pre></div>
 
-<h2 id="web-ui">Web UI</h2>
+<h3 id="web-ui">Web UI</h3>
 <h3 id="start-dashboard">Start dashboard</h3>
 <p>Create dashboard:
 <div class="highlight"><pre><span></span>kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
@@ -1185,6 +1294,20 @@ Password: the password that is listed in ~/.kube/config (open file in editor and
             </div>
           </a>
         
+        
+          <a href="../../aws/aws/" title="AWS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                AWS
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
