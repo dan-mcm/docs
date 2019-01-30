@@ -50,18 +50,27 @@ Data warehousing DBs use different types of architecture both from a DB perspect
 
 ## Database Types - Summary:
 
-1. RDS - OLTP
-  * SQL
-  * MySQL
-  * PostgreSQL
-  * Oracle
-  * Aurora
-  * MariaDB
-2. DynamoDB - No SQL
-3. RedShift - OLAP
-4. Elasticache - In memory Caching
-  * Memcached
-  * Redis
+_RDS - OLTP_
+
+* SQL
+* MySQL
+* PostgreSQL
+* Oracle
+* Aurora
+* MariaDB
+
+_No SQL_
+
+* DynamoDB
+
+_OLAP_
+
+* Redshift
+
+_Elasticache - In Memory Caching_
+
+* Memcached
+* Redis
 
 ## RDS Lab
 
