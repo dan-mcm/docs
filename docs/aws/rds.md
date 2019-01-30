@@ -121,3 +121,59 @@ Go back to http://34.247.73.41/connect.php and you should see a ‘connected to 
 Common Troubleshooting - RDS & EC2 in different security groups.
 
 Open port 3306 to the security group the RDS instance is in, open up mysql and allow to the security group your EC2 instance is in so the two can talk.
+
+## Automated Backups
+
+* Automated will allow you to recover any point within a 'retention period'
+  * Recover will choose most recent daily backup and apply those transaction logs (point in time recovery down to a second within the retention period (1-365 days))
+* Enabled by default - stored in S3 & free storage space equal to size of DB.
+* Taken within a defined window, during window storage I/O may be suspended while data is being backup -> may experience some low-latency
+
+## Snapshots
+
+* User initiated -> stored even after deletion of original RDS instance.
+* Whenever restored, there will be a new RDS instance with a new DNS endpoint.
+
+## Encryption
+
+Encryption at rest is supported for MySQL, Oracle, SQL Server, PostgreSQL, MariaDB & Aurora. Done using AWS KMS service. Once RDS is encrypted data stored arest in underlying storage is encrypted as well as its automated backups, read replicas & snapshots. Currently encrypting existing DB instance isn't supported.
+
+## Multi-AZ (disaster recovery)
+
+_synchronous_
+
+Allows exact copy of prod DB in another availability zone. AWS handles replication, so when your prod DB is written to, the write will auto sync to the stand by DB.
+
+In event of planned DB maintenance, DB failure or Availability one failure, RDS will automatically failover to the standby so DB operations can resume without admin intervention.
+
+Used only for disaster recovery -> not used for improving performance.
+
+Available on:
+
+* SQL Server
+* Oracle
+* MySQL Server
+* PostgreSQL
+* MariaDB
+* Aurora (enabled by default)
+
+## Read Replicas (performance improvements)
+
+_asynchronous_
+
+* Used for scaling not disaster recovery.
+* Must have auto backups turned on in order to deploy a read replicas
+* You can have up to 5 read replica copies of any DB
+* You can have read replicas of replicas (watch latency)
+* Each read replica will have its own DNS endpoint
+* You can have read replicas that have Multi-AZ
+* You can create read replicas of Multi-AZ source DBs
+* Read replicas can be promoted to be their own DBs, this breaks the replication.
+* You can have a read replica in a second region.
+
+Available on:
+
+* MySQL
+* PostgreSQL
+* MariaDB
+* Aurora
