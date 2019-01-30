@@ -14,6 +14,15 @@ nav:
     - Docker: containerisation/docker.md
     - Kubernetes: containerisation/kubernetes.md
 
+  - AWS:
+    - AWS: aws/aws.md
+    - CLI: aws/cli.md
+    - IAM: aws/iam.md
+    - EC2: aws/ec2.md
+    - RDS: aws/rds.md
+    - ELB: aws/elb.md
+    - Route 53: aws/r53.md
+
 theme:
   name: material
   favicon: https://lh3.googleusercontent.com/m2Zy-ujFWYyQUhg3uIuG_YDx00HB1v08cQ4CBJnd-v6LMPBpps3C4kvQriV0nObfI-I
