@@ -733,11 +733,13 @@
 <h3 id="redis">Redis</h3>
 <p>Popular open source in-memory key-value store supports data structs such as sorted sets and lists. Supports master/slave replication and Multi-AZ which can be used to achieve cross AZ redundancy.</p>
 <p>ElastiCache manages Redis more as a relational DB. Redis ElastiCache clusters are managed as stateful entities that include failover, similar to how Amazon RDS manages DB failover.</p>
-<p>Use Cases:
-<em> More adv data types such as lists hashes &amp; sets
-</em> Sorting and ranking datasets in memory i.e. leaderboards
-<em> Persistence of key store important
-</em> Run multiple AZs with failover</p>
+<p>Use Cases:</p>
+<ul>
+<li>More adv data types such as lists hashes &amp; sets</li>
+<li>Sorting and ranking datasets in memory i.e. leaderboards</li>
+<li>Persistence of key store important</li>
+<li>Run multiple AZs with failover</li>
+</ul>
 <h2 id="exam-tips">Exam Tips</h2>
 <p>Typically scenario where DB is under stress/load -&gt; may be asked which service you should use to alleviate this.</p>
 <p>Elasticache is a good choice if DB is read-heavy and not prone to frequent changing</p>
