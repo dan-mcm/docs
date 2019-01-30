@@ -28,6 +28,7 @@ Popular open source in-memory key-value store supports data structs such as sort
 ElastiCache manages Redis more as a relational DB. Redis ElastiCache clusters are managed as stateful entities that include failover, similar to how Amazon RDS manages DB failover.
 
 Use Cases:
+
 * More adv data types such as lists hashes & sets
 * Sorting and ranking datasets in memory i.e. leaderboards
 * Persistence of key store important
