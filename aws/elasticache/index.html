@@ -36,7 +36,7 @@
     
     
       
-        <title>IAM - Dans Docs</title>
+        <title>Elasticache - Dans Docs</title>
       
     
     
@@ -99,7 +99,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#aws-iam" tabindex="1" class="md-skip">
+      <a href="#aws-elasticache" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
                 Dans Docs
               </span>
               <span class="md-header-nav__topic">
-                IAM
+                Elasticache
               </span>
             
           
@@ -504,70 +504,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        IAM
-      </label>
-    
-    <a href="./" title="IAM" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../iam/" title="IAM" class="md-nav__link">
       IAM
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basics" title="Basics:" class="md-nav__link">
-    Basics:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#account-setup" title="Account Setup:" class="md-nav__link">
-    Account Setup:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#practical" title="Practical:" class="md-nav__link">
-    Practical:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exam-tips" title="Exam Tips" class="md-nav__link">
-    Exam Tips
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -623,11 +564,76 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../elasticache/" title="Elasticache" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Elasticache
+      </label>
+    
+    <a href="./" title="Elasticache" class="md-nav__link md-nav__link--active">
       Elasticache
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#types" title="Types" class="md-nav__link">
+    Types
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memcached" title="Memcached" class="md-nav__link">
+    Memcached
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis" title="Redis" class="md-nav__link">
+    Redis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exam-tips" title="Exam Tips" class="md-nav__link">
+    Exam Tips
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -657,23 +663,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basics" title="Basics:" class="md-nav__link">
-    Basics:
+  <a href="#types" title="Types" class="md-nav__link">
+    Types
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memcached" title="Memcached" class="md-nav__link">
+    Memcached
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#account-setup" title="Account Setup:" class="md-nav__link">
-    Account Setup:
+        
+          <li class="md-nav__item">
+  <a href="#redis" title="Redis" class="md-nav__link">
+    Redis
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#practical" title="Practical:" class="md-nav__link">
-    Practical:
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -700,53 +712,36 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/iam.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/elasticache.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="aws-iam">AWS IAM</h1>
-<p>IAM consists of:</p>
+                <h1 id="aws-elasticache">AWS Elasticache</h1>
+<p>Elasticache is a web services that makes it easy to deploy, operate and scale an in-memory cache in cloud. Improve performance of web apps by allowing retrieval of info from fast managed in memory caches instead of relying on slower disk-based DBs.</p>
+<p>Can be used to significantly improve latency for read-heavy app workloads (social networking/gaming) or compute-intensive workloads (recommendation engine)</p>
+<p>Caching improves app performance by storing critical piece of data in memory for low-latency access. Cached information may include the results of I/O-intensive DB queries or the results of computation intense calculations.</p>
+<h2 id="types">Types</h2>
+<h3 id="memcached">Memcached</h3>
+<p>Widely adopted memory object caching system. Protocol compliant with Memcached, so popular tools with existing Memcached environment will work with the services</p>
+<p>Pure caching solution with no persistence, ElastiCache manages Memcached nodes as a pool that can grow and shrink similar to an EC2 auto scaling group. individual nodes are expendable, and ElastiCache provides additional capabilities here, such as automatic node replacement and auto discovery.</p>
+<p>Use Cases:</p>
 <ul>
-<li>Users</li>
-<li>Groups [Group users and apply policies collectively]</li>
-<li>Roles</li>
-<li>Policy Documents [JSON]</li>
+<li>Object caching your goal - to offland DB.</li>
+<li>Simple caching model as possible</li>
+<li>Running large cache nodes &amp; multithreaded performance with use of multiple cores</li>
+<li>Grow &amp; scale cache horizontally</li>
 </ul>
-<h2 id="basics">Basics:</h2>
-<ul>
-<li>IAM is universal - does not apply to regions at this time</li>
-<li>The ‘root account’ is account created when first setup your AWS account (complete admin access)</li>
-<li>New Users have no permissions when first created</li>
-<li>New Users are assigned Access Key ID &amp; Secret Access Keys when first created</li>
-<li>These are not same as a password, you cannot use the key ID and secret access key to login to the AWS management console</li>
-<li>You can use this to access AWS via the APIs and CLI</li>
-</ul>
-<h2 id="account-setup">Account Setup:</h2>
-<ul>
-<li>You only get to view Access Key ID &amp; Secrete Access Key once. If lost, you have to regenerate them.</li>
-<li>Always setup Multifactor Authentication (MFA) on your root account</li>
-<li>You can create and customise your own password rotation policies</li>
-</ul>
-<h2 id="practical">Practical:</h2>
-<p><em>Applying IAM role to EC2</em>:</p>
-<p>Go to EC2 in UI
-Select Actions/Instance-Settings/
-Attach/Replace IAM role</p>
-<p><em>Modifying S3 within EC2</em>:</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> ~/.aws <span class="o">[</span>contains config credentials<span class="o">]</span>
-aws s3 ls
-aws s3 ls s3://experimenting-aws
-<span class="nb">echo</span> <span class="s2">&quot;Hello v2 from EC2&quot;</span> &gt; hello2.txt
-aws s3 cp hello2.txt s3://experimenting-aws
-</pre></div>
-
+<h3 id="redis">Redis</h3>
+<p>Popular open source in-memory key-value store supports data structs such as sorted sets and lists. Supports master/slave replication and Multi-AZ which can be used to achieve cross AZ redundancy.</p>
+<p>ElastiCache manages Redis more as a relational DB. Redis ElastiCache clusters are managed as stateful entities that include failover, similar to how Amazon RDS manages DB failover.</p>
+<p>Use Cases:
+<em> More adv data types such as lists hashes &amp; sets
+</em> Sorting and ranking datasets in memory i.e. leaderboards
+<em> Persistence of key store important
+</em> Run multiple AZs with failover</p>
 <h2 id="exam-tips">Exam Tips</h2>
-<ul>
-<li>Roles allow you to not use Access Key ID’s and Secret Access Keys</li>
-<li>Roles are preferred from a security perspective</li>
-<li>Roles are controlled by policies</li>
-<li>You can change a policy on a role and it will take immediate affect</li>
-<li>You can attach and detach roles to running EC2 instances without having to stop or terminate these instances</li>
-</ul>
+<p>Typically scenario where DB is under stress/load -&gt; may be asked which service you should use to alleviate this.</p>
+<p>Elasticache is a good choice if DB is read-heavy and not prone to frequent changing</p>
+<p>Redshift good answer if reason the DB is feeling stress is because management keep running OLAP transactions on it etc.</p>
                 
                   
                 
@@ -767,7 +762,7 @@ aws s3 cp hello2.txt s3://experimenting-aws
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../cli/" title="CLI" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../r53/" title="Route 53" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -776,25 +771,11 @@ aws s3 cp hello2.txt s3://experimenting-aws
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                CLI
+                Route 53
               </span>
             </div>
           </a>
         
-        
-          <a href="../ec2/" title="EC2" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                EC2
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
