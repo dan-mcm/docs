@@ -1,0 +1,2013 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="https://lh3.googleusercontent.com/m2Zy-ujFWYyQUhg3uIuG_YDx00HB1v08cQ4CBJnd-v6LMPBpps3C4kvQriV0nObfI-I">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+    
+    
+      
+        <title>Dynamo DB - Dans Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.8c900955.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#dynamo-db" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Dans Docs" class="md-header-nav__button md-logo">
+          
+            <img src="https://lh3.googleusercontent.com/m2Zy-ujFWYyQUhg3uIuG_YDx00HB1v08cQ4CBJnd-v6LMPBpps3C4kvQriV0nObfI-I" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Dans Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Dynamo DB
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/daniel40392/docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Dan's Docs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../languages/python/" title="Languages" class="md-tabs__link">
+          Languages
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../containerisation/docker/" title="Containerisation" class="md-tabs__link">
+          Containerisation
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../aws/" title="AWS" class="md-tabs__link md-tabs__link--active">
+          AWS
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Dans Docs" class="md-nav__button md-logo">
+      
+        <img src="https://lh3.googleusercontent.com/m2Zy-ujFWYyQUhg3uIuG_YDx00HB1v08cQ4CBJnd-v6LMPBpps3C4kvQriV0nObfI-I" width="48" height="48">
+      
+    </a>
+    Dans Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/daniel40392/docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Dan's Docs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../publications/dev/" title="Publications" class="md-nav__link">
+      Publications
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Languages
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Languages
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../languages/python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../languages/javascript/" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../languages/java/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../languages/scala/" title="Scala" class="md-nav__link">
+      Scala
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../languages/go/" title="Go" class="md-nav__link">
+      Go
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Containerisation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Containerisation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../containerisation/docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../containerisation/kubernetes/" title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      AWS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        AWS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../aws/" title="AWS" class="md-nav__link">
+      AWS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli/" title="CLI" class="md-nav__link">
+      CLI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../iam/" title="IAM" class="md-nav__link">
+      IAM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ec2/" title="EC2" class="md-nav__link">
+      EC2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rds/" title="RDS" class="md-nav__link">
+      RDS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../elb/" title="ELB" class="md-nav__link">
+      ELB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../r53/" title="Route 53" class="md-nav__link">
+      Route 53
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../elasticache/" title="Elasticache" class="md-nav__link">
+      Elasticache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Dynamo DB
+      </label>
+    
+    <a href="./" title="Dynamo DB" class="md-nav__link md-nav__link--active">
+      Dynamo DB
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reads" title="Reads" class="md-nav__link">
+    Reads
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eventually-consistent-reads" title="Eventually Consistent Reads" class="md-nav__link">
+    Eventually Consistent Reads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strongly-consistent-reads" title="Strongly Consistent Reads" class="md-nav__link">
+    Strongly Consistent Reads
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure" title="Structure" class="md-nav__link">
+    Structure
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-keys" title="Primary Keys" class="md-nav__link">
+    Primary Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-control" title="Access Control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iam-conditions-example" title="IAM Conditions Example" class="md-nav__link">
+    IAM Conditions Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-dynamo-db" title="Exam Tips - Dynamo DB" class="md-nav__link">
+    Exam Tips - Dynamo DB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-cli-commands" title="Sample CLI Commands" class="md-nav__link">
+    Sample CLI Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#index" title="Index" class="md-nav__link">
+    Index
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-secondary-index" title="Local Secondary Index" class="md-nav__link">
+    Local Secondary Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-secondary-index" title="Global Secondary Index" class="md-nav__link">
+    Global Secondary Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-indexes" title="Exam Tips - Indexes" class="md-nav__link">
+    Exam Tips - Indexes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-scan" title="Query &amp; Scan" class="md-nav__link">
+    Query &amp; Scan
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query" title="Query" class="md-nav__link">
+    Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan" title="Scan" class="md-nav__link">
+    Scan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-or-scan" title="Query or Scan?" class="md-nav__link">
+    Query or Scan?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-improve-performance" title="How to Improve Performance" class="md-nav__link">
+    How to Improve Performance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-scan-v-query" title="Exam Tips - Scan -v- Query" class="md-nav__link">
+    Exam Tips - Scan -v- Query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisioned-throughput" title="Provisioned Throughput" class="md-nav__link">
+    Provisioned Throughput
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strongly-consistent-reads-calculation" title="Strongly Consistent Reads Calculation" class="md-nav__link">
+    Strongly Consistent Reads Calculation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventually-consistent-reads-calculation" title="Eventually Consistent Reads Calculation" class="md-nav__link">
+    Eventually Consistent Reads Calculation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-capacity-unit-calculation" title="Write Capacity Unit Calculation" class="md-nav__link">
+    Write Capacity Unit Calculation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-provisioned-throughput" title="Exam Tips - Provisioned throughput" class="md-nav__link">
+    Exam Tips - Provisioned throughput
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-demand-capacity" title="On Demand Capacity" class="md-nav__link">
+    On Demand Capacity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-pricing-model-to-use" title="Which Pricing Model to Use" class="md-nav__link">
+    Which Pricing Model to Use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dax-dynamo-db-accellorator" title="DAX (Dynamo DB Accellorator)" class="md-nav__link">
+    DAX (Dynamo DB Accellorator)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-dax-works" title="How DAX Works" class="md-nav__link">
+    How DAX Works
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-dax-is-not-suitable-for" title="What DAX is not suitable for" class="md-nav__link">
+    What DAX is not suitable for
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-dax" title="Exam Tips - DAX" class="md-nav__link">
+    Exam Tips - DAX
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elasticache" title="Elasticache" class="md-nav__link">
+    Elasticache
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefits-use-cases" title="Benefits &amp; Use Cases" class="md-nav__link">
+    Benefits &amp; Use Cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types" title="Types" class="md-nav__link">
+    Types
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memcached" title="Memcached" class="md-nav__link">
+    Memcached
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis" title="Redis" class="md-nav__link">
+    Redis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caching-strategies" title="Caching Strategies" class="md-nav__link">
+    Caching Strategies
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lazy-loading" title="Lazy Loading" class="md-nav__link">
+    Lazy Loading
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lazy-loading-ttl-time-to-live" title="Lazy Loading TTL (Time To Live)" class="md-nav__link">
+    Lazy Loading TTL (Time To Live)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-through" title="Write-Through" class="md-nav__link">
+    Write-Through
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-elasticache" title="Exam Tips - Elasticache" class="md-nav__link">
+    Exam Tips - Elasticache
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-transactions" title="DynamoDB Transactions" class="md-nav__link">
+    DynamoDB Transactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-ttl" title="DynamoDB TTL" class="md-nav__link">
+    DynamoDB TTL
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-commands" title="Sample Commands" class="md-nav__link">
+    Sample Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-streams" title="DynamoDB Streams" class="md-nav__link">
+    DynamoDB Streams
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processing-streams" title="Processing Streams" class="md-nav__link">
+    Processing Streams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-dynamodb-streams" title="Exam Tips - DynamoDB Streams" class="md-nav__link">
+    Exam Tips - DynamoDB Streams
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisioned-throughput-exceeded-exponential-backoff" title="Provisioned Throughput Exceeded &amp; Exponential Backoff" class="md-nav__link">
+    Provisioned Throughput Exceeded &amp; Exponential Backoff
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exponential-backoff" title="Exponential Backoff" class="md-nav__link">
+    Exponential Backoff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-provisioned-throughput-exponential-backoff" title="Exam Tips - Provisioned Throughput &amp; Exponential Backoff" class="md-nav__link">
+    Exam Tips - Provisioned Throughput &amp; Exponential Backoff
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reads" title="Reads" class="md-nav__link">
+    Reads
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eventually-consistent-reads" title="Eventually Consistent Reads" class="md-nav__link">
+    Eventually Consistent Reads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strongly-consistent-reads" title="Strongly Consistent Reads" class="md-nav__link">
+    Strongly Consistent Reads
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure" title="Structure" class="md-nav__link">
+    Structure
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-keys" title="Primary Keys" class="md-nav__link">
+    Primary Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-control" title="Access Control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iam-conditions-example" title="IAM Conditions Example" class="md-nav__link">
+    IAM Conditions Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-dynamo-db" title="Exam Tips - Dynamo DB" class="md-nav__link">
+    Exam Tips - Dynamo DB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-cli-commands" title="Sample CLI Commands" class="md-nav__link">
+    Sample CLI Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#index" title="Index" class="md-nav__link">
+    Index
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-secondary-index" title="Local Secondary Index" class="md-nav__link">
+    Local Secondary Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-secondary-index" title="Global Secondary Index" class="md-nav__link">
+    Global Secondary Index
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-indexes" title="Exam Tips - Indexes" class="md-nav__link">
+    Exam Tips - Indexes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-scan" title="Query &amp; Scan" class="md-nav__link">
+    Query &amp; Scan
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query" title="Query" class="md-nav__link">
+    Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan" title="Scan" class="md-nav__link">
+    Scan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-or-scan" title="Query or Scan?" class="md-nav__link">
+    Query or Scan?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-improve-performance" title="How to Improve Performance" class="md-nav__link">
+    How to Improve Performance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-scan-v-query" title="Exam Tips - Scan -v- Query" class="md-nav__link">
+    Exam Tips - Scan -v- Query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisioned-throughput" title="Provisioned Throughput" class="md-nav__link">
+    Provisioned Throughput
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strongly-consistent-reads-calculation" title="Strongly Consistent Reads Calculation" class="md-nav__link">
+    Strongly Consistent Reads Calculation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventually-consistent-reads-calculation" title="Eventually Consistent Reads Calculation" class="md-nav__link">
+    Eventually Consistent Reads Calculation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-capacity-unit-calculation" title="Write Capacity Unit Calculation" class="md-nav__link">
+    Write Capacity Unit Calculation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-provisioned-throughput" title="Exam Tips - Provisioned throughput" class="md-nav__link">
+    Exam Tips - Provisioned throughput
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-demand-capacity" title="On Demand Capacity" class="md-nav__link">
+    On Demand Capacity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-pricing-model-to-use" title="Which Pricing Model to Use" class="md-nav__link">
+    Which Pricing Model to Use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dax-dynamo-db-accellorator" title="DAX (Dynamo DB Accellorator)" class="md-nav__link">
+    DAX (Dynamo DB Accellorator)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-dax-works" title="How DAX Works" class="md-nav__link">
+    How DAX Works
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-dax-is-not-suitable-for" title="What DAX is not suitable for" class="md-nav__link">
+    What DAX is not suitable for
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-dax" title="Exam Tips - DAX" class="md-nav__link">
+    Exam Tips - DAX
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elasticache" title="Elasticache" class="md-nav__link">
+    Elasticache
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefits-use-cases" title="Benefits &amp; Use Cases" class="md-nav__link">
+    Benefits &amp; Use Cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types" title="Types" class="md-nav__link">
+    Types
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memcached" title="Memcached" class="md-nav__link">
+    Memcached
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redis" title="Redis" class="md-nav__link">
+    Redis
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caching-strategies" title="Caching Strategies" class="md-nav__link">
+    Caching Strategies
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lazy-loading" title="Lazy Loading" class="md-nav__link">
+    Lazy Loading
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lazy-loading-ttl-time-to-live" title="Lazy Loading TTL (Time To Live)" class="md-nav__link">
+    Lazy Loading TTL (Time To Live)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-through" title="Write-Through" class="md-nav__link">
+    Write-Through
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-elasticache" title="Exam Tips - Elasticache" class="md-nav__link">
+    Exam Tips - Elasticache
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-transactions" title="DynamoDB Transactions" class="md-nav__link">
+    DynamoDB Transactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-ttl" title="DynamoDB TTL" class="md-nav__link">
+    DynamoDB TTL
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-commands" title="Sample Commands" class="md-nav__link">
+    Sample Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb-streams" title="DynamoDB Streams" class="md-nav__link">
+    DynamoDB Streams
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processing-streams" title="Processing Streams" class="md-nav__link">
+    Processing Streams
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-dynamodb-streams" title="Exam Tips - DynamoDB Streams" class="md-nav__link">
+    Exam Tips - DynamoDB Streams
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisioned-throughput-exceeded-exponential-backoff" title="Provisioned Throughput Exceeded &amp; Exponential Backoff" class="md-nav__link">
+    Provisioned Throughput Exceeded &amp; Exponential Backoff
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exponential-backoff" title="Exponential Backoff" class="md-nav__link">
+    Exponential Backoff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exam-tips-provisioned-throughput-exponential-backoff" title="Exam Tips - Provisioned Throughput &amp; Exponential Backoff" class="md-nav__link">
+    Exam Tips - Provisioned Throughput &amp; Exponential Backoff
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/dynamo.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="dynamo-db">Dynamo DB</h1>
+<ul>
+<li>A fast and flexible noSQL DB for applications that need consistent, single-digit millisecond latency at any scale.</li>
+<li>Fully managed DB, can be configured to autoscale, integrates well with Lambda.</li>
+<li>Supports both document and key-value data models</li>
+<li>Flexible data model and reliable performance.</li>
+<li>Stored on SSD</li>
+<li>Spread across 3 geographically distinct dat centres</li>
+<li>Choice of 2 consistency models:</li>
+<li>Eventual Consistent Reads (Default)</li>
+<li>Strongly Consistent Reads</li>
+</ul>
+<h2 id="reads">Reads</h2>
+<h3 id="eventually-consistent-reads">Eventually Consistent Reads</h3>
+<p>Consistency across all copies of data is usually reached within a second. Repeating a read after a short time should return the updated data. (Best Read Performance)</p>
+<h3 id="strongly-consistent-reads">Strongly Consistent Reads</h3>
+<p>A strongly consistent read returns a result that reflects all writes that received a successful response prior to the end</p>
+<h2 id="structure">Structure</h2>
+<ul>
+<li>Tables</li>
+<li>Items</li>
+<li>Attributes</li>
+<li>Supports key-value and document data structures</li>
+<li>Key = Name of the data, Value = Data itself</li>
+<li>Documents can be written in JSON, HTML or XML</li>
+</ul>
+<h3 id="primary-keys">Primary Keys</h3>
+<p>Dynamo DB Stores and retrieves data based on Primary Key - 2 Types:</p>
+<p>Partition Key - unique attribute (e.g. user ID):</p>
+<ul>
+<li>Value of partition key is input to an internal hash function which determines the partition or physical location on which the data is Stored</li>
+<li>If you are using the partition key as your primary key, then no two items can have the same partition key.</li>
+</ul>
+<p>Composite Key (Partition key + Sort Key) in combination:</p>
+<ul>
+<li>Primary key would be a composite key consisting of</li>
+<li>Partition Key - User ID</li>
+<li>Sort Key - Timestamp of Post</li>
+<li>2 items may have the same Partition key, but they must have a different sort key.</li>
+<li>All items with the same Partition Key are stored together, then sorted according to the Sort key Value</li>
+<li>Allows you to store multiple items with the same Partition Key</li>
+</ul>
+<h3 id="access-control">Access Control</h3>
+<ul>
+<li>Authentication and Access Control is managed using AWS IAM</li>
+<li>You can create an IAM user within your AWS account which has specific permissions to access and create DynamoDB tables.</li>
+<li>You can create an IAM role which enables you to obtain temporary access keys which can be used to access DynamoDB</li>
+<li>You can also use a special IAM Condition to restrict user access to only their own records</li>
+</ul>
+<h3 id="iam-conditions-example">IAM Conditions Example</h3>
+<p>Imagine a mobile gaming app with millions of users:
+<em> Users need to access high scores for each game they are playing
+</em> Access must be restricted to ensure they cannot view anyone else&rsquo;s data</p>
+<p>This can be done by adding a Condition to an IAM Policy to allow access only to items where the Partition Key value matches their User ID.</p>
+<p><img src="../../images/IAM-conditions.png"/></p>
+<h3 id="exam-tips-dynamo-db">Exam Tips - Dynamo DB</h3>
+<ul>
+<li>DynamoDB is a low latency noSQL DB</li>
+<li>Consists of Tables Items and Attributes</li>
+<li>Supports both document and key-value data models</li>
+<li>Supported document formats are JSON, HTML, XML</li>
+<li>2 types of Primary key - Partition Key and combination of Partition Key + Sort Key (Composite Key)</li>
+<li>2 consistency models: Strongly Consistent / Eventually Consistent</li>
+<li>Access is controlled using IAM policies</li>
+<li>Fine grained access control using IAM Condition parameter: <code>dynamodb:LeadingKeys</code> to allow users to access only the items where the partition key value matches their user ID</li>
+</ul>
+<p>Useful <a href="https://github.com/ACloudGuru/dynamodb">Example Reference</a> with PHP related scripts.</p>
+<h3 id="sample-cli-commands">Sample CLI Commands</h3>
+<div class="highlight"><pre><span></span>aws dynamodb get-item --table-name ProductCatalog --key <span class="s1">&#39;{&quot;Id&quot;: {&quot;N&quot;:&quot;205&quot;}}&#39;</span>
+</pre></div>
+
+<h2 id="index">Index</h2>
+<p>In SQL DBs an index is a data structure which allows you to perform fast queries on specific columns in a table. You select the columns that you want included in the index and run your searches on the index - rather than the entire dataset.</p>
+<p>Dynamo DB has two types of Index (even though its NoSQL):
+1. Local Secondary Index
+2. Global Secondary Index</p>
+<h3 id="local-secondary-index">Local Secondary Index</h3>
+<ul>
+<li>Can only be created when you are creating your table</li>
+<li>You cannot add, remove or modify it later</li>
+<li>It has the same partition key as your original table</li>
+<li>But a different Sort Key</li>
+<li>Gives you a different view of your data, organized according to an alternative Sort Key</li>
+<li>Any queries based on this Sort Key are much faster using the index than the main table</li>
+<li>e.g. Partition Key: User ID, Sort Key: account creation date</li>
+</ul>
+<h3 id="global-secondary-index">Global Secondary Index</h3>
+<ul>
+<li>You can create when you create your table, or add it later</li>
+<li>Different Partition Key as well as Sort Key</li>
+<li>Gives a completely different view of the data</li>
+<li>Speeds up any queries related to this alternative partition and sort key</li>
+<li>e.g. Partition Key: email address, Sort Key: last log-in date</li>
+</ul>
+<h3 id="exam-tips-indexes">Exam Tips - Indexes</h3>
+<ul>
+<li>Enable fast queries on specific data columns</li>
+<li>Give you a different view of your data, based on alternative Partition / Sort Keys</li>
+<li>Important to understand difference</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Local Secondary Index</th>
+<th align="left">Global Secondary Index</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Must be created at same time table is created</td>
+<td align="left">Can create at any time (including table creation)</td>
+</tr>
+<tr>
+<td align="left">Same Partition Key as your Table</td>
+<td align="left">Different Partition Key</td>
+</tr>
+<tr>
+<td align="left">Different Sort Key</td>
+<td align="left">Different Sort Key</td>
+</tr>
+</tbody>
+</table>
+<h2 id="query-scan">Query &amp; Scan</h2>
+<h3 id="query">Query</h3>
+<p>A query operation finds item in a table based on the Primary Key attribute and a distinct value to search for e.g. select and item where the user ID is equal to 212, will select all attributes for that name e.g. first name, surname, email etc.</p>
+<ul>
+<li>Use an optional Sort Key name and value to refine the results e.g. if Sort Key is a timestamp, you can refine query to only select items from last 7 days</li>
+<li>By default a query returns all the attributes for the items but you can use the <strong>ProjectionExpression</strong> parameter if you want the query to only return the specific attributes you want e.g. if you only want to see the email address rather than all the attributes</li>
+<li>Results are always sorted by the Sort Key</li>
+<li>Numeric order - by default in ascending order (1,2,3,4)</li>
+<li>ASCII character code values</li>
+<li>You can reverse the order by setting the <strong>ScanIndexForward</strong> parameter to false - (not this param is only related to queries no scan)</li>
+<li>By default, Queries are Eventually Consistent</li>
+<li>You need to explicitly set the query to be Strongly Consistent</li>
+</ul>
+<h3 id="scan">Scan</h3>
+<p>A scan operation examines every item in the table.</p>
+<ul>
+<li>By default returns all data Attributes</li>
+<li>Use the <strong>ProjectionExpression</strong> parameter to refine the scan to return only the attributes you want</li>
+</ul>
+<h3 id="query-or-scan">Query or Scan?</h3>
+<ul>
+<li>Query is more efficient than a Scan</li>
+<li>Scan dumps the entire table, then filters out the values to provide the desired result - removing the unwanted data</li>
+<li>This adds an extra step of removing the data you don&rsquo;t want</li>
+<li>As the table grows, the scan operation takes longer</li>
+<li>Scan operation on a larger table can use up the provisioned throughput for a large table in just a single operation</li>
+</ul>
+<h3 id="how-to-improve-performance">How to Improve Performance</h3>
+<ul>
+<li>You can reduce the impact of a query or scan by setting a smaller page size which uses fewer read operations e.g. set the page size to return 40 Items</li>
+<li>Larger number of smaller operations will allow other requests to succeed without throttling</li>
+<li>Avoid using scan operations if you can: design tables in a way that you can use Query, Get, or BatchGetItem APIs</li>
+<li>By default, a scan operation processes data sequentially in returning 1MB increments before moving on to retrieve the next 1MB of data. It can only scan one partition at a time.</li>
+<li>You can configure DynamoDB to use Parallel scans instead by logically dividing a table or index into segments and scanning each segment in parallel</li>
+<li>Best to avoid parallel scans if your table or index is already incurring heavy read / write activity from other applications</li>
+</ul>
+<h3 id="exam-tips-scan-v-query">Exam Tips - Scan -v- Query</h3>
+<ul>
+<li>A Query operation finds items in a table using only the Primary Key attribute -&gt; You provide the primary key and a distinct value to search for</li>
+<li>A scan operation examines every item in the table -&gt; By default returns all data attributes</li>
+<li>Use the <strong>ProjectionExpression</strong> parameter to refine the results</li>
+<li>Query results always sorted by Sort Key (if there is one)</li>
+<li>Sorted in ascending order</li>
+<li>Set <strong>ScanIndexForward</strong> parameter to false to reverse the order - queries only</li>
+<li>Query operation is generally more efficient than a Scan</li>
+<li>Reduce the impact of a query of scan by setting a smaller page size which uses fewer read operations</li>
+<li>Isolate scan operations to specific tables and segregate them from your mission-critical traffic</li>
+<li>Try Parallel scans, rather than the default sequential scan</li>
+<li>Avoid using scan operations if you can: design tables in a way that you can use the Query, Get, or BatchGetItem APIs</li>
+</ul>
+<h2 id="provisioned-throughput">Provisioned Throughput</h2>
+<p>Dynamo DB Provisioned Throughput is measure in Capacity Units.</p>
+<ul>
+<li>When you create your table, you specify your requirements in terms of Read Capacity Units and Write Capacity Units</li>
+<li>1x Write Capacity Unit = 1x 1KB write per second</li>
+<li>1x Read Capacity Unit = 1x Strongly Consistent Read of 4KB per second OR 2x Eventually ConsistentReads of 4KB per second (Default)</li>
+</ul>
+<h3 id="strongly-consistent-reads-calculation">Strongly Consistent Reads Calculation</h3>
+<p>Your application needs to read 80 items (table rows) per second. Each item is 3KB in size. You need Strongly consistent reads.</p>
+<ul>
+<li>First: Calculate how many Read Capacity Units needed for each read: size of each item / 4KB i.e. 3KB/4Kb = 0.75. Rounded up to the nearest whole number, each read will need 1x Read Capacity Unit per read operation.</li>
+<li>Multiplied by the number of reads per second = 80 Read Capacity Units required</li>
+</ul>
+<h3 id="eventually-consistent-reads-calculation">Eventually Consistent Reads Calculation</h3>
+<ul>
+<li>Same as above BUT 2x 4KB reads per second - double the throughput of Strongly Consistent Reads</li>
+<li>3KB/4KB = 0.75, round to nearest whole number = 1</li>
+<li>Multiply by number of reads per second = 80</li>
+<li>Divided 80 by 2, only need 40 read capacity units for Eventually Consistent Reads</li>
+</ul>
+<h3 id="write-capacity-unit-calculation">Write Capacity Unit Calculation</h3>
+<p>You want to write 100 items per second. Each item 512 bytes in size</p>
+<ul>
+<li>First: Calculate how many Capacity Units for each write: Size of each item /1KB (for Write CU) 512 bytes / 1KB = 0.5</li>
+<li>Round to nearest whole number = 1 Write Capacity Unit per write operation operation</li>
+<li>Multiplied by number of writes per second = 100 Write Capacity Units required</li>
+</ul>
+<h3 id="exam-tips-provisioned-throughput">Exam Tips - Provisioned throughput</h3>
+<ul>
+<li>Measured in Capacity Units</li>
+<li>1x Write Capacity Unit = 1x 1KB Write per Second</li>
+<li>1x Read Capacity Unit = 1x 4KB Strongly Consistent Read OR 2x 4KB Eventually Consistent Read</li>
+</ul>
+<h2 id="on-demand-capacity">On Demand Capacity</h2>
+<ul>
+<li>Charges apply for: Reading, Writing, Storing data</li>
+<li>Don&rsquo;t need to specify your requirements</li>
+<li>DynamoDB instantly scales up and down based on the activity of your application</li>
+<li>Great for unpredictable workloads</li>
+<li>You want to pay for only what you use (pay per request)</li>
+</ul>
+<h2 id="which-pricing-model-to-use">Which Pricing Model to Use</h2>
+<table>
+<thead>
+<tr>
+<th align="left">On-Demand Capacity</th>
+<th align="left">Provisioned Capacity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Unknown Workloads</td>
+<td align="left">Forecast read &amp; write capacity requirements</td>
+</tr>
+<tr>
+<td align="left">Unpredictable Application Traffic</td>
+<td align="left">Predictable Application Traffic</td>
+</tr>
+<tr>
+<td align="left">Want Pay-Per-Use Model</td>
+<td align="left">App traffic is consistent or increases gradually</td>
+</tr>
+<tr>
+<td align="left">Spikey/Short-lived Projects</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="dax-dynamo-db-accellorator">DAX (Dynamo DB Accellorator)</h2>
+<p>A fully managed, clustered in-memory cache for DynamoDB
+<em> Delivers up to 10x read performance improvement
+</em> Microsecond performance for millions of requests per second
+* Ideal for Read-Heavy and bursty workloads e.g. auction applications, gaming and retail sites during black Friday promotions</p>
+<h3 id="how-dax-works">How DAX Works</h3>
+<ul>
+<li>Dax is a write-through caching service - data is written to the Cache as well as the back end store at the same time</li>
+<li>Allows you to point your DynamoDB API calls at the DAX cluster</li>
+<li>If the item you are querying is in the cache (cache hit), DAX returns the result to the application</li>
+<li>If the item is not available (cache miss) then DAX performs an Eventually Consistent GetItem operation against DynamoDB</li>
+<li>Retrieval of data from DAX reduces the read load on DynamoDB tables</li>
+<li>May be able to reduce Provisioned Read Capacity</li>
+</ul>
+<h3 id="what-dax-is-not-suitable-for">What DAX is not suitable for</h3>
+<ul>
+<li>Caters for Eventually Consistent reads only - no not suitable for applications that require Strongly Consistent Reads</li>
+<li>Write intensive applications</li>
+<li>Applications that do not perform many read operations</li>
+<li>Applications that do not require microsecond response times</li>
+</ul>
+<h3 id="exam-tips-dax">Exam Tips - DAX</h3>
+<ul>
+<li>Provides in-memory caching for DynamoDB tables</li>
+<li>Improves response times for Eventually Consistent reads only</li>
+<li>You point your API calls to the DAX cluster instead of your table</li>
+<li>If item you are querying is on the cache, DAX with return it; otherwise it will perform an Eventually Consistent GetItem operation to your DynamoDB table</li>
+<li>Not suitable for write-intensive applications or applications that require Strongly Consistent Reads</li>
+</ul>
+<h2 id="elasticache">Elasticache</h2>
+<p>In memory cache in the cloud</p>
+<ul>
+<li>Improves performance of web apps, allowing retrieval of info from fast in-memory caches rather than slower disk based DBs.</li>
+<li>Sits between your app and the DB e.g. application frequently requesting specific product information for your best selling products</li>
+<li>Takes the load off your DBs</li>
+<li>Good if DB is particularly read-heavy and the data is not changing frequently</li>
+</ul>
+<h3 id="benefits-use-cases">Benefits &amp; Use Cases</h3>
+<ul>
+<li>Improves performance for read-heavy workloads e.g. Social Networking, gaming, Q&amp;A Portals</li>
+<li>Frequently-accessed dat is store din memory for low-latency access, improving overall performance of your app.</li>
+<li>Also good for compute heavy workloads e.g. recommendation engines</li>
+<li>Can be used to store results of I/O intensive DB queries or output of compute-intensive calculations.</li>
+</ul>
+<h3 id="types">Types</h3>
+<h4 id="memcached">Memcached</h4>
+<ul>
+<li>Wiedly adopted memory object cachign system</li>
+<li>Multi threaded</li>
+<li>No Multi-AZ capability</li>
+</ul>
+<h4 id="redis">Redis</h4>
+<ul>
+<li>Open-source in-memory key-value store</li>
+<li>Supports more complex data structures: sorted sets and lists</li>
+<li>Supports Master / SLave replicatoin and Multi-AZ for cross AZ redundancy</li>
+</ul>
+<h3 id="caching-strategies">Caching Strategies</h3>
+<p>2 strategies available:</p>
+<h4 id="lazy-loading">Lazy Loading</h4>
+<ul>
+<li>Loads data into the cache only when necessary</li>
+<li>If requested data is in the cache, Elasticache returns the data to the application</li>
+<li>If the data is not in the cache or has expired, Elasticache returns a null</li>
+<li>Your application then fetches the data from the DB and writes the data received into the cache so that it is available next time.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Advantages</th>
+<th align="left">Disadvantages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Only requested data cached: Avoids filling up cache with useless data</td>
+<td align="left">Cache miss penalty: initial request, query to DB, writing of data to the cache</td>
+</tr>
+<tr>
+<td align="left">Node failures are not fatal a new empty node will just have a lot of cache misses initially</td>
+<td align="left">Stale data - if data is only updated when there is a cache miss, it can become stale. Doesn&rsquo;t automatically update if the data in the database changes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="lazy-loading-ttl-time-to-live">Lazy Loading TTL (Time To Live)</h5>
+<ul>
+<li>Specifies number of seconds until the key (data) expires to avoid keeping stale data in the cache</li>
+<li>Lazy loading treats an expired key as a cache miss and causes the application to retrieve the data from the DB and subsequently write the data into the cache with a new TTL</li>
+<li>Does not eliminate stale data - but helps to avoid it</li>
+</ul>
+<h4 id="write-through">Write-Through</h4>
+<p>Adds or updates data to the cache whenever data is written to the database</p>
+<table>
+<thead>
+<tr>
+<th align="left">Advantages</th>
+<th align="left">Disadvantages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Data in the cache never stale</td>
+<td align="left">Write Penalty: every write involves a write to the cache as well as a write to the DB</td>
+</tr>
+<tr>
+<td align="left">Users are generally more tolerant of additional latency when updating data than when retrieving it</td>
+<td align="left">If a node fails and a new one is spun up, data is missing until added or updated in the DB (mitigate by implementing Lazy Loading in conjunction with write-through)</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left">Wasted resources if most of the data is never read</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exam-tips-elasticache">Exam Tips - Elasticache</h3>
+<ul>
+<li>In-memory cache sites between your application and DB</li>
+<li>2 different caching strats - Lazy Loading &amp; Write Through</li>
+<li>Lazy loading only caches data when it is requested</li>
+<li>Elasticache Node failures not fatal, just lots of cache misses</li>
+<li>Cache miss penalty: Initial request, query DB, writing to cache</li>
+<li>Avoid stale data by implementing a TTL</li>
+<li>Write through strategy writes data into the cache whenever there is a change to the DB</li>
+<li>Data is never Stale</li>
+<li>Write penalty: each write involves a write to the cache</li>
+<li>Elasticache node failure means that data is missing until added or updated in the DB</li>
+<li>Wasted resources if most of the data is never used</li>
+</ul>
+<h2 id="dynamodb-transactions">DynamoDB Transactions</h2>
+<ul>
+<li>ACID Transactions (Atomic, Consistent, Isolated, Durable)</li>
+<li>Read or write multiple items across multiple tables as an all or nothing operations</li>
+<li>Check for a pre-requisite condition before writing to a table</li>
+</ul>
+<h2 id="dynamodb-ttl">DynamoDB TTL</h2>
+<ul>
+<li>TTL attribute defines an expiry time for your data</li>
+<li>Expired items marked for deletion</li>
+<li>Great for removing irrelevant or old data:</li>
+<li>Session data</li>
+<li>Event logs</li>
+<li>Temporary data</li>
+<li>Reduces cost by automatically removing data which is no longer relevant</li>
+<li>TTL expressed as epoch time i.e. when current time &gt; TTL item expired and marked for deletion</li>
+</ul>
+<h3 id="sample-commands">Sample Commands</h3>
+<div class="highlight"><pre><span></span><span class="c1"># ensure you have right IAM role &amp; access permissions</span>
+aws iam get-user
+
+<span class="c1"># create sessiondata table</span>
+aws dynamodb create-table --table-name SessionData --attribute-defintiions <span class="se">\</span>
+<span class="nv">AttributeName</span><span class="o">=</span>UserID,AttributeType<span class="o">=</span>N --key-schema <span class="se">\</span>
+<span class="nv">AttributeName</span><span class="o">=</span>UserID,KeyType<span class="o">=</span>HASH <span class="se">\</span>
+--provisioned-throughput <span class="nv">ReadCapacityUnits</span><span class="o">=</span><span class="m">5</span>,WriteCapacityUnits<span class="o">=</span><span class="m">5</span>
+
+<span class="c1"># populate SessionData table</span>
+aws dynamodb bach-write-item --request-items file://items.json
+</pre></div>
+
+<h2 id="dynamodb-streams">DynamoDB Streams</h2>
+<p>Time-ordered sequence of item level modifications (insert, update, delete)</p>
+<ul>
+<li>Logs are encrypted at rest and stored for 24hrs</li>
+<li>Accessed using a dedicated endpoint</li>
+<li>By default the Primary Key is recorded</li>
+<li>Before and After images can be captured</li>
+</ul>
+<h3 id="processing-streams">Processing Streams</h3>
+<ul>
+<li>Events are recorded in near real-time</li>
+<li>Apps can take actions based on contents of stream</li>
+<li>Event source for Lambda</li>
+<li>Lambda polls the DynamoDB Stream</li>
+<li>Executes Lambda code based on a DynamoDB Streams event</li>
+</ul>
+<h3 id="exam-tips-dynamodb-streams">Exam Tips - DynamoDB Streams</h3>
+<ul>
+<li>Time-ordered sequence of item level modifications in your DynamoDB Tables</li>
+<li>Data is stored for 24 hours only</li>
+<li>Can be used as an event source for Lambda so you can create applications which take actions based on events in your DynamoDB table</li>
+</ul>
+<h2 id="provisioned-throughput-exceeded-exponential-backoff">Provisioned Throughput Exceeded &amp; Exponential Backoff</h2>
+<p><strong>ProvisionedThroughputExceededException</strong></p>
+<ul>
+<li>Your request rate is too high for the read/write capacity provisioned on your DynamoDB table</li>
+<li>SDK will automatically retries the requests until successful</li>
+<li>If you are not using the SDK you can:</li>
+<li>Reduce request frequency</li>
+<li>Use <strong>Exponential Backoff</strong></li>
+</ul>
+<h3 id="exponential-backoff">Exponential Backoff</h3>
+<ul>
+<li>Many components in a network can generate errors due to being overloaded</li>
+<li>In addition to simple retries all AWS SDKs use <strong>Exponential Backoff</strong></li>
+<li>Progressively longer waits between consecutive retries e.g. 50ms, 100ms, 200ms for improved flow control</li>
+<li>If after 1 minute this doesn&rsquo;t work, your request size may be exceeding the throughput for your read/write capacity</li>
+</ul>
+<h3 id="exam-tips-provisioned-throughput-exponential-backoff">Exam Tips - Provisioned Throughput &amp; Exponential Backoff</h3>
+<ul>
+<li>If you see a ProvisionedThoguhputExceeded Error, this means the number of requests is too high</li>
+<li>Exponential Backoff improves flow by retrying requests using progressively longer waits</li>
+<li>This is not just true for DynamoDB, Exponential Backoff is a feature of every AWS SDK and applies to many services within AWS e.g. S#, CloudFormation, SES</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../elasticache/" title="Elasticache" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Elasticache
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b41f3d20.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
