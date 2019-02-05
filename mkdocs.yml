@@ -23,6 +23,7 @@ nav:
     - ELB: aws/elb.md
     - Route 53: aws/r53.md
     - Elasticache: aws/elasticache.md
+    - Dynamo DB: aws/dynamo.md
 
 theme:
   name: material
