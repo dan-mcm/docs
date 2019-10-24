@@ -25,6 +25,7 @@ nav:
     - Elasticache: aws/elasticache.md
     - Dynamo DB: aws/dynamo.md
     - Dax: aws/dax.md
+    - KMS: aws/kms.md
 
 theme:
   name: material
