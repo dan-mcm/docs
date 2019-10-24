@@ -24,6 +24,7 @@ nav:
     - Route 53: aws/r53.md
     - Elasticache: aws/elasticache.md
     - Dynamo DB: aws/dynamo.md
+    - Dax: aws/dax.md
 
 theme:
   name: material

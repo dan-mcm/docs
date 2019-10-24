@@ -41,3 +41,79 @@ Typically scenario where DB is under stress/load -> may be asked which service y
 Elasticache is a good choice if DB is read-heavy and not prone to frequent changing
 
 Redshift good answer if reason the DB is feeling stress is because management keep running OLAP transactions on it etc.
+
+# Elasticache - contd.
+
+In memory cache in the cloud
+
+* Improves performance of web apps, allowing retrieval of info from fast in-memory caches rather than slower disk based DBs.
+* Sits between your app and the DB e.g. application frequently requesting specific product information for your best selling products
+* Takes the load off your DBs
+* Good if DB is particularly read-heavy and the data is not changing frequently
+
+### Benefits & Use Cases
+
+* Improves performance for read-heavy workloads e.g. Social Networking, gaming, Q&A Portals
+* Frequently-accessed dat is store din memory for low-latency access, improving overall performance of your app.
+* Also good for compute heavy workloads e.g. recommendation engines
+* Can be used to store results of I/O intensive DB queries or output of compute-intensive calculations.
+
+### Types
+
+#### Memcached
+
+* Wiedly adopted memory object cachign system
+* Multi threaded
+* No Multi-AZ capability
+
+#### Redis
+
+* Open-source in-memory key-value store
+* Supports more complex data structures: sorted sets and lists
+* Supports Master / SLave replicatoin and Multi-AZ for cross AZ redundancy
+
+### Caching Strategies
+
+2 strategies available:
+
+#### Lazy Loading
+
+* Loads data into the cache only when necessary
+* If requested data is in the cache, Elasticache returns the data to the application
+* If the data is not in the cache or has expired, Elasticache returns a null
+* Your application then fetches the data from the DB and writes the data received into the cache so that it is available next time.
+
+| Advantages     | Disadvantages     |
+| :------------- | :------------- |
+| Only requested data cached: Avoids filling up cache with useless data      | Cache miss penalty: initial request, query to DB, writing of data to the cache       |
+| Node failures are not fatal a new empty node will just have a lot of cache misses initially      | Stale data - if data is only updated when there is a cache miss, it can become stale. Doesn't automatically update if the data in the database changes       |
+
+##### Lazy Loading TTL (Time To Live)
+
+* Specifies number of seconds until the key (data) expires to avoid keeping stale data in the cache
+* Lazy loading treats an expired key as a cache miss and causes the application to retrieve the data from the DB and subsequently write the data into the cache with a new TTL
+* Does not eliminate stale data - but helps to avoid it
+
+#### Write-Through
+
+Adds or updates data to the cache whenever data is written to the database
+
+| Advantages     | Disadvantages     |
+| :------------- | :------------- |
+| Data in the cache never stale       | Write Penalty: every write involves a write to the cache as well as a write to the DB       |
+| Users are generally more tolerant of additional latency when updating data than when retrieving it       | If a node fails and a new one is spun up, data is missing until added or updated in the DB (mitigate by implementing Lazy Loading in conjunction with write-through)       |
+|        | Wasted resources if most of the data is never read       |
+
+### Exam Tips - Elasticache
+
+* In-memory cache sites between your application and DB
+* 2 different caching strats - Lazy Loading & Write Through
+* Lazy loading only caches data when it is requested
+* Elasticache Node failures not fatal, just lots of cache misses
+* Cache miss penalty: Initial request, query DB, writing to cache
+* Avoid stale data by implementing a TTL
+* Write through strategy writes data into the cache whenever there is a change to the DB
+* Data is never Stale
+* Write penalty: each write involves a write to the cache
+* Elasticache node failure means that data is missing until added or updated in the DB
+* Wasted resources if most of the data is never used
