@@ -36,7 +36,7 @@
     
     
       
-        <title>Elasticache - Dans Docs</title>
+        <title>CloudWatch - Dans Docs</title>
       
     
     
@@ -99,7 +99,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#aws-elasticache" tabindex="1" class="md-skip">
+      <a href="#cloudwatch" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
                 Dans Docs
               </span>
               <span class="md-header-nav__topic">
-                Elasticache
+                CloudWatch
               </span>
             
           
@@ -564,76 +564,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Elasticache
-      </label>
-    
-    <a href="./" title="Elasticache" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../elasticache/" title="Elasticache" class="md-nav__link">
       Elasticache
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#types" title="Types" class="md-nav__link">
-    Types
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#memcached" title="Memcached" class="md-nav__link">
-    Memcached
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#redis" title="Redis" class="md-nav__link">
-    Redis
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exam-tips" title="Exam Tips" class="md-nav__link">
-    Exam Tips
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -677,11 +612,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../cloudwatch/" title="CloudWatch" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CloudWatch
+      </label>
+    
+    <a href="./" title="CloudWatch" class="md-nav__link md-nav__link--active">
       CloudWatch
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cloudwatch-and-ec2" title="CloudWatch and EC2" class="md-nav__link">
+    CloudWatch and EC2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metric-granularity" title="Metric Granularity" class="md-nav__link">
+    Metric Granularity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudwatch-alarms" title="CloudWatch Alarms" class="md-nav__link">
+    CloudWatch Alarms
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -711,35 +698,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#types" title="Types" class="md-nav__link">
-    Types
+  <a href="#cloudwatch-and-ec2" title="CloudWatch and EC2" class="md-nav__link">
+    CloudWatch and EC2
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#memcached" title="Memcached" class="md-nav__link">
-    Memcached
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#redis" title="Redis" class="md-nav__link">
-    Redis
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exam-tips" title="Exam Tips" class="md-nav__link">
-    Exam Tips
+  <a href="#metric-granularity" title="Metric Granularity" class="md-nav__link">
+    Metric Granularity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudwatch-alarms" title="CloudWatch Alarms" class="md-nav__link">
+    CloudWatch Alarms
   </a>
   
 </li>
@@ -760,136 +734,137 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/elasticache.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/cloudwatch.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="aws-elasticache">AWS Elasticache</h1>
-<p>Elasticache is a web services that makes it easy to deploy, operate and scale an in-memory cache in cloud. Improve performance of web apps by allowing retrieval of info from fast managed in memory caches instead of relying on slower disk-based DBs.</p>
-<p>Can be used to significantly improve latency for read-heavy app workloads (social networking/gaming) or compute-intensive workloads (recommendation engine)</p>
-<p>Caching improves app performance by storing critical piece of data in memory for low-latency access. Cached information may include the results of I/O-intensive DB queries or the results of computation intense calculations.</p>
-<h2 id="types">Types</h2>
-<h3 id="memcached">Memcached</h3>
-<p>Widely adopted memory object caching system. Protocol compliant with Memcached, so popular tools with existing Memcached environment will work with the services</p>
-<p>Pure caching solution with no persistence, ElastiCache manages Memcached nodes as a pool that can grow and shrink similar to an EC2 auto scaling group. individual nodes are expendable, and ElastiCache provides additional capabilities here, such as automatic node replacement and auto discovery.</p>
-<p>Use Cases:</p>
+                <h1 id="cloudwatch">CloudWatch</h1>
+<p>Amazon CloudWatch is a monitoring service to monitor your AWS resources, as well as the applications that you run on AWS.</p>
+<p>It can monitor things like:</p>
 <ul>
-<li>Object caching your goal - to offland DB.</li>
-<li>Simple caching model as possible</li>
-<li>Running large cache nodes &amp; multithreaded performance with use of multiple cores</li>
-<li>Grow &amp; scale cache horizontally</li>
-</ul>
-<h3 id="redis">Redis</h3>
-<p>Popular open source in-memory key-value store supports data structs such as sorted sets and lists. Supports master/slave replication and Multi-AZ which can be used to achieve cross AZ redundancy.</p>
-<p>ElastiCache manages Redis more as a relational DB. Redis ElastiCache clusters are managed as stateful entities that include failover, similar to how Amazon RDS manages DB failover.</p>
-<p>Use Cases:</p>
+<li>
+<p>Compute</p>
 <ul>
-<li>More adv data types such as lists hashes &amp; sets</li>
-<li>Sorting and ranking datasets in memory i.e. leaderboards</li>
-<li>Persistence of key store important</li>
-<li>Run multiple AZs with failover</li>
+<li>Autoscaling Groups</li>
+<li>Elastic Load Balancers</li>
+<li>Route53 Health Checks</li>
 </ul>
+</li>
+<li>
+<p>Storage &amp; Content Delivery:</p>
+<ul>
+<li>EBS Volumes</li>
+<li>Storage Gateways</li>
+<li>CloudFront</li>
+</ul>
+</li>
+<li>
+<p>Database &amp; Analytics</p>
+<ul>
+<li>DynamoDB</li>
+<li>Elasticache Nodes</li>
+<li>RDS Instances</li>
+<li>Elastic MapReduce Job Flows</li>
+<li>Redshift</li>
+</ul>
+</li>
+<li>
+<p>Other</p>
+<ul>
+<li>SNS Topics</li>
+<li>SQS Queues</li>
+<li>Opsworks</li>
+<li>CloudWatch Logs</li>
+<li>Estimated Charges on AWS Bill</li>
+</ul>
+</li>
+</ul>
+<h2 id="cloudwatch-and-ec2">CloudWatch and EC2</h2>
+<p>Host Level Metrics Consist of:</p>
+<ul>
+<li>CPU</li>
+<li>Network</li>
+<li>
+<p>Disk</p>
+</li>
+<li>
+<p>Status Check</p>
+</li>
+</ul>
+<p>Exam Tip: RAM Utilization is a custom metrics. By Default EC2 monitoring is 5 minute intervals,
+unless you enable detailed monitoring which will then make it 1 minute intervals.</p>
+<p>How long are the Metrics Stored?</p>
+<p>You can retrieve data using the GetMetricStatics API or by using third party tools offered by AWS partners.</p>
+<p>You can store your log data in CloudWatch Logs for as long as you want. By default, CloudWatch Logs will store
+your log data indefinitely. You can change the retention for each Log Group at any time.</p>
+<p>You can retrieve data from any terminated EC2 or ELB instance after its termination.</p>
+<h2 id="metric-granularity">Metric Granularity</h2>
+<p>It depends on the AWS service. Many default metrics for many default services are 1 minute, but it can be
+3 or 5 minutes depending on the service.</p>
+<p>Exam Tip: for custom metrics the minimum granularity that you can have is 1 minute.</p>
+<h2 id="cloudwatch-alarms">CloudWatch Alarms</h2>
+<p>You can create an alarm to monitor any Amazon CloudWatch metric in your account. This can include
+EC2 CPU Utilization, Elastic Load Balancer Latency or even the charges on your AWS bill. You can set
+the appropriate thresholds in which to trigger the alarms and also set what actions should be taken if an alarm state is reached.</p>
+<p>Note: CloudWatch can be used on premise - Not restricted to just AWS resources. Can be on premise too.
+Just need to download and install the SSM agent and Cloudwatch agent.</p>
+<p>Note: Detailed Monitoring - 1 Minute; Standard Monitoring - 5 Minutes.</p>
+<h1 id="cloudwatch-lab">CloudWatch Lab</h1>
+<h2 id="monitoring-ec2-with-custom-metrics">Monitoring EC2 with Custom Metrics</h2>
+<p>IAM -&gt; Roles -&gt; Create Role -&gt; Service use Role: EC2 -&gt; Apply &lsquo;CloudWatchFullAccess&rsquo; Policy</p>
+<p>EC2 -&gt; Launch Instance -&gt; Amazon Linux 2 AMI -&gt; Defaults (Add custom IAM roll) -&gt; Bootstrap Script:
+(Generate Security Group &amp; KeyPair as usual&hellip;)
+<div class="highlight"><pre><span></span>#!/bin/bash
+yum update -y
+sudo yum install -y perl-Switch perl-DateTime perl-Sys-Syslog perl-LWP-Protocol-https perl-Digest-SHA.x86_64
+cd /home/ec2-user/
+curl https://aws-cloudwatch.s3.amazonaws.com/downloads/CloudWatchMonitoringScripts-1.2.2.zip -O
+unzip CloudWatchMonitoringScripts-1.2.2.zip
+rm -rf CloudWatchMonitoringScripts-1.2.2.zip
+</pre></div></p>
+<p>Get started with sshing into EC2</p>
+<div class="highlight"><pre><span></span>chmod 400 myKeyPair.pem
+ssh ec2-user@public-ip -i myKeyPair.pem
+yes
+
+sudo su
+ls (should have aws-scripts-mon)
+cd aws-scripts-mon
+ls
+</pre></div>
+
+<p>Access CloudWatch from AWS UI.
+Click &lsquo;Browse Metrics&rsquo; -&gt; EC2 -&gt; Per Instance Metrics (default metrics)</p>
+<div class="highlight"><pre><span></span>/home/ec2-user/aws-scripts-mon/mon-put-instance-data.pl --mem-util --verify --verbose
+(&#39;verifciation completed successfully. Not actual metrics were sent to CloudWatch&#39;)
+
+/home/ec2-user/aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail
+(&#39;Successfully reported metrics to CloudWatch.&#39;)
+</pre></div>
+
+<p>Can take up to 5 minutes&hellip; but back to AWS UI -&gt; CloudWatch should see &lsquo;Customer Namespaces&rsquo; -&gt; Linux System.</p>
+<div class="highlight"><pre><span></span>cd /etc
+nano crontab
+
+# add the cron below &amp; save
+# pushing this memory data every 1 minute
+*/1 * * * * root /home/ec2-user/aws-scripts-mon/mon-put-instance-data.pl --mem-util --mem-used --mem-avail
+</pre></div>
+
+<p>Wait up to 20 minutes&hellip; see data populate in CloudWatch.
+As detailed monitoring not turned on -&gt; only have data points every 5 minutes.</p>
 <h2 id="exam-tips">Exam Tips</h2>
-<p>Typically scenario where DB is under stress/load -&gt; may be asked which service you should use to alleviate this.</p>
-<p>Elasticache is a good choice if DB is read-heavy and not prone to frequent changing</p>
-<p>Redshift good answer if reason the DB is feeling stress is because management keep running OLAP transactions on it etc.</p>
-<h1 id="elasticache-contd">Elasticache - contd.</h1>
-<p>In memory cache in the cloud</p>
+<p>Host Level Metrics Consist of:
+<em> CPU
+</em> Network
+<em> Disk (I/O - not storage)
+</em> Status Check</p>
+<p>Ram Utilization -is a custom metric
+Customer Metrics - minimum granularity is 1 minute (will require detailed monitoring turned on)</p>
+<h1 id="cloudwatch-v-cloudtrail-v-config">CloudWatch -v- CloudTrail -v- Config</h1>
 <ul>
-<li>Improves performance of web apps, allowing retrieval of info from fast in-memory caches rather than slower disk based DBs.</li>
-<li>Sits between your app and the DB e.g. application frequently requesting specific product information for your best selling products</li>
-<li>Takes the load off your DBs</li>
-<li>Good if DB is particularly read-heavy and the data is not changing frequently</li>
-</ul>
-<h3 id="benefits-use-cases">Benefits &amp; Use Cases</h3>
-<ul>
-<li>Improves performance for read-heavy workloads e.g. Social Networking, gaming, Q&amp;A Portals</li>
-<li>Frequently-accessed dat is store din memory for low-latency access, improving overall performance of your app.</li>
-<li>Also good for compute heavy workloads e.g. recommendation engines</li>
-<li>Can be used to store results of I/O intensive DB queries or output of compute-intensive calculations.</li>
-</ul>
-<h3 id="types_1">Types</h3>
-<h4 id="memcached_1">Memcached</h4>
-<ul>
-<li>Wiedly adopted memory object cachign system</li>
-<li>Multi threaded</li>
-<li>No Multi-AZ capability</li>
-</ul>
-<h4 id="redis_1">Redis</h4>
-<ul>
-<li>Open-source in-memory key-value store</li>
-<li>Supports more complex data structures: sorted sets and lists</li>
-<li>Supports Master / SLave replicatoin and Multi-AZ for cross AZ redundancy</li>
-</ul>
-<h3 id="caching-strategies">Caching Strategies</h3>
-<p>2 strategies available:</p>
-<h4 id="lazy-loading">Lazy Loading</h4>
-<ul>
-<li>Loads data into the cache only when necessary</li>
-<li>If requested data is in the cache, Elasticache returns the data to the application</li>
-<li>If the data is not in the cache or has expired, Elasticache returns a null</li>
-<li>Your application then fetches the data from the DB and writes the data received into the cache so that it is available next time.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">Advantages</th>
-<th align="left">Disadvantages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Only requested data cached: Avoids filling up cache with useless data</td>
-<td align="left">Cache miss penalty: initial request, query to DB, writing of data to the cache</td>
-</tr>
-<tr>
-<td align="left">Node failures are not fatal a new empty node will just have a lot of cache misses initially</td>
-<td align="left">Stale data - if data is only updated when there is a cache miss, it can become stale. Doesn&rsquo;t automatically update if the data in the database changes</td>
-</tr>
-</tbody>
-</table>
-<h5 id="lazy-loading-ttl-time-to-live">Lazy Loading TTL (Time To Live)</h5>
-<ul>
-<li>Specifies number of seconds until the key (data) expires to avoid keeping stale data in the cache</li>
-<li>Lazy loading treats an expired key as a cache miss and causes the application to retrieve the data from the DB and subsequently write the data into the cache with a new TTL</li>
-<li>Does not eliminate stale data - but helps to avoid it</li>
-</ul>
-<h4 id="write-through">Write-Through</h4>
-<p>Adds or updates data to the cache whenever data is written to the database</p>
-<table>
-<thead>
-<tr>
-<th align="left">Advantages</th>
-<th align="left">Disadvantages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Data in the cache never stale</td>
-<td align="left">Write Penalty: every write involves a write to the cache as well as a write to the DB</td>
-</tr>
-<tr>
-<td align="left">Users are generally more tolerant of additional latency when updating data than when retrieving it</td>
-<td align="left">If a node fails and a new one is spun up, data is missing until added or updated in the DB (mitigate by implementing Lazy Loading in conjunction with write-through)</td>
-</tr>
-<tr>
-<td align="left"></td>
-<td align="left">Wasted resources if most of the data is never read</td>
-</tr>
-</tbody>
-</table>
-<h3 id="exam-tips-elasticache">Exam Tips - Elasticache</h3>
-<ul>
-<li>In-memory cache sites between your application and DB</li>
-<li>2 different caching strats - Lazy Loading &amp; Write Through</li>
-<li>Lazy loading only caches data when it is requested</li>
-<li>Elasticache Node failures not fatal, just lots of cache misses</li>
-<li>Cache miss penalty: Initial request, query DB, writing to cache</li>
-<li>Avoid stale data by implementing a TTL</li>
-<li>Write through strategy writes data into the cache whenever there is a change to the DB</li>
-<li>Data is never Stale</li>
-<li>Write penalty: each write involves a write to the cache</li>
-<li>Elasticache node failure means that data is missing until added or updated in the DB</li>
-<li>Wasted resources if most of the data is never used</li>
+<li>CloudWatch monitor performance</li>
+<li>CloudTrail monitors API calls in the AWS platform</li>
+<li>AWS Config records the state of your AWS environment and can notify you of changes (&lsquo;CCTV&rsquo;)</li>
 </ul>
                 
                   
@@ -911,7 +886,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../r53/" title="Route 53" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../kms/" title="KMS" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -920,25 +895,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Route 53
+                KMS
               </span>
             </div>
           </a>
         
-        
-          <a href="../dynamo/" title="Dynamo DB" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Dynamo DB
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>
