@@ -26,6 +26,7 @@ nav:
     - Dynamo DB: aws/dynamo.md
     - Dax: aws/dax.md
     - KMS: aws/kms.md
+    - CloudWatch: aws/cloudwatch.md
 
 theme:
   name: material
