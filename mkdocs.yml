@@ -27,6 +27,7 @@ nav:
     - Dax: aws/dax.md
     - KMS: aws/kms.md
     - CloudWatch: aws/cloudwatch.md
+    - S3: aws/s3.md
 
 theme:
   name: material
