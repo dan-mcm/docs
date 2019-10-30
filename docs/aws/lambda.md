@@ -92,5 +92,3 @@ Note: you can shift traffic between Alias using UI and defining the % weights. (
 * Versions are immutable
 * Can split traffic using aliases to different versions
     * Cannot split traffic with $latest, instead create an alias to latest
-
-# Step Functions
