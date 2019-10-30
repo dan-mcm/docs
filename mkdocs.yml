@@ -29,6 +29,11 @@ nav:
     - CloudWatch: aws/cloudwatch.md
     - S3: aws/s3.md
     - CloudFront: aws/cloudfront.md
+    - Serverless: aws/serverless.md
+    - Lambda: aws/lambda.md
+    - API Gateway: aws/api-gateway.md
+    - Step Functions: aws/step-functions.md
+    - X Ray: aws/x-ray.md
 
 theme:
   name: material
