@@ -20,7 +20,7 @@ for you to build your own custom applications for your business needs.
 
 ## What are the core Kinesis Services
 
-* Kinesis Streams
+* Kinesis Streams (video & data)
 * Kinesis Firehose
 * Kinesis Analytics
 
