@@ -1,0 +1,1395 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="https://lh3.googleusercontent.com/m2Zy-ujFWYyQUhg3uIuG_YDx00HB1v08cQ4CBJnd-v6LMPBpps3C4kvQriV0nObfI-I">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+    
+    
+      
+        <title>Kinesis - Dans Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.8c900955.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="cyan">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#aws-kinesis" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Dans Docs" class="md-header-nav__button md-logo">
+          
+            <img src="https://lh3.googleusercontent.com/m2Zy-ujFWYyQUhg3uIuG_YDx00HB1v08cQ4CBJnd-v6LMPBpps3C4kvQriV0nObfI-I" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Dans Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Kinesis
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/daniel40392/docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Dan's Docs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../languages/python/" title="Languages" class="md-tabs__link">
+          Languages
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../containerisation/docker/" title="Containerisation" class="md-tabs__link">
+          Containerisation
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../aws/" title="AWS" class="md-tabs__link md-tabs__link--active">
+          AWS
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Dans Docs" class="md-nav__button md-logo">
+      
+        <img src="https://lh3.googleusercontent.com/m2Zy-ujFWYyQUhg3uIuG_YDx00HB1v08cQ4CBJnd-v6LMPBpps3C4kvQriV0nObfI-I" width="48" height="48">
+      
+    </a>
+    Dans Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/daniel40392/docs/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Dan's Docs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../publications/dev/" title="Publications" class="md-nav__link">
+      Publications
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Languages
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Languages
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../languages/python/" title="Python" class="md-nav__link">
+      Python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../languages/javascript/" title="JavaScript" class="md-nav__link">
+      JavaScript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../languages/java/" title="Java" class="md-nav__link">
+      Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../languages/scala/" title="Scala" class="md-nav__link">
+      Scala
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../languages/go/" title="Go" class="md-nav__link">
+      Go
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Containerisation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Containerisation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../containerisation/docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../containerisation/kubernetes/" title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      AWS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        AWS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../aws/" title="AWS" class="md-nav__link">
+      AWS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cli/" title="CLI" class="md-nav__link">
+      CLI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../iam/" title="IAM" class="md-nav__link">
+      IAM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ec2/" title="EC2" class="md-nav__link">
+      EC2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rds/" title="RDS" class="md-nav__link">
+      RDS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../elb/" title="ELB" class="md-nav__link">
+      ELB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../r53/" title="Route 53" class="md-nav__link">
+      Route 53
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../elasticache/" title="Elasticache" class="md-nav__link">
+      Elasticache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dynamo/" title="Dynamo DB" class="md-nav__link">
+      Dynamo DB
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dax/" title="Dax" class="md-nav__link">
+      Dax
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kms/" title="KMS" class="md-nav__link">
+      KMS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cloudwatch/" title="CloudWatch" class="md-nav__link">
+      CloudWatch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../s3/" title="S3" class="md-nav__link">
+      S3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cloudfront/" title="CloudFront" class="md-nav__link">
+      CloudFront
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../serverless/" title="Serverless" class="md-nav__link">
+      Serverless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lambda/" title="Lambda" class="md-nav__link">
+      Lambda
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api-gateway/" title="API Gateway" class="md-nav__link">
+      API Gateway
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../step-functions/" title="Step Functions" class="md-nav__link">
+      Step Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../x-ray/" title="X Ray" class="md-nav__link">
+      X Ray
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sqs/" title="SQS" class="md-nav__link">
+      SQS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sns/" title="SNS" class="md-nav__link">
+      SNS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ses/" title="SES" class="md-nav__link">
+      SES
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../elasticbeanstalk/" title="Elastic Beanstalk" class="md-nav__link">
+      Elastic Beanstalk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Kinesis
+      </label>
+    
+    <a href="./" title="Kinesis" class="md-nav__link md-nav__link--active">
+      Kinesis
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-streaming-data" title="What is streaming data?" class="md-nav__link">
+    What is streaming data?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-kinesis" title="What is Kinesis?" class="md-nav__link">
+    What is Kinesis?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-the-core-kinesis-services" title="What are the core Kinesis Services" class="md-nav__link">
+    What are the core Kinesis Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kinesis-streams" title="Kinesis Streams" class="md-nav__link">
+    Kinesis Streams
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kinesis-firehouse" title="Kinesis Firehouse" class="md-nav__link">
+    Kinesis Firehouse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kinesis-analytics" title="Kinesis Analytics" class="md-nav__link">
+    Kinesis Analytics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exam-tips" title="Exam Tips" class="md-nav__link">
+    Exam Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-cloudformation-deployment-with-kinesis" title="Sample CloudFormation Deployment with Kinesis" class="md-nav__link">
+    Sample CloudFormation Deployment with Kinesis
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-streaming-data" title="What is streaming data?" class="md-nav__link">
+    What is streaming data?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-kinesis" title="What is Kinesis?" class="md-nav__link">
+    What is Kinesis?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-the-core-kinesis-services" title="What are the core Kinesis Services" class="md-nav__link">
+    What are the core Kinesis Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kinesis-streams" title="Kinesis Streams" class="md-nav__link">
+    Kinesis Streams
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kinesis-firehouse" title="Kinesis Firehouse" class="md-nav__link">
+    Kinesis Firehouse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kinesis-analytics" title="Kinesis Analytics" class="md-nav__link">
+    Kinesis Analytics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exam-tips" title="Exam Tips" class="md-nav__link">
+    Exam Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-cloudformation-deployment-with-kinesis" title="Sample CloudFormation Deployment with Kinesis" class="md-nav__link">
+    Sample CloudFormation Deployment with Kinesis
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/kinesis.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="aws-kinesis">AWS Kinesis</h1>
+<h2 id="what-is-streaming-data">What is streaming data?</h2>
+<p>Streaming data is data that is generated continuously by thousands of data sources,
+which typically send the data records simultaneously, and in small sizes (order of Kilobytes)/</p>
+<ul>
+<li>Purchases from online stores (amazong.com)</li>
+<li>Stock Prices</li>
+<li>Game data (as the gamer plays)</li>
+<li>Social network data</li>
+<li>Geospatial data (uber.com)</li>
+<li>iOT sensor data</li>
+</ul>
+<h2 id="what-is-kinesis">What is Kinesis?</h2>
+<p>Amazon Kinesis is a platform on AWS to send your streaming data too.
+Kinesis makes it easy to load and analyze streaming data, and also providing the ability
+for you to build your own custom applications for your business needs.</p>
+<h2 id="what-are-the-core-kinesis-services">What are the core Kinesis Services</h2>
+<ul>
+<li>Kinesis Streams (video &amp; data)</li>
+<li>Kinesis Firehose</li>
+<li>Kinesis Analytics</li>
+</ul>
+<h2 id="kinesis-streams">Kinesis Streams</h2>
+<ul>
+<li>Producers -&gt; Kinesis Streams</li>
+<li>Stores data in shards.</li>
+<li>Data stored 24hrs, can be upped to 7 days</li>
+<li>Consumers -&gt; EC2 instances taking data from shards &amp; doing analysis</li>
+<li>
+<p>Data outputted to DynamoDB, S3, EMR, Redshift etc.</p>
+</li>
+<li>
+<p>Kinesis Streams consist of shards</p>
+<ul>
+<li>5 transactions per second for reads, up to max total data read rate of 2MB per second</li>
+<li>up to 1,000 records per second for writes, up to a maximum total data write rate of 1MB per second (including partition keys)</li>
+<li>The data capacity of your stream is a function of the number of shards that you specify for the stream.
+The total capacity of the stream is the sum of the capacities of its shards.</li>
+</ul>
+</li>
+</ul>
+<h2 id="kinesis-firehouse">Kinesis Firehouse</h2>
+<ul>
+<li>Producers -&gt; Kinesis Firehose (no concern for shards/streams as its automated)</li>
+<li>No data retention period -&gt; once data enters its optionally analyzed via lambda or outputted (i.e. ElasticSearch Cluster / S3 -&gt; RedShift)</li>
+<li>No concern for consumers (lambda analytics if you wish - optional) -&gt; output S3</li>
+</ul>
+<h2 id="kinesis-analytics">Kinesis Analytics</h2>
+<ul>
+<li>Allows you to run SQL queries of data as it exists within Firehouse/Streams to output data inside Kinesis/Streams to S3/Redshift/ElasticSearch</li>
+</ul>
+<h2 id="exam-tips">Exam Tips</h2>
+<ul>
+<li>Know the difference between Kinesis Streams and Firehose. You will be given scenario questions and you must choose the most relevant service</li>
+<li>Understand what Kinesis Analytics is</li>
+</ul>
+<h2 id="sample-cloudformation-deployment-with-kinesis">Sample CloudFormation Deployment with Kinesis</h2>
+<div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;AWSTemplateFormatVersion&quot;</span> <span class="o">:</span> <span class="s2">&quot;2010-09-09&quot;</span><span class="p">,</span>
+
+  <span class="s2">&quot;Description&quot;</span> <span class="o">:</span> <span class="s2">&quot;The Amazon Kinesis Data Visualization Sample Application&quot;</span><span class="p">,</span>
+
+  <span class="s2">&quot;Parameters&quot;</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;InstanceType&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Description&quot;</span> <span class="o">:</span> <span class="s2">&quot;EC2 instance type&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Default&quot;</span> <span class="o">:</span> <span class="s2">&quot;t2.micro&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;AllowedValues&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;t2.micro&quot;</span><span class="p">,</span> <span class="s2">&quot;t2.small&quot;</span><span class="p">,</span> <span class="s2">&quot;t2.medium&quot;</span><span class="p">,</span> <span class="s2">&quot;m3.medium&quot;</span><span class="p">,</span> <span class="s2">&quot;m3.large&quot;</span><span class="p">,</span> <span class="s2">&quot;m3.xlarge&quot;</span><span class="p">,</span> <span class="s2">&quot;m3.2xlarge&quot;</span><span class="p">,</span> <span class="s2">&quot;c3.large&quot;</span><span class="p">,</span> <span class="s2">&quot;c3.xlarge&quot;</span><span class="p">,</span> <span class="s2">&quot;c3.2xlarge&quot;</span><span class="p">,</span> <span class="s2">&quot;c3.4xlarge&quot;</span><span class="p">,</span> <span class="s2">&quot;c3.8xlarge&quot;</span> <span class="p">],</span>
+      <span class="s2">&quot;ConstraintDescription&quot;</span> <span class="o">:</span> <span class="s2">&quot;must be a supported EC2 instance type for this template.&quot;</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;KeyName&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Description&quot;</span> <span class="o">:</span> <span class="s2">&quot;(Optional) Name of an existing EC2 KeyPair to enable SSH access to the instance. If this is not provided you will not be able to SSH on to the EC2 instance.&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Default&quot;</span> <span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;MinLength&quot;</span> <span class="o">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;MaxLength&quot;</span> <span class="o">:</span> <span class="s2">&quot;255&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;AllowedPattern&quot;</span> <span class="o">:</span> <span class="s2">&quot;[\\x20-\\x7E]*&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;ConstraintDescription&quot;</span> <span class="o">:</span> <span class="s2">&quot;can contain only ASCII characters.&quot;</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;SSHLocation&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Description&quot;</span> <span class="o">:</span> <span class="s2">&quot;The IP address range that can be used to SSH to the EC2 instances&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;MinLength&quot;</span> <span class="o">:</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;MaxLength&quot;</span> <span class="o">:</span> <span class="s2">&quot;18&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Default&quot;</span> <span class="o">:</span> <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;AllowedPattern&quot;</span> <span class="o">:</span> <span class="s2">&quot;(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;ConstraintDescription&quot;</span> <span class="o">:</span> <span class="s2">&quot;must be a valid IP CIDR range of the form x.x.x.x/x.&quot;</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;ApplicationArchive&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Description&quot;</span> <span class="o">:</span> <span class="s2">&quot;A publicly accessible URL to the sample application archive as produced by &#39;mvn package&#39;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;String&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;MinLength&quot;</span> <span class="o">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;MaxLength&quot;</span> <span class="o">:</span> <span class="s2">&quot;255&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Default&quot;</span> <span class="o">:</span> <span class="s2">&quot;https://github.com/awslabs/amazon-kinesis-data-visualization-sample/releases/download/v1.1.1/amazon-kinesis-data-visualization-sample-1.1.1-assembly.zip&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+
+  <span class="s2">&quot;Conditions&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;UseEC2KeyName&quot;</span><span class="o">:</span> <span class="p">{</span><span class="s2">&quot;Fn::Not&quot;</span><span class="o">:</span> <span class="p">[{</span><span class="s2">&quot;Fn::Equals&quot;</span> <span class="o">:</span> <span class="p">[{</span><span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;KeyName&quot;</span><span class="p">},</span> <span class="s2">&quot;&quot;</span><span class="p">]}]}</span>
+  <span class="p">},</span>
+
+  <span class="s2">&quot;Mappings&quot;</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;AWSInstanceType2Arch&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;t2.micro&quot;</span>    <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Arch&quot;</span> <span class="o">:</span> <span class="s2">&quot;64&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;t2.small&quot;</span>    <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Arch&quot;</span> <span class="o">:</span> <span class="s2">&quot;64&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;t2.medium&quot;</span>   <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Arch&quot;</span> <span class="o">:</span> <span class="s2">&quot;64&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;m3.medium&quot;</span>   <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Arch&quot;</span> <span class="o">:</span> <span class="s2">&quot;64&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;m3.large&quot;</span>    <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Arch&quot;</span> <span class="o">:</span> <span class="s2">&quot;64&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;m3.xlarge&quot;</span>   <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Arch&quot;</span> <span class="o">:</span> <span class="s2">&quot;64&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;m3.2xlarge&quot;</span>  <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Arch&quot;</span> <span class="o">:</span> <span class="s2">&quot;64&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;c3.large&quot;</span>    <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Arch&quot;</span> <span class="o">:</span> <span class="s2">&quot;64&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;c3.xlarge&quot;</span>   <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Arch&quot;</span> <span class="o">:</span> <span class="s2">&quot;64&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;c3.2xlarge&quot;</span>  <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Arch&quot;</span> <span class="o">:</span> <span class="s2">&quot;64&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;c3.4xlarge&quot;</span>  <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Arch&quot;</span> <span class="o">:</span> <span class="s2">&quot;64&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;c3.8xlarge&quot;</span>  <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Arch&quot;</span> <span class="o">:</span> <span class="s2">&quot;64&quot;</span> <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;AWSRegionArch2AMI&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;us-east-1&quot;</span>      <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;64&quot;</span> <span class="o">:</span> <span class="s2">&quot;ami-76817c1e&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;us-west-2&quot;</span>      <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;64&quot;</span> <span class="o">:</span> <span class="s2">&quot;ami-d13845e1&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;eu-west-1&quot;</span>      <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;64&quot;</span> <span class="o">:</span> <span class="s2">&quot;ami-892fe1fe&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;ap-southeast-1&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;64&quot;</span> <span class="o">:</span> <span class="s2">&quot;ami-a6b6eaf4&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;ap-southeast-2&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;64&quot;</span> <span class="o">:</span> <span class="s2">&quot;ami-d9fe9be3&quot;</span> <span class="p">},</span>
+      <span class="s2">&quot;ap-northeast-1&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;64&quot;</span> <span class="o">:</span> <span class="s2">&quot;ami-29dc9228&quot;</span> <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+
+  <span class="s2">&quot;Resources&quot;</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;KinesisStream&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::Kinesis::Stream&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Properties&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;ShardCount&quot;</span> <span class="o">:</span> <span class="s2">&quot;2&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;KCLDynamoDBTable&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::DynamoDB::Table&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Properties&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;AttributeDefinitions&quot;</span> <span class="o">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">&quot;AttributeName&quot;</span> <span class="o">:</span> <span class="s2">&quot;leaseKey&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;AttributeType&quot;</span> <span class="o">:</span> <span class="s2">&quot;S&quot;</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;KeySchema&quot;</span> <span class="o">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">&quot;AttributeName&quot;</span> <span class="o">:</span> <span class="s2">&quot;leaseKey&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;KeyType&quot;</span> <span class="o">:</span> <span class="s2">&quot;HASH&quot;</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;ProvisionedThroughput&quot;</span> <span class="o">:</span> <span class="p">{</span>
+          <span class="s2">&quot;ReadCapacityUnits&quot;</span> <span class="o">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;WriteCapacityUnits&quot;</span> <span class="o">:</span> <span class="s2">&quot;5&quot;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;CountsDynamoDBTable&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::DynamoDB::Table&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Properties&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;AttributeDefinitions&quot;</span> <span class="o">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">&quot;AttributeName&quot;</span> <span class="o">:</span> <span class="s2">&quot;resource&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;AttributeType&quot;</span> <span class="o">:</span> <span class="s2">&quot;S&quot;</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="s2">&quot;AttributeName&quot;</span> <span class="o">:</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;AttributeType&quot;</span> <span class="o">:</span> <span class="s2">&quot;S&quot;</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;KeySchema&quot;</span> <span class="o">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="s2">&quot;AttributeName&quot;</span> <span class="o">:</span> <span class="s2">&quot;resource&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;KeyType&quot;</span> <span class="o">:</span> <span class="s2">&quot;HASH&quot;</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="s2">&quot;AttributeName&quot;</span> <span class="o">:</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;KeyType&quot;</span> <span class="o">:</span> <span class="s2">&quot;RANGE&quot;</span>
+          <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;ProvisionedThroughput&quot;</span> <span class="o">:</span> <span class="p">{</span>
+          <span class="s2">&quot;ReadCapacityUnits&quot;</span> <span class="o">:</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;WriteCapacityUnits&quot;</span> <span class="o">:</span> <span class="s2">&quot;5&quot;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;Ec2SecurityGroup&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::EC2::SecurityGroup&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Properties&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;GroupDescription&quot;</span> <span class="o">:</span> <span class="s2">&quot;Enable SSH access and HTTP access on the inbound port&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;SecurityGroupIngress&quot;</span> <span class="o">:</span>
+          <span class="p">[{</span> <span class="s2">&quot;IpProtocol&quot;</span> <span class="o">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span> <span class="s2">&quot;FromPort&quot;</span> <span class="o">:</span> <span class="s2">&quot;22&quot;</span><span class="p">,</span> <span class="s2">&quot;ToPort&quot;</span> <span class="o">:</span> <span class="s2">&quot;22&quot;</span><span class="p">,</span> <span class="s2">&quot;CidrIp&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;SSHLocation&quot;</span><span class="p">}</span> <span class="p">},</span>
+           <span class="p">{</span> <span class="s2">&quot;IpProtocol&quot;</span> <span class="o">:</span> <span class="s2">&quot;tcp&quot;</span><span class="p">,</span> <span class="s2">&quot;FromPort&quot;</span> <span class="o">:</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span> <span class="s2">&quot;ToPort&quot;</span> <span class="o">:</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span> <span class="s2">&quot;CidrIp&quot;</span> <span class="o">:</span> <span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">}]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;EIP&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::EC2::EIP&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Properties&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;InstanceId&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;Ec2Instance&quot;</span> <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;RootRole&quot;</span><span class="o">:</span> <span class="p">{</span>
+       <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::IAM::Role&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Properties&quot;</span> <span class="o">:</span> <span class="p">{</span>
+          <span class="s2">&quot;AssumeRolePolicyDocument&quot;</span><span class="o">:</span> <span class="p">{</span>
+             <span class="s2">&quot;Version&quot;</span> <span class="o">:</span> <span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;Statement&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="p">{</span>
+                <span class="s2">&quot;Effect&quot;</span> <span class="o">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Principal&quot;</span> <span class="o">:</span> <span class="p">{</span>
+                   <span class="s2">&quot;Service&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;ec2.amazonaws.com&quot;</span> <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;Action&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;sts:AssumeRole&quot;</span> <span class="p">]</span>
+             <span class="p">}</span> <span class="p">]</span>
+          <span class="p">},</span>
+          <span class="s2">&quot;Path&quot;</span> <span class="o">:</span> <span class="s2">&quot;/&quot;</span>
+       <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;RolePolicies&quot;</span> <span class="o">:</span> <span class="p">{</span>
+       <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::IAM::Policy&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Properties&quot;</span> <span class="o">:</span> <span class="p">{</span>
+          <span class="s2">&quot;PolicyName&quot;</span> <span class="o">:</span> <span class="s2">&quot;root&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PolicyDocument&quot;</span> <span class="o">:</span> <span class="p">{</span>
+             <span class="s2">&quot;Version&quot;</span> <span class="o">:</span> <span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;Statement&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="p">{</span>
+                <span class="s2">&quot;Effect&quot;</span> <span class="o">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Action&quot;</span> <span class="o">:</span> <span class="s2">&quot;kinesis:*&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Resource&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Fn::Join&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="p">[</span> <span class="s2">&quot;arn:aws:kinesis:&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::Region&quot;</span> <span class="p">},</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::AccountId&quot;</span> <span class="p">},</span> <span class="s2">&quot;:stream/&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;KinesisStream&quot;</span> <span class="p">}</span> <span class="p">]]}</span>
+             <span class="p">},</span> <span class="p">{</span>
+                <span class="s2">&quot;Effect&quot;</span> <span class="o">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Action&quot;</span> <span class="o">:</span> <span class="s2">&quot;dynamodb:*&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Resource&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Fn::Join&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="p">[</span> <span class="s2">&quot;arn:aws:dynamodb:&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::Region&quot;</span> <span class="p">},</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::AccountId&quot;</span> <span class="p">},</span> <span class="s2">&quot;:table/&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;KCLDynamoDBTable&quot;</span> <span class="p">}</span> <span class="p">]]}</span>
+             <span class="p">},</span> <span class="p">{</span>
+                <span class="s2">&quot;Effect&quot;</span> <span class="o">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Action&quot;</span> <span class="o">:</span> <span class="s2">&quot;dynamodb:*&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Resource&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Fn::Join&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="p">[</span> <span class="s2">&quot;arn:aws:dynamodb:&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::Region&quot;</span> <span class="p">},</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::AccountId&quot;</span> <span class="p">},</span> <span class="s2">&quot;:table/&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;CountsDynamoDBTable&quot;</span> <span class="p">}</span> <span class="p">]]}</span>
+             <span class="p">},</span> <span class="p">{</span>
+                <span class="s2">&quot;Effect&quot;</span> <span class="o">:</span> <span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Action&quot;</span> <span class="o">:</span> <span class="s2">&quot;cloudwatch:*&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Resource&quot;</span> <span class="o">:</span> <span class="s2">&quot;*&quot;</span>
+             <span class="p">}</span> <span class="p">]</span>
+          <span class="p">},</span>
+          <span class="s2">&quot;Roles&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span><span class="o">:</span> <span class="s2">&quot;RootRole&quot;</span> <span class="p">}</span> <span class="p">]</span>
+       <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;RootInstanceProfile&quot;</span> <span class="o">:</span> <span class="p">{</span>
+       <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::IAM::InstanceProfile&quot;</span><span class="p">,</span>
+       <span class="s2">&quot;Properties&quot;</span> <span class="o">:</span> <span class="p">{</span>
+          <span class="s2">&quot;Path&quot;</span> <span class="o">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Roles&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span><span class="o">:</span> <span class="s2">&quot;RootRole&quot;</span> <span class="p">}</span> <span class="p">]</span>
+       <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;Ec2Instance&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::EC2::Instance&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Metadata&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;AWS::CloudFormation::Init&quot;</span> <span class="o">:</span> <span class="p">{</span>
+          <span class="s2">&quot;config&quot;</span> <span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;packages&quot;</span> <span class="o">:</span> <span class="p">{</span>
+              <span class="s2">&quot;yum&quot;</span> <span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;java-1.7.0-openjdk&quot;</span> <span class="o">:</span> <span class="p">[]</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;files&quot;</span> <span class="o">:</span> <span class="p">{</span>
+              <span class="s2">&quot;/var/kinesis-data-vis-sample-app/watchdog.sh&quot;</span> <span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;content&quot;</span> <span class="o">:</span> <span class="p">{</span><span class="s2">&quot;Fn::Join&quot;</span> <span class="o">:</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="p">[</span>
+                  <span class="s2">&quot;#!/bin/bash\n&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;if ! ps aux | grep HttpReferrerCounterApplication | grep -v grep ; then\n&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;    # Launch the Kinesis application for counting HTTP referrer pairs\n&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;    java -cp /var/kinesis-data-vis-sample-app/lib/\\* com.amazonaws.services.kinesis.samples.datavis.HttpReferrerCounterApplication &quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;KCLDynamoDBTable&quot;</span> <span class="p">},</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;KinesisStream&quot;</span> <span class="p">},</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;CountsDynamoDBTable&quot;</span> <span class="p">},</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::Region&quot;</span> <span class="p">},</span> <span class="s2">&quot; &amp;&gt;&gt; /home/ec2-user/kinesis-data-vis-sample-app-kcl.log &amp;\n&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;fi\n&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;if ! ps aux | grep HttpReferrerStreamWriter | grep -v grep ; then\n&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;    # Launch our Kinesis stream writer to fill our stream with generated HTTP (resource, referrer) pairs.\n&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;    # This will create a writer with 5 threads to send records indefinitely.\n&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;    java -cp /var/kinesis-data-vis-sample-app/lib/\\* com.amazonaws.services.kinesis.samples.datavis.HttpReferrerStreamWriter 5 &quot;</span><span class="p">,</span>  <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;KinesisStream&quot;</span> <span class="p">},</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::Region&quot;</span> <span class="p">},</span> <span class="s2">&quot; &amp;&gt;&gt; /home/ec2-user/kinesis-data-vis-sample-app-publisher.log &amp;\n&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;fi\n&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;if ! ps aux | grep WebServer | grep -v grep ; then\n&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;    # Launch the webserver\n&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;    java -cp /var/kinesis-data-vis-sample-app/lib/\\* com.amazonaws.services.kinesis.samples.datavis.WebServer 80 /var/kinesis-data-vis-sample-app/wwwroot &quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;CountsDynamoDBTable&quot;</span> <span class="p">},</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::Region&quot;</span> <span class="p">},</span> <span class="s2">&quot; &amp;&gt;&gt; /home/ec2-user/kinesis-data-vis-sample-app-www.log &amp;\n&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;fi\n&quot;</span>
+                <span class="p">]]},</span>
+                <span class="s2">&quot;mode&quot;</span> <span class="o">:</span> <span class="s2">&quot;000755&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;owner&quot;</span> <span class="o">:</span> <span class="s2">&quot;ec2-user&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;group&quot;</span> <span class="o">:</span> <span class="s2">&quot;ec2-user&quot;</span>
+              <span class="p">},</span>
+              <span class="s2">&quot;/var/kinesis-data-vis-sample-app/crontask&quot;</span> <span class="o">:</span> <span class="p">{</span>
+                <span class="s2">&quot;content&quot;</span> <span class="o">:</span> <span class="p">{</span><span class="s2">&quot;Fn::Join&quot;</span> <span class="o">:</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="p">[</span>
+                  <span class="s2">&quot;* * * * * bash /var/kinesis-data-vis-sample-app/watchdog.sh\n&quot;</span>
+                <span class="p">]]},</span>
+                <span class="s2">&quot;mode&quot;</span> <span class="o">:</span> <span class="s2">&quot;000644&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;owner&quot;</span> <span class="o">:</span> <span class="s2">&quot;ec2-user&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;group&quot;</span> <span class="o">:</span> <span class="s2">&quot;ec2-user&quot;</span>
+              <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;sources&quot;</span><span class="o">:</span> <span class="p">{</span>
+              <span class="s2">&quot;/var/kinesis-data-vis-sample-app&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;ApplicationArchive&quot;</span> <span class="p">}</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+
+      <span class="s2">&quot;Properties&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;KeyName&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Fn::If&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;UseEC2KeyName&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;KeyName&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::NoValue&quot;</span> <span class="p">}</span> <span class="p">]},</span>
+        <span class="s2">&quot;ImageId&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Fn::FindInMap&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;AWSRegionArch2AMI&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::Region&quot;</span> <span class="p">},</span>
+                                          <span class="p">{</span> <span class="s2">&quot;Fn::FindInMap&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;AWSInstanceType2Arch&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;InstanceType&quot;</span> <span class="p">},</span>
+                                          <span class="s2">&quot;Arch&quot;</span> <span class="p">]</span> <span class="p">}</span> <span class="p">]</span> <span class="p">},</span>
+        <span class="s2">&quot;InstanceType&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;InstanceType&quot;</span> <span class="p">},</span>
+        <span class="s2">&quot;SecurityGroups&quot;</span> <span class="o">:</span> <span class="p">[{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;Ec2SecurityGroup&quot;</span> <span class="p">}],</span>
+        <span class="s2">&quot;IamInstanceProfile&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span><span class="o">:</span> <span class="s2">&quot;RootInstanceProfile&quot;</span> <span class="p">},</span>
+        <span class="s2">&quot;UserData&quot;</span>       <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Fn::Base64&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Fn::Join&quot;</span> <span class="o">:</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="p">[</span>
+          <span class="s2">&quot;#!/bin/bash\n&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;yum update -y aws-cfn-bootstrap\n&quot;</span><span class="p">,</span>
+
+          <span class="s2">&quot;/opt/aws/bin/cfn-init -s &quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::StackId&quot;</span> <span class="p">},</span> <span class="s2">&quot; -r Ec2Instance &quot;</span><span class="p">,</span>
+          <span class="s2">&quot;         --region &quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::Region&quot;</span> <span class="p">},</span> <span class="s2">&quot;\n&quot;</span><span class="p">,</span>
+
+          <span class="s2">&quot;# Register watchdog script with cron\n&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;crontab /var/kinesis-data-vis-sample-app/crontask\n&quot;</span><span class="p">,</span>
+
+          <span class="s2">&quot;# Launch watchdog script immediately so if it fails this stack fails to start\n&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;/var/kinesis-data-vis-sample-app/watchdog.sh\n&quot;</span><span class="p">,</span>
+
+          <span class="s2">&quot;/opt/aws/bin/cfn-signal -e $? &#39;&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;WaitHandle&quot;</span> <span class="p">},</span> <span class="s2">&quot;&#39;\n&quot;</span>
+        <span class="p">]]}}</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;WaitHandle&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::CloudFormation::WaitConditionHandle&quot;</span>
+    <span class="p">},</span>
+
+    <span class="s2">&quot;WaitCondition&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Type&quot;</span> <span class="o">:</span> <span class="s2">&quot;AWS::CloudFormation::WaitCondition&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;DependsOn&quot;</span> <span class="o">:</span> <span class="s2">&quot;Ec2Instance&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Properties&quot;</span> <span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;Handle&quot;</span> <span class="o">:</span> <span class="p">{</span><span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;WaitHandle&quot;</span><span class="p">},</span>
+        <span class="s2">&quot;Timeout&quot;</span> <span class="o">:</span> <span class="s2">&quot;600&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;Outputs&quot;</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;URL&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Description&quot;</span> <span class="o">:</span> <span class="s2">&quot;URL to the sample application&#39;s visualization&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Value&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Fn::Join&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="p">[</span> <span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;Fn::GetAtt&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;Ec2Instance&quot;</span><span class="p">,</span> <span class="s2">&quot;PublicDnsName&quot;</span> <span class="p">]</span> <span class="p">}]]}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;InstanceId&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Description&quot;</span> <span class="o">:</span> <span class="s2">&quot;InstanceId of the newly created EC2 instance&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Value&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;Ec2Instance&quot;</span> <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;AZ&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Description&quot;</span> <span class="o">:</span> <span class="s2">&quot;Availability Zone of the newly created EC2 instance&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Value&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Fn::GetAtt&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;Ec2Instance&quot;</span><span class="p">,</span> <span class="s2">&quot;AvailabilityZone&quot;</span> <span class="p">]</span> <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;StreamName&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Description&quot;</span> <span class="o">:</span> <span class="s2">&quot;The name of the Kinesis Stream. This was autogenerated by the Kinesis Resource named &#39;KinesisStream&#39;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Value&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;KinesisStream&quot;</span> <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;ApplicationName&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Description&quot;</span> <span class="o">:</span> <span class="s2">&quot;The name of the Kinesis Client Application. This was autogenerated by the DynamoDB Resource named &#39;KCLDynamoDBTable&#39;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Value&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;KCLDynamoDBTable&quot;</span> <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;CountsTable&quot;</span> <span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Description&quot;</span> <span class="o">:</span> <span class="s2">&quot;The name of the DynamoDB table where counts are persisted. This was autogenerated by the DynamoDB Resource named &#39;CountsDynamoDBTable&#39;&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Value&quot;</span> <span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;Ref&quot;</span> <span class="o">:</span> <span class="s2">&quot;CountsDynamoDBTable&quot;</span> <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../elasticbeanstalk/" title="Elastic Beanstalk" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Elastic Beanstalk
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b41f3d20.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

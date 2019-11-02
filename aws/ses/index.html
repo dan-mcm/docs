@@ -36,7 +36,7 @@
     
     
       
-        <title>Dax - Dans Docs</title>
+        <title>SES - Dans Docs</title>
       
     
     
@@ -99,7 +99,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#dax-dynamo-db-accelerator" tabindex="1" class="md-skip">
+      <a href="#amazon-ses-simple-email-service" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
                 Dans Docs
               </span>
               <span class="md-header-nav__topic">
-                Dax
+                SES
               </span>
             
           
@@ -588,63 +588,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Dax
-      </label>
-    
-    <a href="./" title="Dax" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../dax/" title="Dax" class="md-nav__link">
       Dax
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-dax-works" title="How DAX Works" class="md-nav__link">
-    How DAX Works
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-dax-is-not-suitable-for" title="What DAX is not suitable for" class="md-nav__link">
-    What DAX is not suitable for
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exam-tips-dax" title="Exam Tips - DAX" class="md-nav__link">
-    Exam Tips - DAX
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -784,11 +732,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../ses/" title="SES" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        SES
+      </label>
+    
+    <a href="./" title="SES" class="md-nav__link md-nav__link--active">
       SES
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" title="Use Cases" class="md-nav__link">
+    Use Cases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ses-v-sns" title="SES -v- SNS" class="md-nav__link">
+    SES -v- SNS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exam-tips" title="Exam Tips" class="md-nav__link">
+    Exam Tips
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -842,22 +842,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-dax-works" title="How DAX Works" class="md-nav__link">
-    How DAX Works
+  <a href="#use-cases" title="Use Cases" class="md-nav__link">
+    Use Cases
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-dax-is-not-suitable-for" title="What DAX is not suitable for" class="md-nav__link">
-    What DAX is not suitable for
+  <a href="#ses-v-sns" title="SES -v- SNS" class="md-nav__link">
+    SES -v- SNS
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exam-tips-dax" title="Exam Tips - DAX" class="md-nav__link">
-    Exam Tips - DAX
+  <a href="#exam-tips" title="Exam Tips" class="md-nav__link">
+    Exam Tips
   </a>
   
 </li>
@@ -878,37 +878,60 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/dax.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/ses.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="dax-dynamo-db-accelerator">DAX (Dynamo DB Accelerator)</h1>
-<p>A fully managed, clustered in-memory cache for DynamoDB
-<em> Delivers up to 10x read performance improvement
-</em> Microsecond performance for millions of requests per second
-* Ideal for Read-Heavy and bursty workloads e.g. auction applications, gaming and retail sites during black Friday promotions</p>
-<h3 id="how-dax-works">How DAX Works</h3>
+                <h1 id="amazon-ses-simple-email-service">Amazon SES (Simple Email Service)</h1>
+<p>This is a scalable and highly available email service designed to help marketing teams
+and application developers send marketing, notification, and transactional emails to
+their customers using a pay as you go model.</p>
+<p>Can also be used to receive emails: incoming mails can be delivered automatically to an S3 bucket.</p>
+<p>Incoming mails can be used to trigger Lambda functions and SNS notifications.</p>
+<h2 id="use-cases">Use Cases</h2>
 <ul>
-<li>Dax is a write-through caching service - data is written to the Cache as well as the back end store at the same time</li>
-<li>Allows you to point your DynamoDB API calls at the DAX cluster</li>
-<li>If the item you are querying is in the cache (cache hit), DAX returns the result to the application</li>
-<li>If the item is not available (cache miss) then DAX performs an Eventually Consistent GetItem operation against DynamoDB</li>
-<li>Retrieval of data from DAX reduces the read load on DynamoDB tables</li>
-<li>May be able to reduce Provisioned Read Capacity</li>
+<li>Automated emails</li>
+<li>Purchase Confirmations, shipping notifications, order status updates e.g.
+mobile phone company needs to send automated confirmation email every time a
+customer purchases pre-paid mobile phone minutes.</li>
+<li>marketing communications, advertisements, newsletters, special offers e.g.
+online retail business that needs to let customers know about sales promotions and discounts</li>
 </ul>
-<h3 id="what-dax-is-not-suitable-for">What DAX is not suitable for</h3>
+<h2 id="ses-v-sns">SES -v- SNS</h2>
+<table>
+<thead>
+<tr>
+<th align="left">SES</th>
+<th align="left">SNS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Email messaging service</td>
+<td align="left">Pub/Sub messaging service, formats include SMS, HTTP, SQS, email</td>
+</tr>
+<tr>
+<td align="left">Can trigger Lambda function or SNS notification</td>
+<td align="left">Can be used to trigger Lambda function</td>
+</tr>
+<tr>
+<td align="left">Can be used for both incoming and outgoing email</td>
+<td align="left">Can fan out messages to large number of recipients (replicate and push messages to multiple endpoints and formats)</td>
+</tr>
+<tr>
+<td align="left">An email address is all that is required to start sending messages to a user</td>
+<td align="left">Consumers must subscribe to a topic to receive the notifications</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exam-tips">Exam Tips</h2>
 <ul>
-<li>Caters for Eventually Consistent reads only - no not suitable for applications that require Strongly Consistent Reads</li>
-<li>Write intensive applications</li>
-<li>Applications that do not perform many read operations</li>
-<li>Applications that do not require microsecond response times</li>
-</ul>
-<h3 id="exam-tips-dax">Exam Tips - DAX</h3>
-<ul>
-<li>Provides in-memory caching for DynamoDB tables</li>
-<li>Improves response times for Eventually Consistent reads only</li>
-<li>You point your API calls to the DAX cluster instead of your table</li>
-<li>If item you are querying is on the cache, DAX with return it; otherwise it will perform an Eventually Consistent GetItem operation to your DynamoDB table</li>
-<li>Not suitable for write-intensive applications or applications that require Strongly Consistent Reads</li>
+<li>Remember that SES is email only</li>
+<li>Can be used for incoming and outgoing mail</li>
+<li>No subscription based, you only need to know the email address</li>
+<li>SNS supports multiple formats (SMS, SQS, HTTP, email)</li>
+<li>Push notifications only</li>
+<li>Pub/Sub model: consumers must subscribe to a topic</li>
+<li>You can fan-out messages to large number of recipients (e.g. multiple clients each with their own SQS queue)</li>
 </ul>
                 
                   
@@ -930,7 +953,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../dynamo/" title="Dynamo DB" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../sns/" title="SNS" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -939,19 +962,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Dynamo DB
+                SNS
               </span>
             </div>
           </a>
         
         
-          <a href="../kms/" title="KMS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../elasticbeanstalk/" title="Elastic Beanstalk" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                KMS
+                Elastic Beanstalk
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
