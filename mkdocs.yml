@@ -34,6 +34,11 @@ nav:
     - API Gateway: aws/api-gateway.md
     - Step Functions: aws/step-functions.md
     - X Ray: aws/x-ray.md
+    - SQS: aws/sqs.md
+    - SNS: aws/sns.md
+    - SES: aws/ses.md
+    - Elastic Beanstalk: aws/elasticbeanstalk.md
+    - Kinesis: aws/kinesis.md
 
 theme:
   name: material
