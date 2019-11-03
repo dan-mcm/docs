@@ -39,6 +39,10 @@ nav:
     - SES: aws/ses.md
     - Elastic Beanstalk: aws/elasticbeanstalk.md
     - Kinesis: aws/kinesis.md
+    - CI/CD: aws/ci-cd.md
+    - CodeCommit: aws/codecommit.md
+    - CodeDeploy: aws/codedeploy.md
+    - CodeBuild: aws/codebuild.md
 
 theme:
   name: material
