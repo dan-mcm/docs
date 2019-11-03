@@ -123,3 +123,34 @@ Outputs:
     Description: The Instance ID
     Value: !Ref MyEC2Instance
 ```
+
+# CloudFormation Nested Stacks
+
+* Nested Stacks allow re-use of CloudFormation code for common use cases
+e.g. standard config for a load balancer, web server, application server etc.
+
+* Instead of copying out the code each time, create a standard template for each common
+use case and reference from within your CloudFormation template.
+
+## CloudFormation Template Structure
+
+```yaml
+Resources:
+  Type: AWS::CloudFormation::Stack
+  Properties:
+    NotificationARNs:
+      - String
+    Parameters:
+      AWS CloudFormation Stack Parameters
+    Tags:
+      - Resource Tag
+    TemplateURL: https://s3.amazonaws.com/.../template.yml # mandatory - must be file within s3 bucket
+    TimeoutInMinutes: Integer
+```
+
+## Exam Tips - Nested Stacks
+
+* Nested Stacks allow you to re-use your CloudFormation code so you don't need to copy/paste every time
+* Really useful for frequently used configurations, e.g. load balancer, web or app servers
+* Simply create a Cloud Formation template, store it in S3 and you can reference it in the Resources section of any CF template 
+using the Stack resource type
