@@ -43,6 +43,7 @@ nav:
     - CodeCommit: aws/codecommit.md
     - CodeDeploy: aws/codedeploy.md
     - CodeBuild: aws/codebuild.md
+    - CloudFormation: aws/cloudformation.md
 
 theme:
   name: material
