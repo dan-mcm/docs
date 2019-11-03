@@ -36,7 +36,7 @@
     
     
       
-        <title>Dax - Dans Docs</title>
+        <title>CloudFormation - Dans Docs</title>
       
     
     
@@ -99,7 +99,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#dax-dynamo-db-accelerator" tabindex="1" class="md-skip">
+      <a href="#aws-cloudformation" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
                 Dans Docs
               </span>
               <span class="md-header-nav__topic">
-                Dax
+                CloudFormation
               </span>
             
           
@@ -588,63 +588,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Dax
-      </label>
-    
-    <a href="./" title="Dax" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../dax/" title="Dax" class="md-nav__link">
       Dax
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-dax-works" title="How DAX Works" class="md-nav__link">
-    How DAX Works
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-dax-is-not-suitable-for" title="What DAX is not suitable for" class="md-nav__link">
-    What DAX is not suitable for
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exam-tips-dax" title="Exam Tips - DAX" class="md-nav__link">
-    Exam Tips - DAX
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -868,11 +816,70 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../cloudformation/" title="CloudFormation" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CloudFormation
+      </label>
+    
+    <a href="./" title="CloudFormation" class="md-nav__link md-nav__link--active">
       CloudFormation
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cloudformation-benefits" title="CloudFormation Benefits" class="md-nav__link">
+    CloudFormation Benefits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudformation-template" title="CloudFormation Template" class="md-nav__link">
+    CloudFormation Template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exam-tips" title="Exam Tips" class="md-nav__link">
+    Exam Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab" title="Lab" class="md-nav__link">
+    Lab
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -902,22 +909,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-dax-works" title="How DAX Works" class="md-nav__link">
-    How DAX Works
+  <a href="#cloudformation-benefits" title="CloudFormation Benefits" class="md-nav__link">
+    CloudFormation Benefits
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-dax-is-not-suitable-for" title="What DAX is not suitable for" class="md-nav__link">
-    What DAX is not suitable for
+  <a href="#cloudformation-template" title="CloudFormation Template" class="md-nav__link">
+    CloudFormation Template
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exam-tips-dax" title="Exam Tips - DAX" class="md-nav__link">
-    Exam Tips - DAX
+  <a href="#exam-tips" title="Exam Tips" class="md-nav__link">
+    Exam Tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lab" title="Lab" class="md-nav__link">
+    Lab
   </a>
   
 </li>
@@ -938,37 +952,165 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/dax.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/cloudformation.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="dax-dynamo-db-accelerator">DAX (Dynamo DB Accelerator)</h1>
-<p>A fully managed, clustered in-memory cache for DynamoDB
-<em> Delivers up to 10x read performance improvement
-</em> Microsecond performance for millions of requests per second
-* Ideal for Read-Heavy and bursty workloads e.g. auction applications, gaming and retail sites during black Friday promotions</p>
-<h3 id="how-dax-works">How DAX Works</h3>
+                <h1 id="aws-cloudformation">AWS CloudFormation</h1>
 <ul>
-<li>Dax is a write-through caching service - data is written to the Cache as well as the back end store at the same time</li>
-<li>Allows you to point your DynamoDB API calls at the DAX cluster</li>
-<li>If the item you are querying is in the cache (cache hit), DAX returns the result to the application</li>
-<li>If the item is not available (cache miss) then DAX performs an Eventually Consistent GetItem operation against DynamoDB</li>
-<li>Retrieval of data from DAX reduces the read load on DynamoDB tables</li>
-<li>May be able to reduce Provisioned Read Capacity</li>
+<li>CloudFormation is a service that allows you to manage configure and provision your AWS infrastructure as code.</li>
+<li>Resources are defined using a CloudFormation template</li>
+<li>CloudFormation interprets the template and makes the appropriate API calls to create the resources you have defined</li>
+<li>Supports YAML or JSON</li>
 </ul>
-<h3 id="what-dax-is-not-suitable-for">What DAX is not suitable for</h3>
+<h2 id="cloudformation-benefits">CloudFormation Benefits</h2>
 <ul>
-<li>Caters for Eventually Consistent reads only - no not suitable for applications that require Strongly Consistent Reads</li>
-<li>Write intensive applications</li>
-<li>Applications that do not perform many read operations</li>
-<li>Applications that do not require microsecond response times</li>
+<li>Infrastructure is provisioned consistently, with fewer mistakes</li>
+<li>Less time and effort than configuring things manually</li>
+<li>You can version control and peer review your templates</li>
+<li>Free to use (charged for what your create)</li>
+<li>Can be used to manage updates &amp; dependencies</li>
+<li>Can be used to rollback and delete the entire stack as well</li>
 </ul>
-<h3 id="exam-tips-dax">Exam Tips - DAX</h3>
+<h2 id="cloudformation-template">CloudFormation Template</h2>
 <ul>
-<li>Provides in-memory caching for DynamoDB tables</li>
-<li>Improves response times for Eventually Consistent reads only</li>
-<li>You point your API calls to the DAX cluster instead of your table</li>
-<li>If item you are querying is on the cache, DAX with return it; otherwise it will perform an Eventually Consistent GetItem operation to your DynamoDB table</li>
-<li>Not suitable for write-intensive applications or applications that require Strongly Consistent Reads</li>
+<li>YAML or JSON template used to describe the endstate of the infrastructure you are either provisioning or changing</li>
+<li>After creating the template, you upload it to CloudFormation using S3</li>
+<li>CloudFormation reads the template and makes the API calls on your behalf</li>
+<li>The resulting resources are called a Stack</li>
+<li><a href="https://aws.amazon.com/cloudformation/resources/templates/">https://aws.amazon.com/cloudformation/resources/templates/</a></li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><span class="nt">AWSTemplateFormatVersion</span><span class="p">:</span> <span class="s">&quot;2010-09-09&quot;</span>
+<span class="nt">Description</span><span class="p">:</span> <span class="s">&quot;Template</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">create</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">EC2</span><span class="nv"> </span><span class="s">instance&quot;</span>
+<span class="nt">Metadata</span><span class="p">:</span>
+  <span class="nt">Instances</span><span class="p">:</span>
+    <span class="nt">Description</span><span class="p">:</span> <span class="s">&quot;Web</span><span class="nv"> </span><span class="s">Server</span><span class="nv"> </span><span class="s">Instance&quot;</span>
+
+<span class="nt">Parameters</span><span class="p">:</span> <span class="c1">#input values</span>
+  <span class="nt">EnvType</span><span class="p">:</span>
+    <span class="nt">Description</span><span class="p">:</span> <span class="s">&quot;Environment</span><span class="nv"> </span><span class="s">type&quot;</span>
+    <span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
+    <span class="nt">AllowedValues</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">prod</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
+
+<span class="nt">Conditions</span><span class="p">:</span>
+  <span class="nt">CreateProdResources</span><span class="p">:</span> <span class="kt">!Equals</span> <span class="p p-Indicator">[</span> <span class="kt">!RefEnvType,</span> <span class="nv">prod</span><span class="p p-Indicator">]</span>
+
+<span class="nt">Mappings</span><span class="p">:</span> <span class="c1">#e.g. set vlaues based on a region</span>
+  <span class="nt">RegionMap</span><span class="p">:</span>
+    <span class="nt">eu-west-1</span><span class="p">:</span>
+      <span class="nt">&quot;ami&quot;</span><span class="p">:</span> <span class="s">&quot;ami-0bdb1d6c15a40392c&quot;</span>
+
+<span class="nt">Transform</span><span class="p">:</span> <span class="c1">#include snippets of code outside the main template - https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/CHAP_TemplateQuickRef.html</span>
+  <span class="nt">Name</span><span class="p">:</span> <span class="s">&#39;AWS::Include&#39;</span>
+  <span class="nt">Parameters</span><span class="p">:</span>
+    <span class="nt">Location</span><span class="p">:</span> <span class="s">&#39;s3://MyAmazonS3BucketName/MyFileName.yaml&#39;</span>
+
+<span class="nt">Resources</span><span class="p">:</span> <span class="c1">#the AWS resources you are deploying</span>
+  <span class="nt">EC2Instance</span><span class="p">:</span>
+    <span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AWS::EC2::Instance</span>
+    <span class="nt">Properties</span><span class="p">:</span>
+      <span class="nt">InstanceType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">t2.micro</span>
+      <span class="nt">ImageId</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ami-0bdb1d6c15a40392c</span>
+
+<span class="nt">Outputs</span><span class="p">:</span>
+  <span class="nt">InstanceID</span><span class="p">:</span>
+    <span class="nt">Description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The Instance ID</span>
+    <span class="nt">Value</span><span class="p">:</span> <span class="kt">!Ref</span> <span class="l l-Scalar l-Scalar-Plain">EC2Instance</span>
+</pre></div>
+
+<ul>
+<li>Resources is the only mandatory section of the CloudFormation template</li>
+<li>Remember that the Transform section is used to reference additional code store in S3, allowing for code
+re-use e.g. for Lambda code or template snippets / reusable pieces of CloudFormation code</li>
+</ul>
+<h2 id="exam-tips">Exam Tips</h2>
+<ul>
+<li>CloudFormation allows you to manage, configure and provision AWS infrastructure as code (YAML/JSON)</li>
+<li>Remember the main sections in the CF Template:<ul>
+<li>Parameters - input custom values</li>
+<li>Conditions - e.g. provision resources based on env</li>
+<li>Resources - Mandatory - the AWS resources to create</li>
+<li>Mappings - create custom mappings like Region : AMI</li>
+<li>Transforms - reference code located in S3 e.g. Lambda code or reusable snippets of CF code</li>
+</ul>
+</li>
+</ul>
+<h2 id="lab">Lab</h2>
+<ul>
+<li>CloudFormation -&gt; Create Stack -&gt; Upload a template to Amazon S3</li>
+</ul>
+<p>Sample Template</p>
+<div class="highlight"><pre><span></span><span class="nt">AWSTemplateFormatVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2010-09-09</span>
+
+<span class="nt">Description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Template to create an EC2 instance and enable SSH</span>
+
+<span class="nt">Parameters</span><span class="p">:</span>
+  <span class="nt">KeyName</span><span class="p">:</span>
+    <span class="nt">Description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Name of SSH KeyPair</span>
+    <span class="nt">Type</span><span class="p">:</span> <span class="s">&#39;AWS::EC2::KeyPair::KeyName&#39;</span>
+    <span class="nt">ConstraintDescription</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Provide the name of an existing SSH key pair</span>
+
+<span class="nt">Resources</span><span class="p">:</span>
+  <span class="nt">MyEC2Instance</span><span class="p">:</span>
+    <span class="nt">Type</span><span class="p">:</span> <span class="s">&#39;AWS::EC2::Instance&#39;</span>
+    <span class="nt">Properties</span><span class="p">:</span>
+      <span class="nt">InstanceType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">t2.micro</span>
+      <span class="nt">ImageId</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ami-0bdb1d6c15a40392c</span> <span class="c1"># note this is region specific (AWS Linux2 AMI in eu-west-1)</span>
+      <span class="nt">KeyName</span><span class="p">:</span> <span class="kt">!Ref</span> <span class="l l-Scalar l-Scalar-Plain">KeyName</span>
+      <span class="nt">SecurityGroups</span><span class="p">:</span>
+       <span class="p p-Indicator">-</span> <span class="nt">Ref</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">InstanceSecurityGroup</span>
+      <span class="nt">Tags</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">Key</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Name</span>
+          <span class="nt">Value</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">My CF Instance</span>
+  <span class="nt">InstanceSecurityGroup</span><span class="p">:</span>
+    <span class="nt">Type</span><span class="p">:</span> <span class="s">&#39;AWS::EC2::SecurityGroup&#39;</span>
+    <span class="nt">Properties</span><span class="p">:</span>
+      <span class="nt">GroupDescription</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Enable SSH access via port 22</span>
+      <span class="nt">SecurityGroupIngress</span><span class="p">:</span>
+        <span class="nt">IpProtocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tcp</span>
+        <span class="nt">FromPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">22</span>
+        <span class="nt">ToPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">22</span>
+        <span class="nt">CidrIp</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.0.0.0/0</span>
+
+<span class="nt">Outputs</span><span class="p">:</span>
+  <span class="nt">InstanceID</span><span class="p">:</span>
+    <span class="nt">Description</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">The Instance ID</span>
+    <span class="nt">Value</span><span class="p">:</span> <span class="kt">!Ref</span> <span class="l l-Scalar l-Scalar-Plain">MyEC2Instance</span>
+</pre></div>
+
+<h1 id="cloudformation-nested-stacks">CloudFormation Nested Stacks</h1>
+<ul>
+<li>
+<p>Nested Stacks allow re-use of CloudFormation code for common use cases
+e.g. standard config for a load balancer, web server, application server etc.</p>
+</li>
+<li>
+<p>Instead of copying out the code each time, create a standard template for each common
+use case and reference from within your CloudFormation template.</p>
+</li>
+</ul>
+<h2 id="cloudformation-template-structure">CloudFormation Template Structure</h2>
+<div class="highlight"><pre><span></span><span class="nt">Resources</span><span class="p">:</span>
+  <span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AWS::CloudFormation::Stack</span>
+  <span class="nt">Properties</span><span class="p">:</span>
+    <span class="nt">NotificationARNs</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">String</span>
+    <span class="nt">Parameters</span><span class="p">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">AWS CloudFormation Stack Parameters</span>
+    <span class="nt">Tags</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Resource Tag</span>
+    <span class="nt">TemplateURL</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://s3.amazonaws.com/.../template.yml</span> <span class="c1"># mandatory - must be file within s3 bucket</span>
+    <span class="nt">TimeoutInMinutes</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Integer</span>
+</pre></div>
+
+<h2 id="exam-tips-nested-stacks">Exam Tips - Nested Stacks</h2>
+<ul>
+<li>Nested Stacks allow you to re-use your CloudFormation code so you don&rsquo;t need to copy/paste every time</li>
+<li>Really useful for frequently used configurations, e.g. load balancer, web or app servers</li>
+<li>Simply create a Cloud Formation template, store it in S3 and you can reference it in the Resources section of any CF template 
+using the Stack resource type</li>
 </ul>
                 
                   
@@ -990,7 +1132,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../dynamo/" title="Dynamo DB" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../codebuild/" title="CodeBuild" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -999,25 +1141,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Dynamo DB
+                CodeBuild
               </span>
             </div>
           </a>
         
-        
-          <a href="../kms/" title="KMS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                KMS
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>

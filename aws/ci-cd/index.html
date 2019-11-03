@@ -36,7 +36,7 @@
     
     
       
-        <title>Dax - Dans Docs</title>
+        <title>CI/CD - Dans Docs</title>
       
     
     
@@ -99,7 +99,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#dax-dynamo-db-accelerator" tabindex="1" class="md-skip">
+      <a href="#aws-cicd" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
                 Dans Docs
               </span>
               <span class="md-header-nav__topic">
-                Dax
+                CI/CD
               </span>
             
           
@@ -588,63 +588,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Dax
-      </label>
-    
-    <a href="./" title="Dax" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../dax/" title="Dax" class="md-nav__link">
       Dax
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-dax-works" title="How DAX Works" class="md-nav__link">
-    How DAX Works
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-dax-is-not-suitable-for" title="What DAX is not suitable for" class="md-nav__link">
-    What DAX is not suitable for
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exam-tips-dax" title="Exam Tips - DAX" class="md-nav__link">
-    Exam Tips - DAX
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -820,11 +768,77 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../ci-cd/" title="CI/CD" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CI/CD
+      </label>
+    
+    <a href="./" title="CI/CD" class="md-nav__link md-nav__link--active">
       CI/CD
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-integration-workflow" title="Continuous Integration Workflow" class="md-nav__link">
+    Continuous Integration Workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-delivery" title="Continuous Delivery" class="md-nav__link">
+    Continuous Delivery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-deployment" title="Continuous Deployment" class="md-nav__link">
+    Continuous Deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-tools" title="AWS Tools" class="md-nav__link">
+    AWS Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exam-tips" title="Exam Tips" class="md-nav__link">
+    Exam Tips
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -902,22 +916,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-dax-works" title="How DAX Works" class="md-nav__link">
-    How DAX Works
+  <a href="#continuous-integration-workflow" title="Continuous Integration Workflow" class="md-nav__link">
+    Continuous Integration Workflow
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-dax-is-not-suitable-for" title="What DAX is not suitable for" class="md-nav__link">
-    What DAX is not suitable for
+  <a href="#continuous-delivery" title="Continuous Delivery" class="md-nav__link">
+    Continuous Delivery
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exam-tips-dax" title="Exam Tips - DAX" class="md-nav__link">
-    Exam Tips - DAX
+  <a href="#continuous-deployment" title="Continuous Deployment" class="md-nav__link">
+    Continuous Deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-tools" title="AWS Tools" class="md-nav__link">
+    AWS Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exam-tips" title="Exam Tips" class="md-nav__link">
+    Exam Tips
   </a>
   
 </li>
@@ -938,37 +966,62 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/dax.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/ci-cd.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="dax-dynamo-db-accelerator">DAX (Dynamo DB Accelerator)</h1>
-<p>A fully managed, clustered in-memory cache for DynamoDB
-<em> Delivers up to 10x read performance improvement
-</em> Microsecond performance for millions of requests per second
-* Ideal for Read-Heavy and bursty workloads e.g. auction applications, gaming and retail sites during black Friday promotions</p>
-<h3 id="how-dax-works">How DAX Works</h3>
+                <h1 id="aws-cicd">AWS CI/CD</h1>
 <ul>
-<li>Dax is a write-through caching service - data is written to the Cache as well as the back end store at the same time</li>
-<li>Allows you to point your DynamoDB API calls at the DAX cluster</li>
-<li>If the item you are querying is in the cache (cache hit), DAX returns the result to the application</li>
-<li>If the item is not available (cache miss) then DAX performs an Eventually Consistent GetItem operation against DynamoDB</li>
-<li>Retrieval of data from DAX reduces the read load on DynamoDB tables</li>
-<li>May be able to reduce Provisioned Read Capacity</li>
+<li>Continuous Integration &amp; Continuous Delivery/Deployment are Best Practices for software
+development and deployment</li>
+<li>They enable frequent software changes to be applied whilst maintaining system and service stability.</li>
+<li>Companies like AWS, Netflix, Google, and Facebook have pioneered this approach to releasing code,
+successfully applying thousands of changes per day.</li>
 </ul>
-<h3 id="what-dax-is-not-suitable-for">What DAX is not suitable for</h3>
+<h2 id="continuous-integration-workflow">Continuous Integration Workflow</h2>
 <ul>
-<li>Caters for Eventually Consistent reads only - no not suitable for applications that require Strongly Consistent Reads</li>
-<li>Write intensive applications</li>
-<li>Applications that do not perform many read operations</li>
-<li>Applications that do not require microsecond response times</li>
+<li>Multiple devs working on different features or bug fixes</li>
+<li>All contributing to the same application</li>
+<li>Sharing the same code repository e.g. git</li>
+<li>Frequently pushing their updates into the shared repo - at least daily</li>
+<li>Code repository integrated with a build management system</li>
+<li>Code changes trigger an automated build</li>
+<li>We need a way to ensure that any code change does not break the build or introduce new bugs in the Application</li>
+<li>The test system runs automated tests on the newly built application</li>
+<li>Identifies any bugs, preventing issues from being introduced in the master code</li>
+<li>CI focuses on small code changes which frequently committed into the main repository once they have been successfully tested</li>
 </ul>
-<h3 id="exam-tips-dax">Exam Tips - DAX</h3>
+<h2 id="continuous-delivery">Continuous Delivery</h2>
 <ul>
-<li>Provides in-memory caching for DynamoDB tables</li>
-<li>Improves response times for Eventually Consistent reads only</li>
-<li>You point your API calls to the DAX cluster instead of your table</li>
-<li>If item you are querying is on the cache, DAX with return it; otherwise it will perform an Eventually Consistent GetItem operation to your DynamoDB table</li>
-<li>Not suitable for write-intensive applications or applications that require Strongly Consistent Reads</li>
+<li>Continuous Delivery is a Dev practice where merged changes are automatically built, tested, and
+prepared for released into staging and eventually production environments,</li>
+<li>There is usually a manual decision  process to initiate deployment of the new code.</li>
+</ul>
+<h2 id="continuous-deployment">Continuous Deployment</h2>
+<ul>
+<li>Continuous Deployment takes the idea of automation one step further and automatically deploys
+the new code following successful testing, eliminating any manual steps.</li>
+<li>The new code is automatically released as soon as it passes through the stages of your release process (build, test, package)</li>
+<li>Small changes are released early and frequently</li>
+<li>Both practices require the build, test, and deployment processes to be fully automated but Continuous Deployment
+also automates the release process as well</li>
+</ul>
+<h2 id="aws-tools">AWS Tools</h2>
+<ul>
+<li>CodeCommit - create private git repository within AWS</li>
+<li>CodeBuild - fully managed build service &amp; can run basic tests</li>
+<li>CodeDeploy - automated application deployment service -&gt; EC2 instances/On-premise systems/Lambda functions</li>
+<li>CodePipeline - continuous deployment service - allows you to model/visualize/automate entire release process</li>
+</ul>
+<h2 id="exam-tips">Exam Tips</h2>
+<ul>
+<li>Worth reading white paper: <a href="https://d0.awsstatic.com/whitepapers/DevOps/practicing-continuous-integration-continuous-delivery-on-AWS.pdf">https://d0.awsstatic.com/whitepapers/DevOps/practicing-continuous-integration-continuous-delivery-on-AWS.pdf</a></li>
+<li>Continuous Integration is about integrating to merging the code changes frequently - at least once per day, enables multiple devs to work on the same Application</li>
+<li>Continuous Delivery is all about automating the build, test and deployment functions</li>
+<li>Continuous Deployment fully automates the entire release process, code is deployed into Production as soon as it has successfully passes through the release pipeline</li>
+<li>AWS CodeCommit - Source Control (git)</li>
+<li>AWS CodeBuild - compile source code, run tests and package code</li>
+<li>AWS CodeDeploy - Automated Deployment to EC2, on premises systems and Lambda</li>
+<li>AWS CodePipeline - CI/CD workflow tool, fully automates the entire release process (build, test, deployment)</li>
 </ul>
                 
                   
@@ -990,7 +1043,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../dynamo/" title="Dynamo DB" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../kinesis/" title="Kinesis" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -999,19 +1052,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Dynamo DB
+                Kinesis
               </span>
             </div>
           </a>
         
         
-          <a href="../kms/" title="KMS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../codecommit/" title="CodeCommit" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                KMS
+                CodeCommit
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

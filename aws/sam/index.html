@@ -36,7 +36,7 @@
     
     
       
-        <title>Dax - Dans Docs</title>
+        <title>AWS SAM (Serverless Application Model) - Dans Docs</title>
       
     
     
@@ -99,7 +99,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#dax-dynamo-db-accelerator" tabindex="1" class="md-skip">
+      <a href="#aws-sam-serverless-application-model" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
                 Dans Docs
               </span>
               <span class="md-header-nav__topic">
-                Dax
+                AWS SAM (Serverless Application Model)
               </span>
             
           
@@ -197,16 +197,14 @@
       
         
 
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<nav class="md-tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../.." title="Home" class="md-tabs__link">
+      <a href="../.." title="Home" class="md-tabs__link md-tabs__link--active">
         Home
       </a>
     
@@ -246,7 +244,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../aws/" title="AWS" class="md-tabs__link md-tabs__link--active">
+        <a href="../aws/" title="AWS" class="md-tabs__link">
           AWS
         </a>
       
@@ -459,12 +457,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       AWS
@@ -588,63 +584,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Dax
-      </label>
-    
-    <a href="./" title="Dax" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../dax/" title="Dax" class="md-nav__link">
       Dax
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-dax-works" title="How DAX Works" class="md-nav__link">
-    How DAX Works
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-dax-is-not-suitable-for" title="What DAX is not suitable for" class="md-nav__link">
-    What DAX is not suitable for
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exam-tips-dax" title="Exam Tips - DAX" class="md-nav__link">
-    Exam Tips - DAX
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -902,22 +846,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-dax-works" title="How DAX Works" class="md-nav__link">
-    How DAX Works
+  <a href="#sam-cli-commands" title="SAM CLI Commands" class="md-nav__link">
+    SAM CLI Commands
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-dax-is-not-suitable-for" title="What DAX is not suitable for" class="md-nav__link">
-    What DAX is not suitable for
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exam-tips-dax" title="Exam Tips - DAX" class="md-nav__link">
-    Exam Tips - DAX
+  <a href="#exam-tips" title="Exam Tips" class="md-nav__link">
+    Exam Tips
   </a>
   
 </li>
@@ -938,38 +875,95 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/dax.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/daniel40392/docs/edit/master/docs/aws/sam.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="dax-dynamo-db-accelerator">DAX (Dynamo DB Accelerator)</h1>
-<p>A fully managed, clustered in-memory cache for DynamoDB
-<em> Delivers up to 10x read performance improvement
-</em> Microsecond performance for millions of requests per second
-* Ideal for Read-Heavy and bursty workloads e.g. auction applications, gaming and retail sites during black Friday promotions</p>
-<h3 id="how-dax-works">How DAX Works</h3>
+                <h1 id="aws-sam-serverless-application-model">AWS SAM (Serverless Application Model)</h1>
 <ul>
-<li>Dax is a write-through caching service - data is written to the Cache as well as the back end store at the same time</li>
-<li>Allows you to point your DynamoDB API calls at the DAX cluster</li>
-<li>If the item you are querying is in the cache (cache hit), DAX returns the result to the application</li>
-<li>If the item is not available (cache miss) then DAX performs an Eventually Consistent GetItem operation against DynamoDB</li>
-<li>Retrieval of data from DAX reduces the read load on DynamoDB tables</li>
-<li>May be able to reduce Provisioned Read Capacity</li>
+<li>SAM is an extension to CloudFormation used to define serverless applications</li>
+<li>Simplified syntax for defining serverless roesources:<ul>
+<li>APIs</li>
+<li>Lambda Functions</li>
+<li>DynamoDB Tables etc.</li>
 </ul>
-<h3 id="what-dax-is-not-suitable-for">What DAX is not suitable for</h3>
+</li>
+<li>Use the SAM CLI to package your deployment code, upload it to S3 and deploy your serverless application</li>
+</ul>
+<h2 id="sam-cli-commands">SAM CLI Commands</h2>
+<div class="highlight"><pre><span></span>sam package <span class="se">\</span>
+  --template-file ./mytemplate.yml <span class="se">\</span>
+  --output-template-fil sam-template.yml <span class="se">\</span>
+  --s3-bucket s3-bucket-name
+
+
+sam deploy <span class="se">\</span>
+  --template-file sam-template.yml <span class="se">\</span>
+  --stack-name mystack <span class="se">\</span>
+  --capabilities CAPABILITY_IAM
+</pre></div>
+
+<h2 id="exam-tips">Exam Tips</h2>
 <ul>
-<li>Caters for Eventually Consistent reads only - no not suitable for applications that require Strongly Consistent Reads</li>
-<li>Write intensive applications</li>
-<li>Applications that do not perform many read operations</li>
-<li>Applications that do not require microsecond response times</li>
+<li>SAM is the Serverless Application Model</li>
+<li>Allows you to define and provision serverless applications using CloudFormation</li>
+<li>Uses the SAM CLI commands to package and deploy:<ul>
+<li>sam package - packages your applicaiton and uploads to S3</li>
+<li>sam deploy - deploys your serverless app using CloudFormation</li>
 </ul>
-<h3 id="exam-tips-dax">Exam Tips - DAX</h3>
-<ul>
-<li>Provides in-memory caching for DynamoDB tables</li>
-<li>Improves response times for Eventually Consistent reads only</li>
-<li>You point your API calls to the DAX cluster instead of your table</li>
-<li>If item you are querying is on the cache, DAX with return it; otherwise it will perform an Eventually Consistent GetItem operation to your DynamoDB table</li>
-<li>Not suitable for write-intensive applications or applications that require Strongly Consistent Reads</li>
+</li>
 </ul>
+<h1 id="lab-notes">Lab Notes</h1>
+<div class="highlight"><pre><span></span><span class="c1"># 1) Pre-requisties: After installing Python 3.x, install pip and the SAC CLI:</span>
+easy_install pip
+pip install aws-sam-cli
+
+<span class="c1"># validate the IAM user your using -&gt; ensure has S3FullAccess Policy</span>
+aws iam get-user
+
+<span class="c1"># 2) Create an S3 bucket:</span>
+aws s3 mb s3://cfsambucket --region eu-west-2  <span class="c1">#use the bucket name and region name of your choice</span>
+
+<span class="c1"># 3) Package your deployment:</span>
+sam package <span class="se">\</span>
+--template-file ./lambda.yml <span class="se">\</span>
+--output-template-file sam-template.yml <span class="se">\</span>
+--s3-bucket cfsambucket
+
+<span class="c1">#use the bucket name you used in the previous step</span>
+<span class="c1">#Windows users: replace \ with ^ (use Shift + 6) for line continuation</span>
+
+<span class="c1">#4) Deploy your package:</span>
+sam deploy <span class="se">\</span>
+--template-file sam-template.yml <span class="se">\</span>
+--stack-name mystack <span class="se">\</span>
+--capabilities CAPABILITY_IAM
+
+<span class="c1">#Windows users: replace \ with ^ (use Shift + 6) for line continuation</span>
+</pre></div>
+
+<p>index.js Lambda function
+<div class="highlight"><pre><span></span><span class="nx">exports</span><span class="p">.</span><span class="nx">handler</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">context</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// TODO implement</span>
+    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">statusCode</span><span class="o">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="nx">body</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="s1">&#39;Hello Cloud Gurus, This Lambda Function was deployed using SAM!&#39;</span><span class="p">)</span>
+    <span class="p">};</span>
+    <span class="nx">callback</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">response</span><span class="p">);</span>
+<span class="p">};</span>
+</pre></div></p>
+<p>CloudFormation Lambda (Transform clarifies its SAM)</p>
+<div class="highlight"><pre><span></span><span class="nt">AWSTemplateFormatVersion</span><span class="p">:</span> <span class="s">&#39;2010-09-09&#39;</span>
+<span class="nt">Transform</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AWS::Serverless-2016-10-31</span>
+<span class="nt">Resources</span><span class="p">:</span>
+  <span class="nt">TestFunction</span><span class="p">:</span>
+    <span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">AWS::Serverless::Function</span>
+    <span class="nt">Properties</span><span class="p">:</span>
+      <span class="nt">Handler</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">index.handler</span>
+      <span class="nt">Runtime</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nodejs8.10</span>
+      <span class="nt">Environment</span><span class="p">:</span>
+        <span class="nt">Variables</span><span class="p">:</span>
+          <span class="nt">S3_BUCKET</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cfsambucket</span>
+</pre></div>
                 
                   
                 
@@ -986,41 +980,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../dynamo/" title="Dynamo DB" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Dynamo DB
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../kms/" title="KMS" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                KMS
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
