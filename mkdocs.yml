@@ -44,6 +44,7 @@ nav:
     - CodeDeploy: aws/codedeploy.md
     - CodeBuild: aws/codebuild.md
     - CloudFormation: aws/cloudformation.md
+    - SAM: aws/sam.md
 
 theme:
   name: material
