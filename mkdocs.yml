@@ -43,8 +43,10 @@ nav:
     - CodeCommit: aws/codecommit.md
     - CodeDeploy: aws/codedeploy.md
     - CodeBuild: aws/codebuild.md
+    - CodePipeline: aws/codepipeline.md
     - CloudFormation: aws/cloudformation.md
     - SAM: aws/sam.md
+    - Study Resources: aws/extra-resources.md
 
 theme:
   name: material
