@@ -167,3 +167,30 @@ there are two additional configuration steps required:
     * Additional config. steps required - security group & connection information
     * Suitable for Prod environments, more flexibility
     * Allows connection from multiple envs, you can tear down the app stack without impacting the DB
+
+## Docker & Elastic Beanstalk
+
+* Elastic Beanstalk supports the deployment of Docker Containers
+* Docker containers are self-contained and include all the configuration information and
+software your web application requires to run i.e. libraries, system tools, code & runtime
+* Elastic Beanstalk handles the capacity provisioning, load balancing, scaling, and application
+health monitoring
+
+* Single Docker Container: you can either run a single Docker container on an EC2 instance
+provisioned by Elastic Beanstalk
+* Multiple Docker Containers: Use Elastic Beanstalk to build an ECS cluster and deploy
+multiple Docker containers on each instance
+
+* Deploy your code: upload a zip file containing your code bundle and Elastic Beanstalk will do the rest
+* Upgrade your code: if you want to upgrade your application to a new version, its one easy step in console
+to upload and deploy
+
+## Docker & Elastic Beanstalk - Exam Tips
+
+* When using Elastic Beanstalk, you can deploy your Docker container to a single EC2 instance
+* You can also deploy multiple Docker instances to an ECS cluster
+* To deploy a Docker application just upload your code bundle to Elastic Beanstalk
+* To upgrade to a new version, it's one easy step in the console to upload and deploy
+your new version
+* Code can be uploaded directly from your local machine or a public S3 bucket
+* You can also store your code in CodeCommit - but must used the Elastic Beanstalk CLI

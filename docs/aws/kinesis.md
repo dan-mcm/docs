@@ -374,3 +374,38 @@ for you to build your own custom applications for your business needs.
   }
 }
 ```
+
+## Kinesis Shards -v- Consumers
+
+* Kinesis Client Library runs on the consumer instances
+* Tracks the number of shards in your stream
+* Discovers new shards when you reshard
+
+## Kinesis Client Library
+
+* The KCL ensures that for every shard there is a record processor
+* Manages the number of record processors relative to the number of shards & consumers
+* If you have only one consumer, the KCL will create all the record processors on a single consumer
+* If you have two consumers it will load balance and create half the processors on one instance
+and half on another
+
+## Scaling out the Consumers
+
+* With KCL, generally you should ensure that the number of instances does not exceed
+the number of shards (except for failure or standby purposes)
+* You never need multiple instances to handle the processing of one shard
+* However, one worker can process multiple shards
+* It's fine if the number of shards exceeds the number of instances
+* Don't think that just because you reshard, that you need to add more instances
+* Instead, CPU utilization is what should drive the quantity of consumer instances
+you have, NOT the number of shards in your Kinesis stream
+* Use an Auto Scaling group, and base scaling decisions on CPU load on your consumers
+
+## Kinesis Shards - Exam Tips
+
+* The Kinesis Client Library running on your consumers creates a record processor for each
+shard that is being consumed by your instances
+* If you increase the number of shards, the KCL will add more record processors on your consumers
+* CPU utilization is what should drive the quantity of consumer instances you have, NOT the
+number of shards in your Kinesis stream
+* Use an autoscaling group, and base scaling decisions on CPU load on your consumers
