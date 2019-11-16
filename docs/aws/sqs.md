@@ -81,3 +81,59 @@ once, no duplicates e.g. good for banking transactions which need to happen in s
 * Short Polling - returned immediately even if no messages are in the queue
 * Long Polling - polls the queue periodically and only returns a response when a
 message in the queue or the timeout is reached
+
+# Extra Materials - SQS Delay Queues & Managing Large Messages
+
+## SQS Delay Queues - Postpone Delivery of New Messages
+
+* Postpone delivery of new messages to a queue for a number of seconds
+* Messages sent to the Delay Queue remain invisible to consumers for the duration
+of the delay period
+* Default delay is 0 seconds, maximum is 900
+* For standard queues, changing the settings doesn't affect the delay of messages
+already in the queue, only new messages
+* For FIFO queues, this affects the delay of messages already in the queue
+
+## When should you use a Delay Queue?
+
+* Large distributed applications which may need to introduce a delay in processing
+* You need to apply a delay to an entire queue of messages e.g. adding a delay of
+a few seconds, to allow for updates to your sales and stock control databases before
+sending a notification to a customer confirming an online transaction
+
+## Managing Large SQS Messages
+
+* For large SQS messages - 256KB up to 2GB in size
+    * Use S3 to store the message
+    * Use Amazon SQS Extended Client Library for Java to manage them
+    * (you'll also need the  AWS SDK for Java) - provides an API for S3 bucket
+    and object operations
+
+Note you can't use the following for large messages:
+
+* AWS CLI
+* AWS Management Console / SQS Console
+* SQS API
+* Any other AWS SDK
+
+## SQS Extended Client Library for Java
+
+* Specify that messages are always stored in Amazon S3 OR only messages >256KB
+* Send a message which references a message object stored in S3
+* Get a message object from S3
+* Delete a message object from S3
+
+# Large SQS Messages - Exam Tips
+
+SQS Delay Queue:
+
+* Postpone delivery of new messages
+* Messages in Delay Queue remain invisible for the duration of the delay period (0-900s [15mins])
+* Large distributed applications which may need to introduce a delay in processing
+
+Managing Large Messages in S3
+
+* Store large messages 256KB-2GB
+* AWS SDK for Java
+* Amazon SQS Extended Client Library for Java
+* Cannot use: AWS CLI, AQS/SQS management console, SQS API

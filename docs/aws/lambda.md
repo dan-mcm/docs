@@ -92,3 +92,75 @@ Note: you can shift traffic between Alias using UI and defining the % weights. (
 * Versions are immutable
 * Can split traffic using aliases to different versions
     * Cannot split traffic with $latest, instead create an alias to latest
+
+## Lambda Concurrent Executions Limit
+
+* Not necessary to memorize lots of limits for the Exam
+* Be aware that there is a concurrent limit for Lambda
+* Safety feature to limit the number of concurrent executions across all functions
+in a given region per account
+* Default is 1,000 per region
+* TooManyRequestsException
+* HTTP Status Code: 429
+* Request throughput limit exceeded
+
+* If you have many Lambda functions running in the same region and you suddenly start
+seeing new invocation requests being rejected, then you may have hit your limit
+* At ACG, the daily usage is around 6.5m Lambda Invocations per day in us-east-1
+* Request an increase on this limit by submitting a request to the AWS Support Center
+* Reserved concurrency guarantees that a set number of executions which will always be
+available for your critical function, however this also acts as a limit
+
+## Lambda Concurrent Execution Limit - Exam Tips
+
+* Know that a limit exists - 1,000 concurrent executions per second
+* If you are running a serverless website like ACG, its likely you will hit the limit at some point
+* If you hit the limit you will start to see invocations being rejected - 429 HTTP status code
+* The remedy is to get the limit raised by AWS support
+* Reserved Concurrency guarantees a set number of concurrent executions are always available to
+a critical function
+
+## Lambda Versions
+
+* When you create a lambda function there is only on version: $LATEST
+* When you upload a new version fo the code to Lambda, this version will become $LATEST
+* You can create multiple versions of your function code and use aliases to reference the
+version you want to use as part of the ARN e.g. in a development environment you might want
+to maintain a few versions of the same function as you develop and test your code
+* An alias is like a pointer to a specific version of the function code
+
+## Lambda Version - Exam Tips
+
+* $LATEST is always the last version of code you uploaded to Lambda
+* Use Lambda Versioning and Aliases to point your application to a specific version if you
+don't want to use $LATEST
+    * arn:aws:lambda:eu-west-2:738450006354:function:mylambda:Prod
+    * arn:aws:lambda:eu-west-2:738450006354:function:mylambda:$LATEST
+* If your application uses an alias, instead of $LATEST remember that it will not
+automatically use new code when you upload it
+
+## Lambda & VPC Access
+
+* Some use cases require Lambda to access resources which are inside a private VPC e.g.
+read or write to an RDS DB, or shut down an EC2 in response to a security alert
+
+## Enabling Lambda to Access VPC Resources
+
+* To enable this, you need to allow the function to connect in the private subnet.
+* Lambda needs the following VPC Configuration information so that it can connect to
+the VPC:
+    * Private subnet ID
+    * Security group ID (with required access)
+    * Lambda uses this information to set up ENIs using an available IP address from
+    your private subnet.
+* You add VPC information to your Lambda function config using the vpc-config parameter.
+`aws lambda-function-configuration --function-name my-function --vpc-config
+SubnetIds=subnet-1122aabb,SecurityGroupIds=51530134`
+
+
+## Lambda & VPCs - Exam Tips
+
+* It is possible to enable Lambda to access resources which are inside a private VPC
+* Provide VPC config to the function - private subnet ID, security group ID
+* Lambda uses the VPC information to set up ENIs using an IP from the private subnet CIDR range
+* The security group then allows your function to access resources in VPC

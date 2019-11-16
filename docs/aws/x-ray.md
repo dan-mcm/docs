@@ -48,3 +48,41 @@ X-Ray Supported Languages:
 * What X-Ray SDK Provides
 * What X-Ray Integrated with
 * What X-Ray languages are supported
+
+## X-Ray Configuration
+
+* You need both the X-Ray SDK & Daemon on your systems
+* You use the SDK to instrument your application to send the required data e.g.
+data about incoming and outgoing HTTP requests that are being made to your Java application
+
+### High Level Configuration Steps
+
+* On premises & EC2 System
+    * Install the X-Ray daemon on your EC2 instance or on-premises server.
+* Elastic Beanstalk
+    * Install the X-Ray daemon on the EC2 instances inside your Elastic Beanstalk environment.
+* Elastic Container Service
+    * Install the X-Ray daemon in its own Docker container on your ECS cluster alongside your app.
+
+## Annotations & Indexing
+
+* Annotations: when instrumenting your application, you can record additional information
+about requests by using annotations.
+* Key-value pairs: Annotations are simple key-value pairs that are indexed for use with filter
+expressions, so that you can search for traces that contain specific data and group related
+traces together in the console - e.g. game_name=TicTacToe,game_id=1350868349
+
+## Configuration - Exam Tips
+
+* X-Ray integrates with many AWS services like DynamoDB, Lambda, API Gateway etc.
+* You can also instrument your own applications to send data to X-Ray
+* Applications can be run on EC2, Elastic Beanstalk environments, on-premises systems and ECS
+* For ECS, run the X-Ray daemon in it's own Docker image, running alongside your application
+* Need three things to get started:
+    * X-Ray SDK
+    * X-Ray Daemon
+    * Instrument your application using the SDK to send the required data to X-Ray e.g.
+    data about incoming HTTP requests to your application
+* If you want to also record application specific information in the form of key-value
+pairs, use annotations to add user defined key-value pairs to your X-Ray data e.g.
+game_name=TicTacToe,game_id=1350868349  

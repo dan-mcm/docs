@@ -189,3 +189,18 @@ Sample API Response
 * If successful, STS will return temporary credentials enabling acceess to AWS resources
 * AssumedRoleUser ARN and AssumedRoleID - are used to programmatically reference the temporary credentials -
 not an IAM role or user
+
+## IAM Policy Simulator
+
+* Test the effects of IAM policies before committing them to production
+* Validate that the policy works as expected
+* Test policies attached to existing users - great for troubleshooting an issue which you
+suspect is IAM related
+* https://policysim.aws.amazon.com
+
+# Exam Tips - IAM Policy Simulator
+
+* Test IAM permissions before you commit them to production
+* Validate that the policy works as expected
+* You can also test policies attached to existing users - great for troubleshooting
+* https://policysim.aws.amazon.com
