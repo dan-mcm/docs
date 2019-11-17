@@ -60,9 +60,13 @@ theme:
     primary: teal
     accent: cyan
 
-repo_url: https://github.com/daniel40392/docs
+repo_url: https://github.com/dan-mcm/docs
 repo_name: Dan's Docs
 edit_uri: edit/master/docs
+
+google_analytics:
+  - UA-00000000-0
+  - auto
 
 markdown_extensions:
   - admonition
